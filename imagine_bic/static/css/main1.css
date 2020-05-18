@@ -1,75 +1,434 @@
 @charset "utf-8";
 
 @font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../font/NotoSansCJKkr-Bold.otf") }
 @font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
-
+@font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../font/NotoSansCJKkr-Medium.otf") } 
 
 body{
-    background-image: url("../img/main-bg-blue.png");
-    background-repeat: no-repeat;
+    background-attachment:local;
+    background: url("../img/main-bg-blue.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-} /*bg img 설정*/
+    }
 
-#container #name{
-    font-family: NotoSansCJKKR-Black;
-    position: absolute;
-    top:350px;
-    left:60px;
-    font-size:150px;
-    /*font-size:150vmin;*/
-    color:white;
-} /*'아인' 텍스트 설정*/
+    #header{
+        position: relative;
+        padding:6% 5%;
+    }
+    #header #ss_lg{
+        width:30%;
+        height:auto;
+        float: left;
+        margin-top:8px;
+    }
+    #header #st_bt{
+        width:8%;
+        height:auto;
+        float: right;
+    }
+    #namebox{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width:100%;
+    }
+    #namebox #name{
+        font-family: NotoSansCJKKR-Black;
+        font-size:3.188em;
+        color:white;
+        margin-top:70px;
+        margin-left:15px;
+        width:30%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    #namebox #n_nim{
+        font-family: NotoSansCJKKR-Regular;
+        font-size:2.688em;
+        color:white;
+        margin-top:-64px;
+        margin-left:113px;
+    }
+    #namebox #welcome{
+        font-family: NotoSansCJKKR-Regular;
+        font-size:2.688em;
+        color:white;
+        margin-top:-13px;
+        margin-left:15px;
+    }
 
-#container #n_nim{
-    font-family: NotoSansCJKKR-Regular;
-    position: absolute;
-    top:380px;
-    left:480px;
-    font-size:120px;
-    /* font-size:120vmin; */
-    color:white;
-} /*'님,' 텍스트 설정*/
+    #bt{
+        position: relative;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        margin-top: -30px;
+    }
 
-#container #n_welcome{
-    font-family: NotoSansCJKKR-Regular;
-    position: absolute;
-    top:550px;
-    left:60px;
-    font-size:110px;
-    color:white;
-} /*'대여할 수 있어요.' 텍스트 설정*/
+    #bt #main-bt-01{
+        margin-bottom: 0.649em;
+        margin-right:0.649em;
+        filter: drop-shadow(30px 30px 30px #d9d9d9); 
+        margin-top:55px;
+    }
+    #bt1 #main-bt-02{
+        margin-bottom: 0.649em;
+        filter: drop-shadow(30px 30px 30px #d9d9d9); 
+    }
+    #bt2 #main-bt-03{
+        margin-right:0.649em;
+        filter: drop-shadow(30px 30px 30px #d9d9d9); 
+    }
+    #bt2 #main-bt-04{
+        filter: drop-shadow(30px 30px 30px #d9d9d9); 
+    }
 
-#container #main-setting{
-    position: absolute;
-    top:100px;
-    left:920px;
-} /*설정 버튼 위치 설정*/
+    @media all and (min-width:500px){
+            
+    body{
+        background: url("../img/usermain_bg_tb\ \(2\).png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        }
+        #header{
+            position: relative;
+            padding:5% 5%;
+        }
+        #header #ss_lg{
+            width:32%;
+            height: auto;
+            float: left;
+            margin-top:15px;
+        }
+        #header #st_bt{
+            width:7%;
+            height: auto;
+            float: right;
+        }
+        #namebox{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width:100%;
+        }
+        #namebox #name{
+            font-family: NotoSansCJKKR-Black;
+            font-size:4.588em;
+            color:white;
+            margin-top:70px;
+            margin-left:60px;
+        }
+        #namebox #n_nim{
+            font-family: NotoSansCJKKR-Regular;
+            font-size:4.088em;
+            color:white;
+            margin-top:-98px;
+            margin-left:195px;
+        }
+        #namebox #welcome{
+            font-family: NotoSansCJKKR-Regular;
+            font-size:3.788em;
+            color:white;
+            margin-top:-92px;
+            margin-left:285px;
+        }
+        
+        #bt{
+            position: relative;
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: space-around;
+        }
 
-#container #main-bt01{
-    position: absolute;
-    top:840px;
-    left:40px;
-    filter: drop-shadow(30px 30px 30px #d9d9d9); 
-} /*자전거 예약 버튼 위치 설정*/
+        #bt #main-bt-01{
+            margin-bottom:1.499em;
+            margin-right:1.499em;
+            min-width:275px;
+            filter: drop-shadow(30px 30px 30px #d9d9d9);
+        }
+        #bt1 #main-bt-02{
+            margin-bottom:1.499em;
+            min-width:275px;
+            filter: drop-shadow(30px 30px 30px #d9d9d9); 
+        }
+        #bt2 #main-bt-03{
+            margin-right:1.499em;
+            min-width:275px;
+            filter: drop-shadow(30px 30px 30px #d9d9d9); 
+        }
+        #bt2 #main-bt-04{
+            min-width:275px;
+            filter: drop-shadow(30px 30px 30px #d9d9d9); 
+        }
+   
+    }
+    
+    @media (min-width:795px) and (min-height:1000px){
+            
+        body{
+            background: url("../img/usermain_bg_tb\ \(2\).png") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            }
+            #header{
+                position: relative;
+                padding:5% 5%;
+            }
+            #header #ss_lg{
+                width:32%;
+                height: auto;
+                float: left;
+                margin-top:15px;
+            }
+            #header #st_bt{
+                width:7%;
+                height: auto;
+                float: right;
+            }
+            #namebox{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                width:100%;
+            }
+            #namebox #name{
+                font-family: NotoSansCJKKR-Black;
+                font-size:5.499em;
+                color:white;
+                margin-top:70px;
+                margin-left:50px;
+                width:250px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            #namebox #n_nim{
+                font-family: NotoSansCJKKR-Regular;
+                font-size:4.999em;
+                color:white;
+                margin-top:-118px;
+                margin-left:295px;
+            }
+            #namebox #welcome{
+                font-family: NotoSansCJKKR-Regular;
+                font-size:4.599em;
+                color:white;
+                margin-top:-109px;
+                margin-left:390px;
+            }
+            
+            #bt{
+                position: relative;
+                display: flex;
+                flex-wrap:wrap;
+                justify-content: space-around;
+                margin-top:55px;
+            }
+    
+            #bt #main-bt-01{
+                margin-bottom:4.599em;
+                margin-right:4.599em;
+                width:315px;
+                filter: drop-shadow(30px 30px 30px #d9d9d9);
+            }
+            #bt1 #main-bt-02{
+                margin-bottom:4.599em;
+                width:315px;
+                filter: drop-shadow(30px 30px 30px #d9d9d9); 
+            }
+            #bt2 #main-bt-03{
+                margin-right:4.599em;
+                width:315px;
+                filter: drop-shadow(30px 30px 30px #d9d9d9); 
+            }
+            #bt2 #main-bt-04{
+                width:315px;
+                filter: drop-shadow(30px 30px 30px #d9d9d9); 
+            }
+       
+        }
 
-#container #main-bt02{
-    position: absolute;
-    top:840px;
-    left:560px;
-    filter: drop-shadow(30px 30px 30px #d9d9d9); 
-} /*예약 확인 버튼 위치 설정*/
+    @media all and (min-width:1025px){
+        body{
+            background: url("../img/um_bg_d.png") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: 100%;
+            -o-background-size: cover;
+            background-size: cover;
+            }
+            #header{
+                position: relative;
+                padding:3% 5%;
+            }
+            #header #ss_lg{
+                width:12%;
+                height: auto;
+                float: left;
+                margin-top:10px;
+            }
+            #header #st_bt{
+                width:3%;
+                height: auto;
+                float: right;
+            }
+            #namebox{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                width:100%;
+            }
+            #namebox #name{
+                font-family: NotoSansCJKKR-Black;
+                font-size:4.599em;
+                color:white;
+                margin-right:455px;
+                text-align: center;
+            }
+            #namebox #n_nim{
+                font-family: NotoSansCJKKR-Regular;
+                font-size:3.588em;
+                color:white;
+                margin-top:-90px;
+                margin-right:387px;
+                text-align: center;
+            }
+            #namebox #welcome{
+                font-family: NotoSansCJKKR-Regular;
+                font-size:3.258em;
+                margin-top:-85px;
+                margin-right:110px;
+                color:white;
+                text-align: center;
+            }
+            #bt{
+                position: relative;
+                display: flex;
+                flex-wrap:wrap;
+                justify-content: center;
+            }
+            #bt1{
+                margin-top:95px;
+            }
 
-#container #main-bt03{
-    position: absolute;
-    top:1460px;
-    left:40px;
-    filter: drop-shadow(30px 30px 30px #d9d9d9); 
-} /*대여점 위치 버튼 위치 설정*/
+            #bt2{
+                margin-top:148px;
+                margin-left:1.799em;
+            }
+    
+            #bt #main-bt-01{
+                min-width:205px;
+                filter:none;
+            }
+            #bt1 #main-bt-02{
+                min-width:205px;
+                filter:none;
+            }
+            #bt2 #main-bt-03{
+                min-width:205px;
+                filter:none;
+            }
+            #bt2 #main-bt-04{
+                min-width:205px;
+                filter:none;
+            }
+        }
 
-#container #main-bt04{
-    position: absolute;
-    top:1460px;
-    left:560px;
-    filter: drop-shadow(30px 30px 30px #d9d9d9); 
-} /*공지 버튼 위치 설정*/
-
+        @media  (min-width:1919px) and (min-height:1019px){
+            body{
+                background: url("../img/um_bg_d.png") no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: 100%;
+                -o-background-size: cover;
+                background-size: cover;
+                }
+                #header{
+                    position: relative;
+                    padding:3% 5%;
+                }
+                #header #ss_lg{
+                    width:12%;
+                    height: auto;
+                    float: left;
+                    margin-top:10px;
+                }
+                #header #st_bt{
+                    width:3%;
+                    height: auto;
+                    float: right;
+                }
+                #namebox{
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    width:100%;
+                }
+                #namebox #name{
+                    font-family: NotoSansCJKKR-Black;
+                    font-size:5.599em;
+                    color:white;
+                    margin-left:590px;
+                    text-align: center;
+                    width:250px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                #namebox #n_nim{
+                    font-family: NotoSansCJKKR-Regular;
+                    font-size:4.088em;
+                    color:white;
+                    margin-top:-105px;
+                    margin-right:375px;
+                    text-align: center;
+                }
+                #namebox #welcome{
+                    font-family: NotoSansCJKKR-Regular;
+                    font-size:3.858em;
+                    margin-top:-100px;
+                    margin-right:70px;
+                    color:white;
+                    text-align: center;
+                }
+                #bt{
+                    position: relative;
+                    display: flex;
+                    flex-wrap:wrap;
+                    justify-content: center;
+                }
+                #bt1{
+                    margin-top:55px;
+                }
+                #bt2{
+                    margin-top:107px;
+                    margin-left:4.555em; 
+                }
+        
+                #bt #main-bt-01{
+                    width:25%;
+                    height: auto;
+                    filter:none;
+                }
+                #bt1 #main-bt-02{
+                    width:25%;
+                    height: auto;
+                    filter:none;
+                }
+                #bt2 #main-bt-03{
+                    width:25%;
+                    height: auto;
+                    filter:none;
+                }
+                #bt2 #main-bt-04{
+                    width:25%;
+                    height: auto;
+                    filter:none;
+                }
+            }

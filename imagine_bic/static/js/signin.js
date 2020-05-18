@@ -3,6 +3,7 @@ function chfun(){
 }
 
 function sm(){
+    location.href="/index";
     loginForm.submit();
 }
 
