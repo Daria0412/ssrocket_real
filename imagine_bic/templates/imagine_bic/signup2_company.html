@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{% static 'css/company_signup2.css' %}" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript"></script>
-        <script src="js/company_signup2.js"></script>
+        <script src="js/signup2_company.js"></script>
         <title>company_signup2</title>
     </head>
 
@@ -21,11 +21,11 @@
         </div>
 
         <span id="ac">
-            <form action = "{% url 'company_signup1' %}" name = "joinForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
+            <form action = "{% url 'signup_company' %}" name = "joinForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
             <div id="form">
                 <span id="c_addr">
                 <input type="text" name="company_addr" id="company_addr" placeholder="Company address"/>
-                <img id="bar" src=".{% static 'img/bar-long.png' %}">
+                <img id="bar" src="{% static 'img/bar-long.png' %}">
                 </span>
 
                 <span id="c_loc">
@@ -37,7 +37,7 @@
                         <option value="세이노">세이노</option>
                         <option value="주노">주노</option>
                     </select>
-                        <img id="bar" src="../img/bar-long.png">
+                        <img id="bar" src="{% static 'img/bar-long.png' %}">
                 </span>
 
                 <span id="c_phone">
@@ -48,6 +48,28 @@
                 <span id="c_bike">
                     <select id="bicycle_num" name="bicycle_num">
                     <option selected value="Bicycle num">Bicycle num</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+
+
                 </select>
                     <img id="bar" src="{% static 'img/bar-long.png' %}">
                 </span>

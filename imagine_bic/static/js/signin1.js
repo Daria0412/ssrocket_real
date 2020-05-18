@@ -7,5 +7,6 @@ function sm(){
 }
 
 function bkfun(){
-    location.href = "/";
+    history.back();
 }
+

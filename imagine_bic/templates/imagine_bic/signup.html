@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/signup.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/signup1.css' %}" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript"></script>
         <script src="{% static 'js/signup.js' %}"></script>
@@ -18,7 +18,7 @@
 
 
         <div id="txt">
-            <img id="l_b" src="../img/l_b.png" onclick="chfun()">
+            <img id="l_b" src="{% static 'img/l_b.png' %}" onclick="chfun()">
             <img id="join_b" src="{% static 'img/join_b.png' %}">
         </div>
 
@@ -33,7 +33,7 @@
                     <span id="input_email">
                     <input type="email" name="id" id="id" placeholder="E-mail"/>
                     <img id="bar-02" src="{% static 'img/bar-long.png' %}">
-                    <img id="recheck" src="{% static 'img/recheck.png' %}" re>
+                    <img id="barEmailck" src="{% static 'img/recheck.png' %}" re>
                     </span>
                     <span id="input_pw">
                     <input type="password" name="pwd" id="pwd" placeholder="Password"/>

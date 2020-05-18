@@ -3,6 +3,6 @@ function bkfun(){
 }
 
 function sm(){
+    location.href='signin/';
     joinForm.submit();
 }
-// 

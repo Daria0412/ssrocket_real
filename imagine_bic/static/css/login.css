@@ -45,6 +45,7 @@ body{
 #w #welcome{
     width:55%;
 }
+
 #form #input_email{
     display: flex;
     flex-wrap: wrap;
@@ -347,7 +348,7 @@ body{
             justify-content: center;
         }
         #form{
-            width:2+00px;
+            width:200px;
         }
         #backbt{
             width:3%;
@@ -454,5 +455,9 @@ body{
             height:5%;
             margin-top:-3px;
         }
-
+        #w #welcome{
+            margin-top:10%;
+            width:100%;
+        }
+        
     }

@@ -64,7 +64,7 @@ body{
     width:230px;
 }
 
-#form #input_email #recheck{
+#form #input_email #barEmailck{
     margin-top:20px;
     filter: drop-shadow(30px 30px 30px #cecdcd); 
 }
@@ -220,7 +220,7 @@ body{
             height:4px;
         }
         
-        #form #input_email #recheck{
+        #form #input_email #barEmailck{
             width:400px;
             margin-top:30px;
             filter: drop-shadow(30px 30px 30px #cecdcd); 
@@ -362,7 +362,7 @@ body{
                 height:4px;
             }
             
-            #form #input_email #recheck{
+            #form #input_email #barEmailck{
                 width:550px;
                 margin-top:40px;
                 filter: drop-shadow(30px 30px 30px #cecdcd); 
@@ -520,7 +520,7 @@ body{
             height:4px;
         }
         
-        #form #input_email #recheck{
+        #form #input_email #barEmailck{
             width:400px;
             margin-top:30px;
             filter: drop-shadow(30px 30px 30px #cecdcd); 
@@ -679,7 +679,7 @@ body{
             height:4px;
         }
         
-        #form #input_email #recheck{
+        #form #input_email #barEmailck{
             width:400px;
             margin-top:30px;
             filter: drop-shadow(30px 30px 30px #cecdcd); 
