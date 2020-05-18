@@ -11,5 +11,6 @@ function chfun(){
 }
 
 function sm(){
+    location.href="company/"
     joinForm.submit();
 }

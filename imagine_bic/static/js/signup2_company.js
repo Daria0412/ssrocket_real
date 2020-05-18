@@ -5,3 +5,4 @@ function bkfun(){
 function sm(){
     joinForm.submit();
 }
+// 
