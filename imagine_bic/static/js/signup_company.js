@@ -1,7 +1,9 @@
 function bkfun(){
     history.back();
 }
-
+function chfun(){
+    location.href="/signin";
+}
 function sm(){
     location.href="company/"
     joinForm.submit();

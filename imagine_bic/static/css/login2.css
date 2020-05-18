@@ -45,7 +45,6 @@ body{
 #w #welcome{
     width:55%;
 }
-
 #form #input_email{
     display: flex;
     flex-wrap: wrap;
@@ -348,7 +347,7 @@ body{
             justify-content: center;
         }
         #form{
-            width:200px;
+            width:2+00px;
         }
         #backbt{
             width:3%;
@@ -455,9 +454,49 @@ body{
             height:5%;
             margin-top:-3px;
         }
-        #w #welcome{
-            margin-top:10%;
-            width:100%;
+
+        #a{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+    
+        #form #input_email{
+            display: flex;
+            position: relative;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:10px;
+            width:430px;
+            height:5px;
+            left:220px;
         }
         
+        #form #input_email #id{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(114, 111, 111);
+            border:none;
+            width:430px;
+        }
+
+        
+        #form #input_pw{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:8.055em;
+            margin-bottom:2.555em;
+            position: relative;
+            right:210px;
+            width:430px;
+        }
+
+        #form #input_pw #pwd{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(111, 111, 111);
+            width:530px;
+        }
     }
