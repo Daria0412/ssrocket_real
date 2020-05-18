@@ -13,11 +13,3 @@ function ch02fun(){
     document.getElementById("user_info").value=1
     useForm.submit();
 }
-
-function gou(){
-    location.href='index/';
-}
-
-function goc(){
-    location.href='/index/company/';
-}
