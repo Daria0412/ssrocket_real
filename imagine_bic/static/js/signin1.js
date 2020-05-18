@@ -9,3 +9,4 @@ function sm(){
 function bkfun(){
     location.href = "/";
 }
+//커밋커밋
