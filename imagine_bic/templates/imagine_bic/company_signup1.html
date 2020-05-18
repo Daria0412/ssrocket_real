@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/company_signup1.css' %}" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript"></script>
+        <script src="{% static 'js/company_signup1.js' %}"></script>
+        <title>company_signup1</title>
+    </head>
+
+    <body>
+       {% load static %}
+        <img id="backbt" src="{% static 'img/b_b.png' %}" onclick="bkfun()">
+
+
+        <div id="txt">
+            <img id="l_b" src="{% static 'img/l_b.png' %}" onclick="chfun()">
+            <img id="join_b" src="{% static 'img/join_b.png' %}">
+        </div>
+
+        <span id="ac">
+        <form action = "{% url 'signup' %}" name = "joinForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
+            <div id="form">
+                <span id="input_name">
+                <input type="text" name="name" id="name" placeholder="Name"/>
+                <img id="bar-01" src="">
+                </span>
+                <span id="a">
+                <span id="input_email">
+                <input type="email" name="id" id="id" placeholder="E-mail"/>
+                <img id="bar-02" src="{% static 'img/bar-long.png' %}">
+                <img id="recheck" src="{% static 'img/recheck.png' %}" re>
+                </span>
+                <span id="input_pw">
+                <input type="password" name="pwd" id="pwd" placeholder="Password"/>
+                <img id="bar-03" src="{% static 'img/bar-long.png' %}">
+                </span>
+                </span>
+                <span id="input_pwchk">
+                <input type="password" name="pwdck" id="pwdck" placeholder="Password Re-Enter"/>
+                <img id="bar-04" src="{% static 'img/bar-long.png' %}">
+                </span>
+            </div>
+        </span>
+
+          <span id="bt">
+          <img id="joinBt" src="{% static 'img/next-b.png' %}" onclick = "sm()">
+          </span>
+          
+          <input type='hidden' id=info name = info value = "1">
+
+         </form>
+    </body>
+</html>

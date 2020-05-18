@@ -1,25 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="ko">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/choose1_use.css' %}" type="text/css"> <!--choose.css 링크-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <link rel="stylesheet" href="{% static 'css/choose_use.css' %}" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript"></script>
         <script src="{% static 'js/choose_use.js' %}"></script>
         <title>choose_use</title>
     </head>
+ 
     <body>
-
-        
-        {% load static %}
+      {% load static %}
         <form action = "{% url 'choose_use' %}" name = "useForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
-            <input type=hidden name = "user_info" id ="user_info" value="">
-        </form>
-            <div id="container">
-            <img id="traveler" src="{% static 'img/tr-bt1.png' %}" onclick="ch01fun();">
-            <img id="company" src="{% static 'img/comp-bt1.png' %}" onclick="ch02fun();">
-            </div>
+          <div id="bt">
+            <img id="user" src="{% static 'img/user_b.png' %}" onclick="location.href='index/'">
+            <img id="company" src="{% static 'img/comp_b.png' %}" onclick="location.href='/index/company/'">
+          </div>
+        <input type=hidden name = "user_info" id ="user_info" value="">
+    </form>
     </body>
 </html>

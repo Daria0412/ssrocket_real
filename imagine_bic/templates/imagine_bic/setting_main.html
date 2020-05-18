@@ -4,19 +4,24 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        {% load static %}
-        <link rel="stylesheet" href="{% static 'css/setting_secession.css' %}" type="text/css">
+        <link rel="stylesheet" href="../css/setting_main.css" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript"></script>
-        <script src="{% static 'js/setting_secession.js' %}"></script>
-        <title>logout</title>
+        <script src="../js/setting_main.js"></script>
+        <title>setting_main</title>
     </head>
-
+ 
     <body>
-        {% load static %}
+        <div id="head">
         <div id="bt">
-            <img id="yes" src="{% static 'img/yes_b.png' %}" onclick="location.href='/login/'">
-            <img id="no" src="{% static 'img/no_b.png' %}" onclick="n()">
+            <img id="backbt" src="../img/bb_b.png" onclick="bkfun()">
+            <img id="homebt" src="../img/hb_b.png" onclick="gohome()">
         </div>
+
+        <div id="settxt">
+            <span id="txt">설정 및 문의</span>
+        </div>
+        </div>
+        
     </body>
 </html>

@@ -1,28 +1,61 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
-        {% load static %}
         <meta charset="utf-8">
-        <link rel="stylesheet" href="{% static 'css/choose1_shop.css' %}" type="text/css"> <!--reservation_2.css 링크-->
-        <script type="text/javascript"></script>
-        {% if count == 1 %}<script>location.href="{% url 'choose_shop' %}"</script>{% endif %}
-        <script src="{% static 'js/choose1_shop.js' %}"></script><!--reservation_2.js 링크-->
-        <title>choose_shop</title>
-    </head>
-    <body>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load static %}
-        <div id="container">
-        <img id="reservation2-bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
-        <!--뒤로가기 버튼 삽입-->
-        <a href="/index"><img id="reservation2-homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="hfun();"></a>
-        <!--홈 버튼 삽입-->
-        {% load mathfilters %}
-        {% for company in companys %}
-        <img id="rental" name=rental src="{% static 'img/reservation2-block01.png' %}" onclick="location.href='choose_shop/{{ company.company_num}}'"><!--onclick=sd()사용 원함-->
-        <div id="rental-01" name="rental-01">{{company.member_name}}</div>'
-        <div id="rental-02" name="rental-02">남은 자전거 : {{company.bicycle_num|sub:company.rent_num}}</div>'
-        <div id="rental-03" name="rental-02">{{company.company_info}}<br>{{company.company_phone}}</div>
-        {% endfor %}
+        <link rel="stylesheet" href="{% static 'css/choose_shop.css' %}" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript"></script>
+        <script src="{% static 'js/choose_shop.js' %}"></script>
+        <title>company_main</title>
+    </head>
+ 
+    <body>
+       {% load static %} 
+       <img id="backbt" src="{% static 'img/b_bt.png' %}" onclick="bkfun()">
+       <img id="goset" src="{% static 'img/st_bt.png' %}"  onclick="location.href='index/setting/'">
+
+       <div id="text">
+           <span id="this">이곳</span>
+           <span id="from">에서</span><br                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    >
+           <span id="rent">대여할 수 있어요!</span>
+       </div>
+
+    <div id="a">
+        <div class="back">
+        <div class="shop_list">
+            <span id="member_name">기후현지점자전거대여소</span>
+            <br>
+            <span id="bike">남은 자전거: </span>
+            <span id="bicycle_num">10</span>
+            <span id="dae">대</span>
+            <br>
+            <span id="user_date">24시간 운영! 번화가에 위치해 접근성이 좋으며, 역 근처에 위치해있습니다.</span>
+            <br>
+            <span id="tel">TEL: </span>
+            <span id="company_phone">+86 10 1234 5678</span>
+            <br>
+        </div>
+      </div>
+    </div>
+    <div id="a">
+        <div class="back">
+        <div class="shop_list">
+            
+            <span id="member_name">기후현지점자전거대여소</span>
+            <br>
+            <span id="bike">남은 자전거: </span>
+            <span id="bicycle_num">10</span>
+            <span id="dae">대</span>
+            <br>
+            <span id="user_date">24시간 운영! 번화가에 위치해 접근성이 좋으며, 역 근처에 위치해있습니다.</span>
+            <br>
+            <span id="tel">TEL: </span>
+            <span id="company_phone">+86 10 1234 5678</span>
+            <br>
+        </div>
+      </div>
     </div>
     </body>
-</html>

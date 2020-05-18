@@ -1,26 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="ko">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/choose_lan.css' %}" type="text/css"> <!--choose.css 링크-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <link rel="stylesheet" href="{% static 'css/choose_lan.css' %}" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript"></script>
-        <script src="{% static 'js/choose1_lan.js' %}"></script>
+        <script src="{% static 'js/choose_lan1.js' %}"></script>
         <title>choose_lan</title>
     </head>
+ 
     <body>
         {% load static %}
+        <img id="ssbike" src="{% static 'img/ssbike.png' %}">
+ 
+        <span id="a">
+            <div id="txt">
+            <div id="wel">WELCOME!</div> 
+            <div id="plz">Please choose one language!</div>
+            </div>
+        </span>
+ 
         <form action = "{% url 'choose_lan' %}" name = "lanForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
-            <div id="container">
-                <div id="lan_txt01">안녕하세요!</div>
-                <div id="lan_txt02">만나서 반갑습니다!</div>
-                <img id="kr-bt1" src="{% static 'img/kr-bt1.png' %}" onclick="ch01fun();">
-                <img id="jp-bt1" src="{% static 'img/jp-bt1.png' %}" onclick="ch02fun();">
-                <img id="eg-bt1" src="{% static 'img/eg-bt1.png' %}" onclick="ch03fun();">
+            <span id="l">
+            <div id="lan">
+                <span id="lan_e"><img id="eng" src="{% static 'img/eg_b.png' %}"onclick= "location.href='/choose_use'"></span>
+                <span id="lan_k"><img id="kr" src="{% static 'img/kr_b.png' %}" onclick= "location.href='/choose_use'"></span>
+                <span id="lan_j"><img id="jp" src="{% static 'img/jp_b.png' %}"onclick= "location.href='/choose_use'"></span>
                 <input type = "hidden" name = "lan" id = "lan" value = "">
             </div>
+            </span>
         </form>
     </body>
 </html>

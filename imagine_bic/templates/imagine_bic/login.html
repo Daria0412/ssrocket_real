@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/login1.css' %}" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript"></script>
+        <script src="{% static 'js/login.js' %}"></script>
+        <title>login</title>
+    </head>
+
+    <body>
+        {% load static %}
+        <img id="backbt" src="{% static 'img/b_b.png' %}" onclick="bkfun()">
+
+
+        <div id="txt">
+            <img id="l_b" src="{% static 'img/lb_b.png' %}">
+            <img id="join_b" src="{% static 'img/joing_b.png' %}" onclick="chfun()">
+        </div>
+
+        <div id="e">
+        <form action = "{% url 'login' %}" name = "loginForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
+            <div id="form">
+
+                <span id="w">
+                <img id="welcome" src="{% static 'img/welcom-txt.png' %}">
+                </span>
+
+                <span id="a">
+
+                    <span id="input_email">
+                    <input type="email" name="id" id="id" placeholder="E-mail"/>
+                    <img id="bar" src="{% static 'img/bar-long.png' %}">
+                    </span>
+
+                    <span id="input_pw">
+                    <input type="password" name="pwd" id="pwd" placeholder="Password"/>
+                    <img id="bar" src="{% static 'img/bar-long.png' %}">
+                    </span>
+
+                </span>
+            </div>
+        </span>
+        <span id="bt">
+            <img id="joinBt" src="{% static 'img/loginbt.png' %}" onclick = "sm()"/>
+        </span>
+    </form>
+</div>
+
+    </body>
+</html>

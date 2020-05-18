@@ -1,24 +1,25 @@
-<!DOCTYPE html>
-<html lang="ko">
-    <head>
-        {% load static %}
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="{% static 'css/signup1.css' %}" type="text/css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script type="text/javascript"></script>
-        <script src="{% static 'js/signup_company.js' %}"></script>
-        <title>signup</title>
-        <script>
+function bkfun(){
+    history.back();
+}
+
+function chfun(){
+    location.href="login.html";
+}
+
+function sm(){
+    joinForm.submit();
+    location.href="company_signup2.html";
+}
+
         /* 중복체크! */
         $(function(){
             /* 아이디 수정했을 때 */
             $('#id').change(function () {
-                $('#barEmailck').show();
+                $('#recheck').show();
             });
-    
+
             // 중복확인 버튼을 눌렀을 때
-            $('#barEmailck').click(function(){
-                console.log("버튼 눌림");
+            $('#recheck').click(function(){
                 var id = $('#id').val();
                 // 이메일 란이 공백일 경우
                 if(id == ''){
@@ -34,7 +35,6 @@
                     type:'get',
                     dataType:'json',
                     success:function(response){
-                        console.log("ajax 들어감");
                         if(response.result != 'success'){
                             console.error(response.data)
                             return;
@@ -58,7 +58,7 @@
 
                 return false;
             });
-    
+
             // 가입 버튼 눌렀을 때
             $('#joinForm').submit(function() {
                 if($("#joinBt").attr("id_check_result") == "fail") {
@@ -67,17 +67,15 @@
                     return false;
                 }
             });
-        
+
             $("#id").on("propertychange change keyup paste input", function(){
-                $('#barEmailck').show();
+                $('recheck').show();
                 $("#joinBt").attr("id_check_result", "fail");
             });
         });
 
         // 비밀번호 확인
-        $(function(){ 
-            $("#alert-success").hide(); 
-            $("#alert-danger").hide(); 
+        $(function(){
             $("input").keyup(function(){ 
                 var pwd = $("#pwd").val(); 
                 var pwdCk = $("#pwdck").val(); 
@@ -94,33 +92,3 @@
                 } 
             }); 
         });
-
-    </script>
-    </head>
-
-    <body>
-        {% load static %}
-        <form action = "{% url 'signup' %}" name = "joinForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
-            <div id="container">
-                <img id="bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
-                 <!--뒤로가기 버튼 삽입-->
-                <a href="{% url 'signin'%}">
-                    <img id="login-text2" name="login-text2" src="{% static 'img/login-text2.png' %}">
-                </a>
-                <img id="join-text1" src="{% static 'img/join-text1.png' %}">
-                <img id="bar-round" src="{% static 'img/dot.png' %}">
-                <img id="bar-01" src="{% static 'img/bar-gray.png' %}">
-                <img id="bar-02" src="{% static 'img/bar-gray.png' %}">
-                <img id="bar-03" src="{% static 'img/bar-gray.png' %}">
-                <img id="bar-04" src="{% static 'img/bar-gray.png' %}">
-                <img id="barEmailck" src="{% static 'img/bar-rck.png' %}">
-                <img id="joinBt"  src="{% static 'img/next-bt.png' %}" onclick = "sm()">
-                <input type="text" name="name" id="name" placeholder="Name"/>
-                <input type="email" name="id" id="id" placeholder="E-mail"/>
-                <input type="password" name="pwd" id="pwd" placeholder="Password"/>
-                <input type="password" name="pwdck" id="pwdck" placeholder="Password Re-Enter"/>
-                <input type='hidden' id=info name = info value = "1">
-            </div>
-        </form>
-    </body>
-</html>

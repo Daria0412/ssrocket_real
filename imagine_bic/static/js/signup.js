@@ -2,26 +2,24 @@ function bkfun(){
     history.back();
 }
 
-function gofun(){
-    location.href="choose_use.html";
-}
-
 function chfun(){
-    location.href="signin.html";
+    location.href="login.html";
 }
 
 function sm(){
     joinForm.submit();
+    location.href="main.html";
 }
+
         /* 중복체크! */
         $(function(){
             /* 아이디 수정했을 때 */
             $('#id').change(function () {
-                $('#barEmailck').show();
+                $('#recheck').show();
             });
 
             // 중복확인 버튼을 눌렀을 때
-            $('#barEmailck').click(function(){
+            $('#recheck').click(function(){
                 var id = $('#id').val();
                 // 이메일 란이 공백일 경우
                 if(id == ''){
@@ -71,7 +69,7 @@ function sm(){
             });
 
             $("#id").on("propertychange change keyup paste input", function(){
-                $('#barEmailck').show();
+                $('recheck').show();
                 $("#joinBt").attr("id_check_result", "fail");
             });
         });

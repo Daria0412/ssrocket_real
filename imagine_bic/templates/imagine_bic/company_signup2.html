@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/company_signup2.css' %}" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript"></script>
+        <script src="js/company_signup2.js"></script>
+        <title>company_signup2</title>
+    </head>
+
+    <body>
+        {% load static %}
+        <img id="backbt" src="{% static 'img/bb_b.png' %}" onclick="bkfun()">
+
+        <div id="txt">
+            <img id="join_b" src="{% static 'img/join_b.png' %}">
+        </div>
+
+        <span id="ac">
+            <form action = "{% url 'company_signup1' %}" name = "joinForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
+            <div id="form">
+                <span id="c_addr">
+                <input type="text" name="company_addr" id="company_addr" placeholder="Company address"/>
+                <img id="bar" src=".{% static 'img/bar-long.png' %}">
+                </span>
+
+                <span id="c_loc">
+                    <select id="category" name="category">
+                        <option selected value="Location">Location</option>
+                        <option value="도노">도노</option>
+                        <option value="히다">히다</option>
+                        <option value="기후">기후</option>
+                        <option value="세이노">세이노</option>
+                        <option value="주노">주노</option>
+                    </select>
+                        <img id="bar" src="../img/bar-long.png">
+                </span>
+
+                <span id="c_phone">
+                        <input type="text" name="company_phone" id="company_phone" placeholder="Telephone"/>
+                        <img id="bar" src="{% static 'img/bar-long.png' %}">
+                </span>
+
+                <span id="c_bike">
+                    <select id="bicycle_num" name="bicycle_num">
+                    <option selected value="Bicycle num">Bicycle num</option>
+                </select>
+                    <img id="bar" src="{% static 'img/bar-long.png' %}">
+                </span>
+
+                <span id="c_time1">
+                    <select id="s_business" name="s_business">
+                        <option value="Open time">Open time</option>
+                        <option value="12:00">AM 12:00</option>
+                        <option value="01:00">AM 1:00</option>
+                        <option value="02:00">AM 2:00</option>
+                        <option value="03:00">AM 3:00</option>
+                        <option value="04:00">AM 4:00</option>
+                        <option value="05:00">AM 5:00</option>
+                        <option value="06:00">AM 6:00</option>
+                        <option value="07:00">AM 7:00</option>
+                        <option value="08:00">AM 8:00</option>
+                        <option value="09:00">AM 9:00</option>
+                        <option value="10:00">AM 10:00</option>
+                        <option value="11:00">AM 11:00</option>
+                        <option value="12:00">PM 12:00</option>
+                        <option value="13:00">PM 1:00</option>
+                        <option value="14:00">PM 2:00</option>
+                        <option value="15:00">PM 3:00</option>
+                        <option value="16:00">PM 4:00</option>
+                        <option value="17:00">PM 5:00</option>
+                        <option value="18:00">PM 6:00</option>
+                        <option value="19:00">PM 7:00</option>
+                        <option value="20:00">PM 8:00</option>
+                        <option value="21:00">PM 9:00</option>
+                        <option value="22:00">PM 10:00</option>
+                        <option value="23:00">PM 11:00</option>
+                    </select>
+                    <img id="bar" src="{% static 'img/bar-long.png' %}">
+                </span>
+             <span id="c_time2">
+                    <select id="e_business" name="e_business">
+                        <option value="Close time">Close time</option>
+                        <option value="12:00">AM 12:00</option>
+                        <option value="01:00">AM 1:00</option>
+                        <option value="02:00">AM 2:00</option>
+                        <option value="03:00">AM 3:00</option>
+                        <option value="04:00">AM 4:00</option>
+                        <option value="05:00">AM 5:00</option>
+                        <option value="06:00">AM 6:00</option>
+                        <option value="07:00">AM 7:00</option>
+                        <option value="08:00">AM 8:00</option>
+                        <option value="09:00">AM 9:00</option>
+                        <option value="10:00">AM 10:00</option>
+                        <option value="11:00">AM 11:00</option>
+                        <option value="12:00">PM 12:00</option>
+                        <option value="13:00">PM 1:00</option>
+                        <option value="14:00">PM 2:00</option>
+                        <option value="15:00">PM 3:00</option>
+                        <option value="16:00">PM 4:00</option>
+                        <option value="17:00">PM 5:00</option>
+                        <option value="18:00">PM 6:00</option>
+                        <option value="19:00">PM 7:00</option>
+                        <option value="20:00">PM 8:00</option>
+                        <option value="21:00">PM 9:00</option>
+                        <option value="22:00">PM 10:00</option>
+                        <option value="23:00">PM 11:00</option>
+                    </select>
+                    <img id="bar" src="{% static 'img/bar-long.png' %}">
+                </span>
+
+                <span id="c_info">
+                <!--회색 박스 이미지-->
+                <textarea name="company_info" id="company_info" placeholder=" About your company"></textarea>  
+            </div>
+        </span>
+    </form>
+
+    <span id="bt">
+        <a href="main.html"><img id="joinBt" src="{% static 'img/fin-b.png' %}" onclick = "sm()"></a>
+        </span>
+    </body>
+</html>

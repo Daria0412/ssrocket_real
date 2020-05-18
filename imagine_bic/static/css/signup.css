@@ -1,143 +1,747 @@
 @charset "utf-8";
 
 @font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../font/NotoSansCJKkr-Bold.otf") }
 @font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../font/NotoSansCJKkr-Medium.otf") } 
 
 body{
-    background-image: url("../img/sup-bg.png");
-    background-repeat: no-repeat;
+    background: url("../img/sup-bg\ \(1\).png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-} /*bg img 설정*/
+}
 
-#container #join-text1{
-    position: absolute;
-    top:500px;
-    left:600px;
-} /*회원가입 txt 위치 설정*/
+#backbt{
+    margin-top:20px;
+    margin-left:20px;
+}
+#txt{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-top:30%;
+    }
 
-#container #login-text2{
-    position: absolute;
-    top:500px;
-    left:220px;
-} /*로그인 txt 위치 설정*/
+#txt #l_b{
+    height: 9%;
+    margin-right:-3.649em;
+}
 
-#container #bar-round{
-    position: absolute;
-    top:600px;
-    left:700px;
-}/*round bar 위치 설정*/
+#txt #join_b{
+    height:9%;
+    margin-top: -1.5px;
+}
 
-#container #finishbt{
-    position: absolute;
-    top:1800px;
-    left:100px;
-}/* 가입하기 버튼 위치 설정*/
+#form #input_name{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:55px;
+    margin-bottom:3.055em;
+}
 
-
-#container #name{
-    position: absolute;
-    top:800px;
-    left:150px;
+#form #input_name #name{
     font-family:NotoSansCJKKR-Regular;
-    font-size: 48px;
+    font-size: 16px;
     color:rgb(114, 111, 111);
-    width:850px;
-    height:100px;
-    border: none;
-    background: transparent;
-    text-align: left;
-} /*이름 입력 창*/
+    border:none;
+    width:230px;
+}
 
-#container #id{
-    position: absolute;
-    top:1000px;
-    left:150px;
+#form #input_email{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#form #input_email #id{
     font-family:NotoSansCJKKR-Regular;
-    font-size: 48px;
+    font-size: 16px;
     color:rgb(114, 111, 111);
-    width:850px;
-    height:100px;
-    border: none;
-    background: transparent;
-    text-align: left;
-} /*e-mail 입력 창*/
+    border:none;
+    width:230px;
+}
 
-#container #bar-01{
-    position: absolute;
-    top:920px;
-    left:150px;
-} /*name 언더바*/
+#form #input_email #recheck{
+    margin-top:20px;
+    filter: drop-shadow(30px 30px 30px #cecdcd); 
+}
 
-#container #bar-02{
-    position: absolute;
-    top:1120px;
-    left:150px;
-}  /*e-mail 언더바*/
+#form #input_pw{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:3.055em;
+    margin-bottom:1.055em;
+}
 
-#container #barEmailck{
-    position: absolute;
-    top:1200px;
-    left:150px;
-    filter: drop-shadow(30px 30px 30px #e6e4e4); 
-} /*email 중복확인 bt 위치 설정*/
-
-#container #pwd{
-    position: absolute;
-    top:1400px;
-    left:150px;
+#form #input_pw #pwd{
     font-family:NotoSansCJKKR-Regular;
-    font-size: 48px;
+    font-size: 16px;
     color:rgb(114, 111, 111);
-    width:850px;
-    height:100px;
-    border: none;
-    background: transparent;
-    text-align: left;
-} /*pwd 입력창 위치 설정*/
+    border:none;
+    width:230px;
+}
 
+#form #input_pwchk{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom:4.055em;
+}
 
-#container #pwdck{
-    position: absolute;
-    top:1600px;
-    left:150px;
+#form #input_pwchk #pwdck{
     font-family:NotoSansCJKKR-Regular;
-    font-size: 48px;
+    font-size: 16px;
     color:rgb(114, 111, 111);
-    width:850px;
-    height:100px;
-    border: none;
-    background: transparent;
-    text-align: left;
-} /*pwd 입력창 위치 설정*/
+    border:none;
+    width:230px;
+}
+#bt{
+    display: flex;
+    justify-content: center;
+}
 
-#container #bar-03{
-    position: absolute;
-    top:1520px;
-    left:150px;
-}  /*pw 언더바*/
+#joinBt{
+    width:25%;
+    height: auto;
+    filter: drop-shadow(30px 30px 30px #dbdbdb); 
+}
 
-#container #bar-04{
-    position: absolute;
-    top:1720px;
-    left:150px;
-}  /*pw recheck 언더바*/
 
-#container #joinBt{
-    position: absolute;
-    top:1900px;
-    left:700px;
-    filter: drop-shadow(30px 30px 30px #e6e4e4); 
-} /*완료 bt 위치 설정*/
+@media (min-width:359px) and (max-height:700px){
+    
+body{
+    background: url("../img/sup-bg\ \(1\).png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
 
-#container #bkbt{
-    position: absolute;
-    top:100px;
-    left:60px;
-} /*<- 버튼 위치 설정*/
+#txt{
+    display: flex;
+    justify-content: space-around;
+    margin-top:20%;
+    }
+}
 
-input::-webkit-input-placeholder {
-    position: absolute;
-    color:rgb(184, 179, 179);
-    font-family:NotoSansCJKKR-Regular;
-    font-size:48px;
-} /*placeholder 보여지는 부분 css*/
+@media (min-width:400px) and (max-height:740px){
+    body{
+        background: url("../img/sup-bg\ \(1\).png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        }
+
+    #txt{
+        display: flex;
+        justify-content: space-around;
+        margin-top:25%;
+        }
+    }
+
+@media all and (min-width:500px){
+    body{
+        background: url("../img/join_bg_tb.png") no-repeat center center fixed;
+        background-attachment:local;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        }
+
+        #backbt{
+            width:7%;
+            margin-top:70px;
+            margin-left:70px;
+        }
+
+        #txt{
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            margin-top:40%;
+        }
+
+        #txt #l_b{
+            width:10%;
+            height:10%;
+            margin-right:-20.649em;
+        }
+
+        #txt #join_b{
+            width:13%;
+            height:13%;
+            margin-top:-2px;
+        }
+
+        #form #input_name{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:65px;
+        }
+        
+        #form #input_name #name{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(114, 111, 111);
+            border:none;
+            width:400px;
+        }
+
+        #form #input_name #bar-01{
+            width:400px;
+            height:4px;
+        }
+        
+        #form #input_email{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:20px;
+            width:400px;
+        }
+        
+        #form #input_email #id{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(114, 111, 111);
+            border:none;
+            width:400px;
+        }
+
+        #form #input_email #bar-02{
+            width:400px;
+            height:4px;
+        }
+        
+        #form #input_email #recheck{
+            width:400px;
+            margin-top:30px;
+            filter: drop-shadow(30px 30px 30px #cecdcd); 
+        }
+
+        #form #input_pw{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:3.055em;
+            margin-bottom:1.555em;
+            width:400px;
+        }
+
+        #form #input_pw #bar-03{
+            width:400px;
+            height:4px;
+        }
+        
+        #form #input_pw #pwd{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(114, 111, 111);
+            width:400px;
+        }
+        
+        #form #input_pwchk{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #form #a{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        #form #input_pwchk #bar-04{
+            width:400px;
+            height:4px;
+        }
+        
+        #form #input_pwchk #pwdck{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(114, 111, 111);
+            border:none;
+            width:400px;
+        }
+
+        #bt{
+            display: flex;
+            justify-content: center;
+        }
+
+        #joinBt{
+            width:20%;
+            margin-top:70px;
+            margin-bottom:100px;
+            filter: drop-shadow(30px 30px 30px #dbdbdb); 
+        }
+    }
+
+        
+    @media all and (min-width:814px){
+        body{
+            background: url("../img/join_bg_tb.png") no-repeat center center fixed;
+            background-attachment:local;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            }
+    
+            #backbt{
+                width:7%;
+                margin-top:70px;
+                margin-left:70px;
+            }
+    
+            #txt{
+                position: relative;
+                display: flex;
+                justify-content: space-around;
+                margin-top:46%;
+            }
+    
+            #txt #l_b{
+                width:10%;
+                height:10%;
+                margin-right:-25.649em;
+            }
+    
+            #txt #join_b{
+                width:13%;
+                height:13%;
+                margin-top:-3px;
+            }
+    
+            #form #input_name{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top:85px;
+            }
+            
+            #form #input_name #name{
+                font-family:NotoSansCJKKR-Regular;
+                font-size: 34px;
+                color:rgb(114, 111, 111);
+                border:none;
+                width:550px;
+            }
+    
+            #form #input_name #bar-01{
+                width:550px;
+                height:4px;
+            }
+            
+            #form #input_email{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top:30px;
+                width:550px;
+            }
+            
+            #form #input_email #id{
+                font-family:NotoSansCJKKR-Regular;
+                font-size: 34px;
+                color:rgb(114, 111, 111);
+                border:none;
+                width:550px;
+            }
+    
+            #form #input_email #bar-02{
+                width:550px;
+                height:4px;
+            }
+            
+            #form #input_email #recheck{
+                width:550px;
+                margin-top:40px;
+                filter: drop-shadow(30px 30px 30px #cecdcd); 
+            }
+    
+            #form #input_pw{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top:7.055em;
+                margin-bottom:2.555em;
+                width:550px;
+            }
+    
+            #form #input_pw #bar-03{
+                width:550px;
+                height:4px;
+            }
+            
+            #form #input_pw #pwd{
+                font-family:NotoSansCJKKR-Regular;
+                font-size: 34px;
+                color:rgb(111, 111, 111);
+                width:550px;
+            }
+            
+            #form #input_pwchk{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+    
+            #form #a{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            #form #input_pwchk #bar-04{
+                width:550px;
+                height:4px;
+            }
+            
+            #form #input_pwchk #pwdck{
+                font-family:NotoSansCJKKR-Regular;
+                font-size: 34px;
+                color:rgb(114, 111, 111);
+                border:none;
+                width:550px;
+            }
+
+            #bt{
+                display:flex;
+                justify-content: center;
+            }
+            
+            #joinBt{
+                width:20%;
+                margin-top:70px;
+                margin-bottom:100px;
+                filter: drop-shadow(30px 30px 30px #dbdbdb); 
+            }
+    }
+
+    @media all and (min-width:1025px){   
+        
+        body{
+        background: url("../img/uj_bg_d.png") no-repeat center center fixed;
+        background-attachment:local;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        }
+
+        #backbt{
+            width:0%;
+            margin-top:70px;
+            margin-left:70px;
+        }
+
+        #txt{
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            margin-top:28%;
+        }
+
+        #txt #l_b{
+            width:4.2%;
+            height:4.2%;
+            margin-right:-60.649em;
+        }
+
+        #txt #join_b{
+            width:5.5%;
+            height:5.5%;
+            margin-top:-2px;
+        }
+
+        #ac{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:-450px;
+        }
+
+        #form{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width:400px;
+        }
+
+        #form #input_name{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:550px;
+            width:400px;
+        }
+        
+        #form #input_name #name{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(114, 111, 111);
+            border:none;
+            width:400px;
+        }
+
+        #form #input_name #bar-01{
+            width:400px;
+            height:4px;
+        }
+        
+        #form #input_email{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:20px;
+            width:500px;
+        }
+        
+        #form #input_email #id{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(114, 111, 111);
+            border:none;
+            width:400px;
+        }
+
+        #form #input_email #bar-02{
+            width:400px;
+            height:4px;
+        }
+        
+        #form #input_email #recheck{
+            width:400px;
+            margin-top:30px;
+            filter: drop-shadow(30px 30px 30px #cecdcd); 
+        }
+
+        #form #input_pw{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:3.055em;
+            margin-bottom:1.555em;
+            width:400px;
+        }
+
+        #form #input_pw #bar-03{
+            width:400px;
+            height:4px;
+        }
+        
+        #form #input_pw #pwd{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(114, 111, 111);
+            width:400px;
+        }
+        
+        #form #input_pwchk{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width:400px;
+        }
+
+        #form #a{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        #form #input_pwchk #bar-04{
+            width:400px;
+            height:4px;
+        }
+        
+        #form #input_pwchk #pwdck{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(114, 111, 111);
+            border:none;
+            width:400px;
+        }
+
+        #bt{
+            display:flex;
+            justify-content: center;
+        }
+
+        #joinBt{
+            width:150px;
+            height:auto;
+            margin-top:40px;
+            margin-bottom:40px;
+            filter: drop-shadow(30px 30px 30px #dbdbdb); 
+        }
+
+    }
+    @media  (min-width:1919px) and (min-height:1019px){
+    body{
+        background: url("../img/uj_bg_d.png") no-repeat center center fixed;
+        background-attachment:local;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        }
+
+        #backbt{
+            width:0%;
+            margin-top:70px;
+            margin-left:70px;
+        }
+
+        #txt{
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            margin-top:28%;
+        }
+
+        #txt #l_b{
+            width:4.2%;
+            height:4.2%;
+            margin-right:-90.649em;
+        }
+
+        #txt #join_b{
+            width:5.5%;
+            height:5.5%;
+            margin-top:-2px;
+        }
+
+        #ac{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:-450px;
+        }
+
+        #form{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width:400px;
+        }
+
+        #form #input_name{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:550px;
+            width:400px;
+        }
+        
+        #form #input_name #name{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(114, 111, 111);
+            border:none;
+            width:400px;
+        }
+
+        #form #input_name #bar-01{
+            width:400px;
+            height:4px;
+        }
+        
+        #form #input_email{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:20px;
+            width:500px;
+        }
+        
+        #form #input_email #id{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(114, 111, 111);
+            border:none;
+            width:400px;
+        }
+
+        #form #input_email #bar-02{
+            width:400px;
+            height:4px;
+        }
+        
+        #form #input_email #recheck{
+            width:400px;
+            margin-top:30px;
+            filter: drop-shadow(30px 30px 30px #cecdcd); 
+        }
+
+        #form #input_pw{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:3.055em;
+            margin-bottom:1.555em;
+            width:400px;
+        }
+
+        #form #input_pw #bar-03{
+            width:400px;
+            height:4px;
+        }
+        
+        #form #input_pw #pwd{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(114, 111, 111);
+            width:400px;
+        }
+        
+        #form #input_pwchk{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width:400px;
+        }
+
+        #form #a{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        #form #input_pwchk #bar-04{
+            width:400px;
+            height:4px;
+        }
+        
+        #form #input_pwchk #pwdck{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(114, 111, 111);
+            border:none;
+            width:400px;
+        }
+
+        #bt{
+            display:flex;
+            justify-content: center;
+        }
+        
+        #joinBt{
+            width: 170px;
+            height:auto;
+            margin-top:40px;
+            margin-bottom:40px;
+            filter: drop-shadow(30px 30px 30px #dbdbdb); 
+        }
+    }

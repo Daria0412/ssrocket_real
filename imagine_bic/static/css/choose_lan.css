@@ -1,47 +1,463 @@
 @charset "utf-8";
 
 @font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../font/NotoSansCJKkr-Bold.otf") }
 @font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
-
+@font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../font/NotoSansCJKkr-Medium.otf") } 
 
 body{
-    background-image: url("../img/language-bg.png");
-    background-repeat: no-repeat;
+    background: url("../img/lg_bg.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-} /*bg img 설정*/
-
-#container #lan_txt01{
-    font-family: NotoSansCJKKR-Black;
-    position: absolute;
-    top:350px;
-    left:60px;
-    font-size:120px;
-    color:white;
 }
 
-#container #lan_txt02{
-    font-family: NotoSansCJKKR-Regular;
-    position: absolute;
-    top:500px;
-    left:70px;
-    font-size:80px;
-    color:white;
+#txt{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: left;
+    margin-top:3.555em;
+    margin-left:5%;
+    color:#FFFFFF;
 }
 
-#container #kr-bt1{
-    position: absolute;
-    top:900px;
-    left:180px;
+#txt #wel{ 
+    font-family:NotoSansCJKKR-Bold;
+    font-size: 24px;
 }
 
-#container #jp-bt1{
-    position: absolute;
-    top:1200px;
-    left:180px;
+#txt #plz{ 
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 18px;
 }
 
-#container #eg-bt1{
-    position: absolute;
-    top:1500px;
-    left:180px;
+#ssbike{
+    width:20%;
+    height: auto;
+    margin-left:5%;
+    margin-top:2.000em;
 }
+
+#lan{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#lan #lan_e{
+    margin-top: 9.555em;
+    margin-bottom:2.555em;
+}
+
+#lan #lan_k{
+    margin-bottom:2.555em;
+}
+
+@media all and (min-width:419px){
+
+    #l{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #lan{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width:20%;
+    }
+    
+    #lan #lan_e{
+        margin-top: 9.555em;
+        margin-bottom:2.555em;
+    }
+    
+    #lan #lan_k{
+        margin-bottom:2.555em;
+    }
+    
+}
+@media (min-width:359px) and (max-height:650px){
+    
+body{
+    background: url("../img/lg_bg.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+    
+    #txt{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: left;
+        margin-top:2.000em;
+        margin-left:5%;
+        color:#FFFFFF;
+    }
+
+    #txt #wel{ 
+        font-family:NotoSansCJKKR-Bold;
+        font-size: 24px;
+    }
+
+    #txt #plz{ 
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 18px;
+    }
+
+    #ssbike{
+        width:20%;
+        height: auto;
+        margin-left:5%;
+        margin-top:1.000em;
+    }
+    #lan #lan_e{
+        margin-top: 7.555em;
+        margin-bottom:2.555em;
+    }
+    
+}
+
+@media (max-width:375px) and (min-height:811px){
+    body{
+        background: url("../img/lg_bg.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        }
+        #txt{
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: left;
+            margin-top:5.000em;
+            margin-left:5%;
+            color:#FFFFFF;
+        }
+
+        #txt #wel{ 
+            font-family:NotoSansCJKKR-Bold;
+            font-size: 24px;
+        }
+
+        #txt #plz{ 
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 18px;
+        }
+
+        #ssbike{
+            width:20%;
+            height: auto;
+            margin-left:5%;
+            margin-top:1.700em;
+        }
+        #lan #lan_e{
+            margin-top: 10.555em;
+            margin-bottom:2.555em;
+        }
+    }
+
+
+
+    
+@media (min-width:374px) and (max-height:668px){
+    body{
+        background: url("../img/lg_bg.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        }
+          
+        #txt{
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: left;
+            margin-top:2.000em;
+            margin-left:5%;
+            color:#FFFFFF;
+        }
+
+        #txt #wel{ 
+            font-family:NotoSansCJKKR-Bold;
+            font-size: 24px;
+        }
+
+        #txt #plz{ 
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 18px;
+        }
+
+        #ssbike{
+            width:20%;
+            height: auto;
+            margin-left:5%;
+            margin-top:0.700em;
+        }
+        #lan #lan_e{
+            margin-top: 7.555em;
+            margin-bottom:2.555em;
+        }
+    }
+
+    @media (min-width:410px) and (max-height:840px){
+        body{
+            background: url("../img/lg_bg.png") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            }
+            #txt{
+                display: flex;
+                flex-wrap:wrap;
+                justify-content: left;
+                margin-top:3.000em;
+                margin-left:5%;
+                color:#FFFFFF;
+                width:360px;
+            }
+    
+            #txt #wel{ 
+                font-family:NotoSansCJKKR-Bold;
+                font-size: 24px;
+            }
+    
+            #txt #plz{ 
+                font-family:NotoSansCJKKR-Regular;
+                font-size: 18px;
+            }
+        }
+    
+
+
+@media all and (min-width:500px){
+    body{
+        background: url("../img/lang_bg_tb.png") no-repeat center center fixed;
+        background-attachment:local;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        }
+        
+    #txt{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: left;
+        color:#FFFFFF;
+        margin-bottom:90%;
+    }
+
+    #txt #wel{ 
+        font-family:NotoSansCJKKR-Bold;
+        font-size: 36px;
+        margin-right:0.555em;
+    }
+
+    #txt #plz{ 
+        font-family:NotoSansCJKKR-Bold;
+        font-size: 34px;
+    }
+
+    #ssbike{
+        display: flex;
+        justify-content: left;
+        width:15%;
+        height:auto;
+        margin-top:5%;
+    }
+
+    #l{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+    }
+
+    #lan{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width:25em;
+        margin-top:-650px;
+      
+    }
+
+    #lan #lan_e #eng{
+        width:20em;
+        height:auto;
+    }
+
+    #lan #lan_k #kr{
+        width:20em;
+        height:auto;
+    }
+
+    #lan #lan_j #jp{
+        width:20em;
+        height:auto;
+    }
+
+    }
+
+        
+    @media all and (min-width:814px){
+        body{
+            background: url("../img/lang_bg_tb.png") no-repeat center center fixed;
+            background-attachment:local;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+    
+            }
+            
+        #txt{
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: left;
+            color:#FFFFFF;
+            margin-bottom:90%;
+        }
+    
+        #txt #wel{ 
+            font-family:NotoSansCJKKR-Bold;
+            font-size: 38px;
+            margin-right:0.555em;
+        }
+    
+        #txt #plz{ 
+            font-family:NotoSansCJKKR-Bold;
+            font-size: 36px;
+        }
+    
+        #ssbike{
+            display: flex;
+            justify-content: left;
+            width:15%;
+            height:auto;
+            margin-top:5%;
+        }
+    
+        #l{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        
+        }
+    
+        #lan{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width:25em;
+            margin-top:-700px;
+        }
+    
+        #lan #lan_e #eng{
+            width:27em;
+            height:auto;
+        }
+    
+        #lan #lan_k #kr{
+            width:27em;
+            height:auto;
+        }
+    
+        #lan #lan_j #jp{
+            width:27em;
+            height:auto;
+        }
+    }
+
+    
+    @media (min-width:1025px)and (min-height:799px){    
+        body{
+            background: url("../img/langchs_bg_d.png") no-repeat center center fixed;
+            background-attachment:local;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover; 
+            }
+
+        #a{
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: center;
+        }
+            
+        #txt{
+            position: relative;
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            color:#FFFFFF;
+            width:900px;
+            right:3em;
+        }
+    
+        #txt #wel{  
+            font-family:NotoSansCJKKR-Bold;
+            font-size: 40px;
+        }
+    
+        #txt #plz{ 
+            font-family:NotoSansCJKKR-Bold;
+            font-size: 38px;
+        }
+    
+        #ssbike{
+            display: flex;
+            justify-content: left;
+            width:7%;
+            height:auto;
+            margin-top:5%;
+        }
+    
+        #l{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:-30%;
+        }
+    
+        #lan{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width:25em;
+        }
+    
+        #lan #lan_e #eng{
+            width:20em;
+            height:auto;
+        }
+    
+        #lan #lan_k #kr{
+            width:20em;
+            height:auto;
+        }
+    
+        #lan #lan_j #jp{
+            width:20em;
+            height:auto;
+        }
+    }
+
+    @media  (min-width:1919px) and (min-height:1019px){
+            
+        #l{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:-50%;
+        }
+    }

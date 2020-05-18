@@ -2,47 +2,75 @@
 <html lang="ko">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load static %}
-        {% if count == 2 %}<script>location.href="{% url 'company_main' %}"</script>{% endif %}
-        <link rel="stylesheet" href="{% static 'css/company_main.css' %}" type="text/css"> <!--main.css 링크-->
+        <link rel="stylesheet" href="{% static 'css/company_main3.css' %}" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript"></script>
-        <script src="{% static 'js/main_company.js' %}"></script>
-        <title>main</title>
+        <script src="{% static 'js/coompany_main.js' %}"></script>
+        <title>company_main</title>
     </head>
+ 
     <body>
-        {% load i18n %}
-        <form action = "{% url 'company_main' %}" name = "lanForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
-            <div id="container">
-                {% for user in users %}
-                <div id="member_name" name="member_name">{{user.name}}</div>
-                {% endfor %}
-                <div id="n" name="n">{% trans "님," %}</div>
-                <div id="welcome" name="welcome">{% trans "반갑습니다!" %}</div>
-                <img id="notice-bt-compy" name="notice-bt-compy" src="{% static 'img/notice-bt-compy.png' %}">
-                <img id="notice-main-box" src="{% static 'img/notice-main-box.png' %}">
-                <div id="name" name="name">전은정</div>
-                <div id="nim">님,</div>
-                <div id="r_day">2020년 2월 19일</div>
-                <br>
-                <div id="r_time">15:00~19:00</div>
-                <br>
-                <div id="r">한 대 대여하셨습니다.</div>
-                <img id="main-setting" name="main-setting" src="{% static 'img/main-setting.png' %}" onclick="location.href='setting'"> <!--설정버튼 삽입-->
-                <select id="r_year" name="r_year" data-default-option="년도" data-unit="y" >
-                    <option value="년도">년도</option>
-                </select>
-    
-                <select id="r_month" name="r_month" data-default-option="월" data-unit="m">
-                    <option value="월">월</option>
-                </select>
-    
-                <select id="r_date" name="r_date"  data-default-option="일" data-unit="d">
-                    <option value="일">일</option>
-                </select>
-              
-                
-                
-            </div>
-        </form>
+       {% load static %}
+       <img id="logo" src="{% static 'img/ss_lg.png' %}">
+       <img id="gonotice" src="{% static 'img/if_b.png' %}"  onclick="location.href='/notice'">
+       <img id="goset" src="{% static 'img/st_bt.png' %}"  onclick="location.href='index/setting/'">
+
+       <div id="text">
+           <span id="user">기후현지점</span>
+           <span id="nim">님,</span><br                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    >
+           <span id="welcome">반갑습니다!</span>
+       </div>
+
+    <div id="a">
+        <div class="back">
+        <div class="reservation_list">
+            <span id="user_name">전은정</span>
+            <span id="user_nim">님이</span>
+            <span id="user_date">2020년 05월 11일</span>
+            <br>
+            <span id="user_time">14:00~19:00</span>
+            <br>
+            <span id="user_num">1대</span>
+            <span id="user_end">예약하셨습니다.</span>
+            <br>
+        </div>
+      </div>
+    </div>
+
+    <div id="a">
+        <div class="back">
+        <div class="reservation_list">
+            <span id="user_name">전은정</span>
+            <span id="user_nim">님이</span>
+            <span id="user_date">2020년 05월 11일</span>
+            <br>
+            <span id="user_time">14:00~19:00</span>
+            <br>
+            <span id="user_num">1대</span>
+            <span id="user_end">예약하셨습니다.</span>
+            <br>
+        </div>
+      </div>
+    </div>
+
+    <div id="a">
+        <div class="back">
+        <div class="reservation_list">
+            <span id="user_name">전은정</span>
+            <span id="user_nim">님이</span>
+            <span id="user_date">2020년 05월 11일</span>
+            <br>
+            <span id="user_time">14:00~19:00</span>
+            <br>
+            <span id="user_num">1대</span>
+            <span id="user_end">예약하셨습니다.</span>
+            <br>
+        </div>
+      </div>
+    </div>
+
     </body>
 </html>
