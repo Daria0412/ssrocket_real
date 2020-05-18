@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{% static 'css/login1.css' %}" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript"></script>
-        <script src="{% static 'js/login.js' %}"></script>
+        <script src="{% static 'js/signin.js' %}"></script>
         <title>login</title>
     </head>
 
@@ -23,7 +23,7 @@
         </div>
 
         <div id="e">
-        <form action = "{% url 'login' %}" name = "loginForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
+        <form action = "{% url 'signin' %}" name = "loginForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
             <div id="form">
 
                 <span id="w">

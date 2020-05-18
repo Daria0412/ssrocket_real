@@ -10,12 +10,12 @@ class Sign:
 
     def signin(request, id,pwd):#로그인
         users = User.objects.filter(id = id)
-        response = render(request, 'imagine_bic/signin.html',{"okay":1,"users":users})
+        response = render(request, 'imagine_bic/login.html',{"okay":1,"users":users})
         if users is not None:
             for user in users:
                 if id == user.id and pwd == user.pwd:
                     if user.info == 0:
-                        response = render(request, 'imagine_bic/main.html',{"okay":1,"users":users})
+                        response = render(request, 'imagine_bic/index.html',{"okay":1,"users":users})
                     else:
                         response = render(request,'imagine_bic/company_main.html',{"count":2,"users":users})
                     response.set_cookie('id',id)
@@ -31,7 +31,7 @@ class Sign:
         pwd = request.POST['pwd']
         user = User.objects.create(id = id, name = name, pwd = pwd, info = user_info)
         if user_info == "0":
-            return render(request, 'imagine_bic/signin.html')
+            return render(request, 'imagine_bic/login.html')
         response = render(request, 'imagine_bic/signup2_company.html',{"count":1})
         response.set_cookie('id',id)
         return response

@@ -31,7 +31,7 @@ def index(request):
         user_info = user.info
     if user_info == 0:
         print("이 유저는 여행자")
-        response = render(request, 'imagine_bic/main.html', {'users':users,"count":1})
+        response = render(request, 'imagine_bic/index.html', {'users':users,"count":1})
         response.set_cookie('id',id)
         return response
     return render(request, 'imagine_bic/company_main.html',{'users':users,"count":1})
@@ -231,7 +231,7 @@ def check_reservation(request, pk):
 def choose_use(request):
     if request.method == "POST":
         user_info = request.POST['user_info']
-        response = render(request, 'imagine_bic/signin.html',{"count":1})
+        response = render(request, 'imagine_bic/login.html',{"count":1})
         response.set_cookie('user_info',user_info)
         return response
     return render(request, 'imagine_bic/choose_use.html',{"count":1})
@@ -253,7 +253,7 @@ def signup_company(request):
         e_business = request.POST['e_business']
         company_info = request.POST['company_info']
         company = Company.objects.create(member_name = name, company_addr = company_addr,company_phone=company_phone,bicycle_num=bicycle_num,member_id=id, s_business=s_business,e_business=e_business,company_info=company_info,company_loc=company_loc,rent_num=0)
-        response = render(request, 'imagine_bic/signin.html',{"count":1})
+        response = render(request, 'imagine_bic/login.html',{"count":1})
         response.delete_cookie('id')
         return response
     return render(request, 'imagine_bic/signup2_company.html')
