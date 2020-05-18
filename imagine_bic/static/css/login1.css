@@ -1,0 +1,458 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../font/NotoSansCJKkr-Bold.otf") }
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../font/NotoSansCJKkr-Medium.otf") } 
+
+body{
+    background: url("../img/loginbg\ \(1\).png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#backbt{
+    margin-top:20px;
+    margin-left:20px;
+}
+#txt{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-top:70%;
+    }
+
+#txt #l_b{
+    height: 9%;
+    margin-right:-3.649em;
+}
+
+#txt #join_b{
+    height:9%;
+    margin-top: -1.5px;
+}
+
+#w{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-top:20%;
+    margin-bottom:3.055em;
+}
+
+#w #welcome{
+    width:55%;
+}
+#form #input_email{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#form #input_email #id{
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 16px;
+    color:rgb(114, 111, 111);
+    border:none;
+    width:230px;
+}
+
+#form #input_pw{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:3.055em;
+    margin-bottom:2.055em;
+}
+
+#form #input_pw #pwd{
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 16px;
+    color:rgb(114, 111, 111);
+    border:none;
+    width:230px;
+}
+
+#bt{
+    display: flex;
+    justify-content: center;
+}
+
+#joinBt{
+    width:25%;
+    height: auto;
+    filter: drop-shadow(30px 30px 30px #dbdbdb); 
+}
+
+
+@media (min-width:359px) and (max-height:700px){
+    
+body{
+    background: url("../img/loginbg\ \(1\).png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+
+#txt{
+    display: flex;
+    justify-content: space-around;
+    margin-top:50%;
+    }
+}
+
+@media (min-width:400px) and (max-height:740px){
+    body{
+        background: url("../img/sup-bg\ \(1\).png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        }
+
+    #txt{
+        display: flex;
+        justify-content: space-around;
+        margin-top:25%;
+        }
+    }
+
+@media all and (min-width:500px){
+    body{
+        background: url("../img/join_bg_tb.png") no-repeat center center fixed;
+        background-attachment:local;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        }
+
+        #backbt{
+            width:7%;
+            margin-top:70px;
+            margin-left:70px;
+        }
+
+        #txt{
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            margin-top:40%;
+        }
+
+        #txt #l_b{
+            width:10%;
+            height:10%;
+            margin-right:-20.649em;
+        }
+
+        #txt #join_b{
+            width:13%;
+            height:13%;
+            margin-top:-2px;
+        }
+
+        #form #bar{
+            width:430px;
+        }
+
+        #w{
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            margin-top:15%;
+            margin-bottom:4.055em;
+        }
+        
+        #w #welcome{
+            width:45%;
+        }
+        
+        #form #input_email{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:20px;
+            width:500px;
+        }
+        
+        #form #input_email #id{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(114, 111, 111);
+            border:none;
+            width:400px;
+        }
+
+        #form #input_pw{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:3.055em;
+            margin-bottom:1.555em;
+            width:500px;
+        }
+        
+        #form #input_pw #pwd{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(114, 111, 111);
+            width:400px;
+        }
+
+        #form #a{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+   
+        #bt{
+            display: flex;
+            justify-content: center;
+        }
+
+        #joinBt{
+            width:25%;
+            margin-top:70px;
+            margin-bottom:100px;
+            filter: drop-shadow(30px 30px 30px #dbdbdb); 
+        }
+    }
+
+        
+    @media all and (min-width:814px){
+        body{
+            background: url("../img/join_bg_tb.png") no-repeat center center fixed;
+            background-attachment:local;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            }
+    
+            #backbt{
+                width:7%;
+                margin-top:70px;
+                margin-left:70px;
+            }
+    
+            #txt{
+                position: relative;
+                display: flex;
+                justify-content: space-around;
+                margin-top:46%;
+            }
+    
+            #txt #l_b{
+                width:10%;
+                height:10%;
+                margin-right:-25.649em;
+            }
+    
+            #txt #join_b{
+                width:13%;
+                height:13%;
+                margin-top:-3px;
+            }
+
+                
+            #form #bar{
+                width:540px;
+            }
+
+            #w{
+                position: relative;
+                display: flex;
+                justify-content: space-around;
+                margin-top:15%;
+                margin-bottom:4.055em;
+            }
+            
+            #w #welcome{
+                width:35%;
+            }
+            
+    
+            #form #input_email{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top:30px;
+                width:530px;
+            }
+            
+            #form #input_email #id{
+                font-family:NotoSansCJKKR-Regular;
+                font-size: 34px;
+                color:rgb(114, 111, 111);
+                border:none;
+                width:530px;
+            }
+    
+            
+            #form #input_pw{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top:7.055em;
+                margin-bottom:2.555em;
+                width:530px;
+            }
+    
+     
+            
+            #form #input_pw #pwd{
+                font-family:NotoSansCJKKR-Regular;
+                font-size: 34px;
+                color:rgb(111, 111, 111);
+                width:530px;
+            }
+            
+      
+            #form #a{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            #bt{
+                display:flex;
+                justify-content: center;
+            }
+            
+            #joinBt{
+                width:20%;
+                margin-top:70px;
+                margin-bottom:100px;
+                filter: drop-shadow(30px 30px 30px #dbdbdb); 
+            }
+    }
+
+    @media (min-width:1439px) and (min-height:899px){   
+        body{
+        background: url("../img/uj_bg_d.png") no-repeat center center fixed;
+        background-attachment:local;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        }
+
+        #e{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #form{
+            width:2+00px;
+        }
+        #backbt{
+            width:3%;
+            margin-top:70px;
+            margin-left:70px;
+        }
+
+        #txt{
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            margin-top:30%;
+        }
+
+        #txt #l_b{
+            width:4%;
+            height:4%;
+            margin-right:-55.649em;
+        }
+
+        #txt #join_b{
+            width:5%;
+            height:5%;
+            margin-top:-3px;
+        }
+
+        #form #bar{
+            width:440px;
+        }
+
+        #w{
+            display:flex;
+            justify-content: center;
+        }
+        #w #welcome{
+            width:30%;
+        }
+
+        #form #input_email{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:30px;
+            width:430px;
+        }
+        
+        #form #input_email #id{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(114, 111, 111);
+            border:none;
+            width:430px;
+        }
+
+        
+        #form #input_pw{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top:7.055em;
+            margin-bottom:2.555em;
+            width:430px;
+        }
+
+        
+        #form #input_pw #pwd{
+            font-family:NotoSansCJKKR-Regular;
+            font-size: 24px;
+            color:rgb(111, 111, 111);
+            width:530px;
+        }
+        
+        #bt{
+            display: flex;
+            justify-content: center;
+        }
+
+        #joinBt{
+            width:170px;
+            height:50px;
+            filter: drop-shadow(30px 30px 30px #dbdbdb); 
+        }
+
+    }
+    
+    
+    @media  (min-width:1919px) and (min-height:1019px){
+
+        #txt{
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            margin-top:20%;
+        }
+
+        #txt #l_b{
+            width:4%;
+            height:4%;
+            margin-right:-85.649em;
+        }
+
+        #txt #join_b{
+            width:5%;
+            height:5%;
+            margin-top:-3px;
+        }
+
+    }

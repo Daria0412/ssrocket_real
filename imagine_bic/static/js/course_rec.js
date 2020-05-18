@@ -1,0 +1,3 @@
+function bkfun(){
+    history.back();
+}

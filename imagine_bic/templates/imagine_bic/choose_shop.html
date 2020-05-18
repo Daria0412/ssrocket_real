@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static 'css/choose1_shop.css' %}" type="text/css"> <!--reservation_2.css 링크-->
+        <script type="text/javascript"></script>
+        {% if count == 1 %}<script>location.href="{% url 'choose_shop' %}"</script>{% endif %}
+        <script src="{% static 'js/choose1_shop.js' %}"></script><!--reservation_2.js 링크-->
+        <title>choose_shop</title>
+    </head>
+    <body>
+        {% load static %}
+        <div id="container">
+        <img id="reservation2-bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
+        <!--뒤로가기 버튼 삽입-->
+        <a href="/index"><img id="reservation2-homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="hfun();"></a>
+        <!--홈 버튼 삽입-->
+        {% load mathfilters %}
+        {% for company in companys %}
+        <img id="rental" name=rental src="{% static 'img/reservation2-block01.png' %}" onclick="location.href='choose_shop/{{ company.company_num}}'"><!--onclick=sd()사용 원함-->
+        <div id="rental-01" name="rental-01">{{company.member_name}}</div>'
+        <div id="rental-02" name="rental-02">남은 자전거 : {{company.bicycle_num|sub:company.rent_num}}</div>'
+        <div id="rental-03" name="rental-02">{{company.company_info}}<br>{{company.company_phone}}</div>
+        {% endfor %}
+    </div>
+    </body>
+</html>

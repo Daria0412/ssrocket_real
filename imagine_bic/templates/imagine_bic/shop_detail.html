@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/shop_detail.css' %}" type="text/css"> <!--main.css 링크-->
+        <script type="text/javascript"></script>
+        <script src="{% static 'js/shop_detail.js' %}"></script>
+        <title>choose_shop_detail</title>
+    </head>
+    <body>
+        <div id="container">
+            <img id="reservation2-bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
+            <!--뒤로가기 버튼 삽입-->
+            <img id="reservation2-homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="bkfun();">
+            <!--홈 버튼 삽입-->    
+            <div id="member_name" name="member_name">{{shop.member_name}}</div>'
+            <div id="company_info" name="company_info">{{shop.company_info}}</div>
+            <div id="company_addr" name="company_addr">주소 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{shop.company_addr}}</div>
+            <div id="company_phone" name="company_phone">전화번호 &nbsp; &nbsp; &nbsp;{{shop.company_phone}}</div>
+            <div id="s_business" name="s_business">영업시간 &nbsp; &nbsp; &nbsp;XX시~XX시</div>
+        </div>
+        <form action = "." name = "shopForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
+            <input type = hidden name = company_num id = company_num value = {{shop.company_num}}>
+            <input type = submit value = {{shop.company_num}}>
+            <img id="fin-bt" src="{% static 'img/fin-bt' %}" onclick = sm()>
+            <!--<input type = submit value = "이 대여소 선택하기">-->
+        </form>
+    </body>
+</html>

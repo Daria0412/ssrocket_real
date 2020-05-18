@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+
+body{
+    background-image: url("../img/loginbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+} /*bg img 설정*/
+
+#container #login-text1{
+    position: absolute;
+    top: 850px;
+    left:200px;
+} /*로그인 txt삽입*/
+
+#container #dot{
+    position: absolute;
+    top:950px;
+    left:280px;
+} /*라운드 바 삽입*/
+
+#container #join-text2{
+    position: absolute;
+    top:850px;
+    left:620px;
+} /*회원가입 txt 삽입*/
+
+#container #welcome-txt{
+    position: absolute;
+    top:1200px;
+    left:100px;
+} /*반갑습니다! txt 삽입*/
+
+#container #id{
+    position: absolute;
+    top:1450px;
+    left:130px;
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 48px;
+    color:rgb(114, 111, 111);
+    width:850px;
+    height:100px;
+    border: none;
+    background: transparent;
+    text-align: left;
+} /*user_id 입력 창*/
+
+#container #pwd{
+    position: absolute;
+    top:1650px;
+    left:130px;
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 48px;
+    color:rgb(114, 111, 111);
+    width:850px;
+    height:100px;
+    border: none;
+    background: transparent;
+    text-align: left;
+} /*비밀번호 입력 창*/
+
+#container #bar-long01{
+    position: absolute;
+    top:1550px;
+    left:120px;
+} /*바 위치 설정*/
+
+#container #bar-long02{
+    position: absolute;
+    top:1750px;
+    left:120px;
+} /*바 위치 설정*/
+
+#container #loginbt{
+    position: absolute;
+    top:1950px;
+    left:620px;
+    filter: drop-shadow(30px 30px 30px #e6e4e4); 
+ } /*loginbt 위치 설쩡*/        
+
+#container #bkbt{
+    position: absolute;
+    top:100px;
+    left:60px;
+} /*<- 버튼 위치 설정*/
+
+input::-webkit-input-placeholder {
+    position: absolute;
+    color:rgb(138, 133, 133);
+    font-family:NotoSansCJKKR-Regular;
+    font-size:48px;
+} /*placeholder 보여지는 부분 css*/

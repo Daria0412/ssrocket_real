@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+
+body{
+    background-image: url("../img/who-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+} /*bg img 설정*/
+
+#container #traveler{
+    position: absolute;
+    top:1300px;
+    left:150px;
+} /*여행자 위치 설정*/
+
+#container #company{
+    position: absolute;
+    top:1300px;
+    left:600px;
+} /*업체 위치 설정*/
+
+

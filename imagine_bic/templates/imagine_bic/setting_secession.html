@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        {%load static%}
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static 'css/setting1_secession.css' %}" type="text/css"> <!--reservation_3.css 링크-->
+        <script type="text/javascript"></script>
+        {% if count == 1 %}<script>location.href="/index/setting/secession"</script>{% endif %}
+        <script src="{% static 'js/setting1_secession.js' %}"></script> <!--choose_time.js 링크-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <title>setting_secession</title>
+    </head>
+    <body>
+        {%load static%}
+        <div id="container">
+        <div id="q">정말 떠나시겠습니까?</div>
+        <img id="yes-bt" src="{% static 'img/yes-bt.png' %}" onclick="byefun();">
+        <img id="no-bt" src="{% static 'img/no-bt.png' %}" onclick="bkfun();">
+    </div>
+    </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static 'css/signup1.css' %}" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript"></script>
+        <script src="{% static 'js/signup_company.js' %}"></script>
+        <title>signup</title>
+        <script>
+        /* 중복체크! */
+        $(function(){
+            /* 아이디 수정했을 때 */
+            $('#id').change(function () {
+                $('#barEmailck').show();
+            });
+    
+            // 중복확인 버튼을 눌렀을 때
+            $('#barEmailck').click(function(){
+                console.log("버튼 눌림");
+                var id = $('#id').val();
+                // 이메일 란이 공백일 경우
+                if(id == ''){
+                    alert('이메일을 입력해주세요.');
+                    return false;
+                }
+                // debugger;
+                $.ajax({
+                    url:'check_email',
+                    data: {
+                        id: id
+                    },
+                    type:'get',
+                    dataType:'json',
+                    success:function(response){
+                        console.log("ajax 들어감");
+                        if(response.result != 'success'){
+                            console.error(response.data)
+                            return;
+                        }
+                        if(response.data == 'exist'){
+                            alert("존재하는 이메일 입니다!");
+                            $('#id').val('').focus();
+                            return;
+                        } else {
+                            alert("사용 가능한 이메일입니다!");
+                            $("#joinBt").attr("id_check_result", "success");
+                            return;
+                        }
+                        // console.log(response)
+                    },
+                    error : function(xhr, error){
+                        alert("서버와의 통신에서 문제가 발생했습니다.");
+                        console.error("error : " + error);
+                    }
+                });
+
+                return false;
+            });
+    
+            // 가입 버튼 눌렀을 때
+            $('#joinForm').submit(function() {
+                if($("#joinBt").attr("id_check_result") == "fail") {
+                    alert("이메일 중복 확인를 해주시기 바랍니다.");
+                    $("#id").focus();
+                    return false;
+                }
+            });
+        
+            $("#id").on("propertychange change keyup paste input", function(){
+                $('#barEmailck').show();
+                $("#joinBt").attr("id_check_result", "fail");
+            });
+        });
+
+        // 비밀번호 확인
+        $(function(){ 
+            $("#alert-success").hide(); 
+            $("#alert-danger").hide(); 
+            $("input").keyup(function(){ 
+                var pwd = $("#pwd").val(); 
+                var pwdCk = $("#pwdck").val(); 
+                if(pwd != "" || pwdCk != ""){ 
+                    if(pwd == pwdCk){ 
+                        $("#alert-success").show(); 
+                        $("#alert-danger").hide(); 
+                        $("#joinBt").removeAttr("disabled"); 
+                    } else{ 
+                        $("#alert-success").hide(); 
+                        $("#alert-danger").show(); 
+                        $("#joinBt").attr("disabled", "disabled"); 
+                    } 
+                } 
+            }); 
+        });
+
+    </script>
+    </head>
+
+    <body>
+        {% load static %}
+        <form action = "{% url 'signup' %}" name = "joinForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
+            <div id="container">
+                <img id="bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
+                 <!--뒤로가기 버튼 삽입-->
+                <a href="{% url 'signin'%}">
+                    <img id="login-text2" name="login-text2" src="{% static 'img/login-text2.png' %}">
+                </a>
+                <img id="join-text1" src="{% static 'img/join-text1.png' %}">
+                <img id="bar-round" src="{% static 'img/dot.png' %}">
+                <img id="bar-01" src="{% static 'img/bar-gray.png' %}">
+                <img id="bar-02" src="{% static 'img/bar-gray.png' %}">
+                <img id="bar-03" src="{% static 'img/bar-gray.png' %}">
+                <img id="bar-04" src="{% static 'img/bar-gray.png' %}">
+                <img id="barEmailck" src="{% static 'img/bar-rck.png' %}">
+                <img id="joinBt"  src="{% static 'img/next-bt.png' %}" onclick = "sm()">
+                <input type="text" name="name" id="name" placeholder="Name"/>
+                <input type="email" name="id" id="id" placeholder="E-mail"/>
+                <input type="password" name="pwd" id="pwd" placeholder="Password"/>
+                <input type="password" name="pwdck" id="pwdck" placeholder="Password Re-Enter"/>
+                <input type='hidden' id=info name = info value = "1">
+            </div>
+        </form>
+    </body>
+</html>

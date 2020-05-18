@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/choose_lan.css' %}" type="text/css"> <!--choose.css 링크-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <script type="text/javascript"></script>
+        <script src="{% static 'js/choose1_lan.js' %}"></script>
+        <title>choose_lan</title>
+    </head>
+    <body>
+        {% load static %}
+        <form action = "{% url 'choose_lan' %}" name = "lanForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
+            <div id="container">
+                <div id="lan_txt01">안녕하세요!</div>
+                <div id="lan_txt02">만나서 반갑습니다!</div>
+                <img id="kr-bt1" src="{% static 'img/kr-bt1.png' %}" onclick="ch01fun();">
+                <img id="jp-bt1" src="{% static 'img/jp-bt1.png' %}" onclick="ch02fun();">
+                <img id="eg-bt1" src="{% static 'img/eg-bt1.png' %}" onclick="ch03fun();">
+                <input type = "hidden" name = "lan" id = "lan" value = "">
+            </div>
+        </form>
+    </body>
+</html>

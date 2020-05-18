@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        {% if count == 1 %}<script>location.href="/signup/company"</script>{% endif %}
+        <link rel="stylesheet" href="{% static 'css/signup2_company.css' %}" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript"></script>
+        <script src="{% static 'js/signup2_company.js' %}"></script>
+        <title>signup2_company</title>
+    </head>
+
+    <body>
+        {% load static %}
+        <form action = "{% url 'signup_company' %}" name = "joinForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
+            <div id="container">
+                <img id="bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
+                 <!--뒤로가기 버튼 삽입-->
+                    <div id="signup2_company">회원가입</div>
+                    <img id="bar-round" src="{% static 'img/dot.png' %}">
+                    <img id="bar-01" src="{% static 'img/bar-gray.png' %}">
+                    <img id="bar-02" src="{% static 'img/bar-gray.png' %}">
+                    <img id="bar-03" src="{% static 'img/bar-gray.png' %}">
+                    <img id="bar-04" src="{% static 'img/bar-gray.png' %}">
+                    <img id="bar-05" src="{% static 'img/bar-short.png' %}">
+                    <img id="bar-06" src="{% static 'img/bar-short.png' %}">
+                    <img id="joinBt"  src="{% static 'img/fin-bt.png' %}" onclick = "sm()">
+                    <input type="text" name="company_addr" id="company_addr" placeholder="Company address"/>
+                    <input type="test" name="company_loc" id="company_loc" placeholder="Company location"/>
+                    <input type="text" name="company_phone" id="company_phone" placeholder="Telephone"/>
+                    <input type="text" name="bicycle_num" id="bicycle_num" placeholder="Bicycle amount"/>
+                    <input type="datetime" name="s_business" id="s_business" placeholder="Open time"/> 
+                    <input type="datetime" name="e_business" id="e_business" placeholder="Close time"/>
+                    <div id="company_info_txt">회사에 대한 정보를 작성해주세요!</div>
+                    <img id="grey-box" src="{% static 'img/grey-line-box.png'%}">
+                    <textarea name="company_info" id="company_info" placeholder="About your company"/>               
+                
+            </div>
+        </form>
+    </body>
+</html>

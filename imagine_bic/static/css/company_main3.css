@@ -1,0 +1,509 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../font/NotoSansCJKkr-Bold.otf") }
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../font/NotoSansCJKkr-Medium.otf") } 
+
+body{
+    background: url("../img/mc_bg.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#logo{
+    position: relative;
+    width:30%;
+    height:auto;
+    margin-top:5%;
+    margin-left:4%;
+}
+
+#gonotice{
+    position: relative;
+    width:25%;
+    height:auto;
+    margin-top:6%;
+    margin-left:20%;
+    
+}
+
+#goset{
+    position: relative;
+    float: right;
+    margin-top:5.5%;
+    margin-right:5%;
+}
+
+#text{
+    position: relative;
+    margin-top:10%;
+    margin-left:3%;
+    margin-bottom:10%;
+}
+
+#text #user{
+    font-family: NotoSansCJKKR-Black;
+    font-size:2.688em;
+    color:white;
+}
+
+#text #nim{
+    font-family: NotoSansCJKKR-Regular;
+    font-size:2.388em;
+    color:white;
+}
+
+#text #welcome{
+    margin-left:1%;
+    font-family: NotoSansCJKKR-Regular;
+    font-size:2.188em;
+    color:white;
+}
+#a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#a .back{
+    position: relative;
+    display: flex;
+    justify-content:flex-start;
+    width:90%;
+    background-color: white;
+    border-radius: 25px;
+    filter: drop-shadow(30px 30px 30px #d9d9d9);
+    margin-top:7%;
+   
+}
+
+.back .reservation_list{
+    position: relative;
+    margin-top:0.8em;
+    margin-bottom: 0.8em;
+}
+
+.reservation_list #user_name{
+    margin-left: 2em;
+    font-family: NotoSansCJKKR-Bold;
+    font-size:0.888em;
+    color:black;
+}
+
+.reservation_list #user_nim{
+    font-family: NotoSansCJKKR-Regular;
+    font-size:0.888em;
+    color:black;
+}
+
+.reservation_list #user_date{
+    font-family: NotoSansCJKKR-Bold;
+    font-size:0.888em;
+    color:black;
+}
+
+.reservation_list #user_time{
+    margin-left: 2em;
+    font-family: NotoSansCJKKR-Bold;
+    font-size:0.888em;
+    color:black;
+}
+
+.reservation_list #user_num{
+    margin-left: 2em;
+    font-family: NotoSansCJKKR-Bold;
+    font-size:0.888em;
+    color:black;
+}
+
+.reservation_list #user_end{
+    font-family: NotoSansCJKKR-Regular;
+    font-size: 0.888em;
+    color:black;
+    margin-bottom:1em;
+}
+
+@media all and (min-width:500px){
+    body{
+        background: url("../img/mcm_bg_tb.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    #logo{
+        position: relative;
+        width:27%;
+        height:auto;
+        margin-top:5%;
+        margin-left:10%;
+    }
+    
+    #gonotice{
+        position: relative;
+        width:20%;
+        height:auto;
+        margin-top:7%;
+        margin-left:25%;
+        
+    }
+    
+    #goset{
+        position: relative;
+        float: right;
+        width:8%;
+        margin-top:5.5%;
+        margin-right:4%;
+    }
+    
+    #text{
+        position: relative;
+        margin-top:5%;
+        margin-left:9%;
+        margin-bottom:10%;
+    }
+    
+    #text #user{
+        font-family: NotoSansCJKKR-Black;
+        font-size:5.088em;
+        color:white;
+    }
+    
+    #text #nim{
+        font-family: NotoSansCJKKR-Regular;
+        font-size:4.788em;
+        color:white;
+    }
+    
+    #text #welcome{
+        margin-left:1%;
+        font-family: NotoSansCJKKR-Regular;
+        font-size:4.588em;
+        color:white;
+    }
+    #a{
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #a .back{
+        position: relative;
+        display: flex;
+        justify-content:flex-start;
+        width:80%;
+        background-color: white;
+        border-radius: 45px;
+        filter: drop-shadow(30px 30px 30px #d9d9d9);
+        margin-top:7%;
+       
+    }
+    
+    .back .reservation_list{
+        position: relative;
+        margin-top:2em;
+        margin-bottom: 2em;
+    }
+    
+    .reservation_list #user_name{
+        margin-left: 2em;
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.488em;
+        color:black;
+    }
+    
+    .reservation_list #user_nim{
+        font-family: NotoSansCJKKR-Regular;
+        font-size:1.488em;
+        color:black;
+    }
+    
+    .reservation_list #user_date{
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.488em;
+        color:black;
+    }
+    
+    .reservation_list #user_time{
+        margin-left: 2em;
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.488em;
+        color:black;
+    }
+    
+    .reservation_list #user_num{
+        margin-left: 2em;
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.488em;
+        color:black;
+    }
+    
+    .reservation_list #user_end{
+        font-family: NotoSansCJKKR-Regular;
+        font-size: 1.488em;
+        color:black;
+        margin-bottom:1em;
+    }
+}
+
+@media (max-height:1000px) and (min-width:1025px){
+        
+    body{
+        background: url("../img/um_bg_d.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    #logo{
+        position: relative;
+        width:13%;
+        height:auto;
+        margin-top:5%;
+        margin-left:7%;
+    }
+
+    #gonotice{
+        position: relative;
+        width:11%;
+        height:auto;
+        margin-top:6%;
+        margin-left:57%;
+        
+    }
+
+    #goset{
+        position: relative;
+        float: right;
+        width: 4%;
+        margin-top:5.5%;
+        margin-right:4%;
+    }
+
+    #text{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top:10%;
+        margin-left:3%;
+        margin-bottom:5%;
+    }
+
+    #text #user{
+        font-family: NotoSansCJKKR-Black;
+        font-size:4.688em;
+        color:white;
+    }
+
+    #text #nim{
+        font-family: NotoSansCJKKR-Regular;
+        font-size:4.388em;
+        color:white;
+        margin-top:0.7%;
+    }
+
+    #text #welcome{
+        margin-left:1%;
+        font-family: NotoSansCJKKR-Regular;
+        font-size:4.188em;
+        color:white;
+        margin-top:0.8%;
+    }
+
+    #a{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #a .back{
+        position: relative;
+        display: flex;
+        justify-content:flex-start;
+        width:50%;
+        background-color: white;
+        border-radius: 25px;
+        filter:none;
+        margin-top:3%;
+    }
+
+    .back .reservation_list{
+        position: relative;
+        margin-top:2em;
+        margin-bottom: 2em;
+    }
+
+    .reservation_list #user_name{
+        margin-left: 2em;
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.188em;
+        color:black;
+    }
+
+    .reservation_list #user_nim{
+        font-family: NotoSansCJKKR-Regular;
+        font-size:1.188em;
+        color:black;
+    }
+
+    .reservation_list #user_date{
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.188em;
+        color:black;
+    }
+
+    .reservation_list #user_time{
+        margin-left: 2em;
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.188em;
+        color:black;
+    }
+
+    .reservation_list #user_num{
+        margin-left: 2em;
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.188em;
+        color:black;
+    }
+
+    .reservation_list #user_end{
+        font-family: NotoSansCJKKR-Regular;
+        font-size: 1.188em;
+        color:black;
+        margin-bottom:1em;
+    }
+}
+
+@media (min-width:1919px) and (min-height:1079px){
+    body{
+        background: url("../img/um_bg_d.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    #logo{
+        position: relative;
+        width:13%;
+        height:auto;
+        margin-top:5%;
+        margin-left:10%;
+    }
+    
+    #gonotice{
+        position: relative;
+        width:10%;
+        height:auto;
+        margin-top:5%;
+        margin-left:55%;
+        
+    }
+    
+    #goset{
+        position: relative;
+        float: right;
+        width:4%;
+        margin-top:4%;
+        margin-right:4%;
+    }
+    
+    #text{
+        position: relative;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        margin-top:10%;
+        text-align: center;
+        margin-right: 9%;
+        margin-bottom:10%;
+    }
+    
+    #text #user{
+        font-family: NotoSansCJKKR-Black;
+        font-size:5.688em;
+        color:white;
+    }
+    
+    #text #nim{
+        font-family: NotoSansCJKKR-Regular;
+        font-size:5.188em;
+        color:white;
+        margin-top: 0.7%;
+    }
+    
+    #text #welcome{
+        margin-left:1%;
+        font-family: NotoSansCJKKR-Regular;
+        font-size:5.088em;
+        color:white;
+        margin-top: 0.7%;
+    }
+    #a{
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #a .back{
+        position: relative;
+        display: flex;
+        justify-content:flex-start;
+        width:40%;
+        background-color: white;
+        border-radius: 45px;
+        filter: none;
+        margin-top:3%;
+       
+    }
+    
+    .back .reservation_list{
+        position: relative;
+        margin-top:3em;
+        margin-bottom: 3em;
+    }
+    
+    .reservation_list #user_name{
+        margin-left: 1.7em;
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.888em;
+        color:black;
+    }
+    
+    .reservation_list #user_nim{
+        font-family: NotoSansCJKKR-Regular;
+        font-size:1.688em;
+        color:black;
+    }
+    
+    .reservation_list #user_date{
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.688em;
+        color:black;
+    }
+    
+    .reservation_list #user_time{
+        margin-left: 2em;
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.688em;
+        color:black;
+    }
+    
+    .reservation_list #user_num{
+        margin-left: 2em;
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.688em;
+        color:black;
+    }
+    
+    .reservation_list #user_end{
+        font-family: NotoSansCJKKR-Regular;
+        font-size: 1.688em;
+        color:black;
+        margin-bottom:1em;
+    }
+}

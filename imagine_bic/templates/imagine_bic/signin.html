@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static 'css/signin.css' %}" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript"></script>
+        {% if count == 1 %}<script>location.href="{% url 'signin' %}"</script>{% endif %}
+        <script src="{% static 'js/signin.js' %}"></script>
+        <title>signin</title>
+    </head>
+    <body>
+        {% load static %}
+        <form action = "{% url 'signin' %}" name = "loginForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
+            <div id="container">
+                <img id="bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="location.href='/'">
+                 <!--뒤로가기 버튼 삽입-->
+                <img id="login-text1"  src="{% static 'img/login-text1.png' %}">
+                <img id="dot" src="{% static 'img/dot.png' %}">
+                <a href="{% url 'signup'%}"><img id="join-text2" src="{% static 'img/join-text2.png' %}"></a>
+                <img id="welcome-txt"  src="{% static 'img/welcome-txt.png' %}">
+                <img id="bar-long01"  src="{% static 'img/bar-gray.png' %}">
+                <img id="bar-long02"  src="{% static 'img/bar-gray.png' %}">
+                <img id="loginbt"  src="{% static 'img/lbt.png' %}" onclick = "sm()">
+                <input type="id" name="id" id="id" placeholder="Id"/>
+                <input type="password" name="pwd" id="pwd" placeholder="Password"/>
+        </div>
+    </form>
+            </div>
+        </form>
+    </body>
+</html>

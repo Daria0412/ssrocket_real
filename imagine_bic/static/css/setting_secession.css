@@ -1,0 +1,167 @@
+
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../font/NotoSansCJKkr-Bold.otf") }
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../font/NotoSansCJKkr-Medium.otf") } 
+
+body{
+    background: url("../img/set_se.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#bt{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    margin-top:20em;
+}
+
+#bt #yes{
+    margin-right:-5.2em;
+}
+
+
+@media all and (min-height:755px){
+    #bt{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        margin-top:25em;
+    }
+    
+}
+
+
+@media all and (min-width:500px){
+    body{
+        background: url("../img/set_se.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    #bt{
+        position: relative;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        margin-top:35em;
+    }
+    
+    #bt #yes{
+        width:25%;
+        height:auto;
+        margin-right:-15.2em;
+    }
+
+    #bt #no{
+        width:25%;
+        height:auto;
+    }
+}
+
+@media all and (min-height:1230px){
+    
+    #bt{
+        position: relative;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        margin-top:45em;
+    }
+    
+}
+
+@media  (min-width:1919px) and (max-width:2000px){
+
+    body{
+        background: url("../img/set_se_d.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    #bt{
+        position: relative;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        margin-top:35em;
+    }
+    
+    #bt #yes{
+        width:10%;
+        height:auto;
+        margin-right:-90.2em;
+    }
+
+    #bt #no{
+        width:10%;
+        height:auto;
+    }
+}
+
+
+
+
+
+@media  (min-height:900px) and (max-height:960px){    
+    #bt{
+        position: relative;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        margin-top:30em;
+    }
+}
+
+@media  all and (min-width:1025px){    
+    body{
+        background: url("../img/set_se_d.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    #bt{
+        position: relative;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        margin-top:30em;
+    }
+    #bt #yes{
+        width:10%;
+        height:auto;
+        margin-right:-60.2em;
+    }
+
+    #bt #no{
+        width:10%;
+        height:auto;
+    }
+}
+
+@media (min-width:1919px) and (min-height:1079px){
+    #bt{
+        position: relative;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        margin-top:40em;
+    }
+    #bt #yes{
+        width:10%;
+        height:auto;
+        margin-right:-90.2em;
+    }
+
+}

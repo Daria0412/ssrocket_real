@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        {% load static %}
+        {% if count == 2 %}<script>location.href="{% url 'company_main' %}"</script>{% endif %}
+        <link rel="stylesheet" href="{% static 'css/company_main.css' %}" type="text/css"> <!--main.css 링크-->
+        <script type="text/javascript"></script>
+        <script src="{% static 'js/main_company.js' %}"></script>
+        <title>main</title>
+    </head>
+    <body>
+        {% load i18n %}
+        <form action = "{% url 'company_main' %}" name = "lanForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
+            <div id="container">
+                {% for user in users %}
+                <div id="member_name" name="member_name">{{user.name}}</div>
+                {% endfor %}
+                <div id="n" name="n">{% trans "님," %}</div>
+                <div id="welcome" name="welcome">{% trans "반갑습니다!" %}</div>
+                <img id="notice-bt-compy" name="notice-bt-compy" src="{% static 'img/notice-bt-compy.png' %}">
+                <img id="notice-main-box" src="{% static 'img/notice-main-box.png' %}">
+                <div id="name" name="name">전은정</div>
+                <div id="nim">님,</div>
+                <div id="r_day">2020년 2월 19일</div>
+                <br>
+                <div id="r_time">15:00~19:00</div>
+                <br>
+                <div id="r">한 대 대여하셨습니다.</div>
+                <img id="main-setting" name="main-setting" src="{% static 'img/main-setting.png' %}" onclick="location.href='setting'"> <!--설정버튼 삽입-->
+                <select id="r_year" name="r_year" data-default-option="년도" data-unit="y" >
+                    <option value="년도">년도</option>
+                </select>
+    
+                <select id="r_month" name="r_month" data-default-option="월" data-unit="m">
+                    <option value="월">월</option>
+                </select>
+    
+                <select id="r_date" name="r_date"  data-default-option="일" data-unit="d">
+                    <option value="일">일</option>
+                </select>
+              
+                
+                
+            </div>
+        </form>
+    </body>
+</html>

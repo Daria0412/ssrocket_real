@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/choose_end.css' %}" type="text/css"> <!--main.css 링크-->
+        <script type="text/javascript"></script>
+        <script src="{% static 'js/choose1_end.js' %}"></script>
+        <title>choose1_end</title>
+    </head>
+    <body>
+        <div id="container">
+            <img id="course-bt-bl" src="{% static 'img/course-bt-bl.png' %}" onclick="chfun01();">
+            <img id="h-bt" src="{% static 'img/h-bt.png' %}" onclick="chfun02();">
+            <div id="name" name="name">{{name}}</div>
+            <div id="nim">님,</div>
+            <div id="finish01">예약이 완료 됐어요.</div>
+            <div id="finish02">예약확인은 홈에서 하실 수 있어요.</div>
+        </div>
+    </body>
+</html>

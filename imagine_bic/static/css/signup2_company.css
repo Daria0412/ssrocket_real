@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../font/NotoSansCJKkr-Bold.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+
+body{
+    background-image: url("../img/compn2-join-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+} /*bg img 설정*/
+
+#container #signup2_company{
+    font-family:NotoSansCJKKR-Bold;
+    font-size: 60px;
+    color:rgb(0, 0, 0);
+    position: absolute;
+    top:200px;
+    left:450px;
+} /*회원가입 txt 위치 설정*/
+
+#container #bar-round{
+    position: absolute;
+    top:300px;
+    left:550px;
+}/*round bar 위치 설정*/
+
+#container #joinBt{
+    position: absolute;
+    top:1900px;
+    left:800px;
+}/*완료 버튼 위치 설정*/
+
+#container #company_addr{
+    position: absolute;
+    top:400px;
+    left:150px;
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 48px;
+    color:rgb(114, 111, 111);
+    width:850px;
+    height:100px;
+    border: none;
+    background: transparent;
+    text-align: left;
+} /*회사 주소 입력 창*/
+
+#container #company_loc{
+    position: absolute;
+    top:600px;
+    left:150px;
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 48px;
+    color:rgb(114, 111, 111);
+    width:850px;
+    height:100px;
+    border: none;
+    background: transparent;                                                            
+    text-align: left;
+} /*회사 지역 입력 창*/
+
+#container #company_phone{
+    position: absolute;
+    top:800px;
+    left:150px;
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 48px;
+    color:rgb(114, 111, 111);
+    width:850px;
+    height:100px;
+    border: none;
+    background: transparent;
+    text-align: left;
+} /*회사 전화번호 입력 창*/
+
+#container #bicycle_num{
+    position: absolute;
+    top:1000px;
+    left:150px;
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 48px;
+    color:rgb(114, 111, 111);
+    width:850px;
+    height:100px;
+    border: none;
+    background: transparent;
+    text-align: left;
+} /*자전거 대수 입력 창*/
+
+#container #s_business{
+    position: absolute;
+    top:1200px;
+    left:150px;
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 48px;
+    color:rgb(114, 111, 111);
+    width:300px;
+    height:100px;
+    border: none;
+    background: transparent;
+    text-align: left;
+} /*오픈 시간 입력 창*/
+
+#container #e_business{
+    position: absolute;
+    top:1200px;
+    left:610px;
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 48px;
+    color:rgb(114, 111, 111);
+    width:300px;
+    height:100px;
+    border: none;
+    background: transparent;
+    text-align: left;
+} /*마감 시간 입력 창*/
+
+#container #bar-01{
+    position: absolute;
+    top:520px;
+    left:150px;
+} /*언더바*/
+
+#container #bar-02{
+    position: absolute;
+    top:720px;
+    left:150px;
+}  /*언더바*/
+
+#container #bar-03{
+    position: absolute;
+    top:920px;
+    left:150px;
+}  /*언더바*/
+
+#container #bar-04{
+    position: absolute;
+    top:1120px;
+    left:150px;
+}  /*언더바*/
+
+#container #bar-05{
+    position: absolute;
+    top:1320px;
+    left:150px;
+}  /*언더바*/
+
+#container #bar-06{
+    position: absolute;
+    top:1320px;
+    left:600px;
+}  /*언더바*/
+
+#container #bkbt{
+    position: absolute;
+    top:100px;
+    left:60px;
+} /*<- 버튼 위치 설정*/
+
+#container #grey-box{
+    position: absolute;
+    top:1500px;
+    left:140px;
+} /*회사 정보 입력창 위치 설정*/
+
+#container #company_info_txt{
+    font-family:NotoSansCJKKR-Midium;
+    font-size: 48px;
+    position: absolute;
+    top:1400px;
+    left:150px;
+    color:rgb(114, 111, 111);
+}
+
+#container #company_info{
+    top:1520px;
+    left:155px;
+    position: absolute;
+    font-family:NotoSansCJKKR-Midium;
+    border:0px;
+    font-size:36px;
+    width:600px;
+}
+
+input::-webkit-input-placeholder {
+    position: absolute;
+    color:rgb(189, 188, 188);
+    font-family:NotoSansCJKKR-Midium;
+    font-size:48px;
+} /*placeholder 보여지는 부분 css*/

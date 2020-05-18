@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../font/NotoSansCJKkr-Bold.otf")}
+@font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../font/NotoSansCJKkr-Medium.otf")}
+
+body{
+    background-image: url("../img/modi-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+} /*bg img 설정*/
+
+
+#container #reservation2-bkbt{
+    position: absolute;
+    top:100px;
+    left:40px;
+} /*<- 버튼 위치 설정*/
+
+#container #reservation2-homebt{
+    position: absolute;
+    top:100px;
+    left:940px;
+} /*home 버튼 위치 설정*/
+
+#container #name{
+    position: absolute;
+    top:800px;
+    left:150px;
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 48px;
+    color:rgb(114, 111, 111);
+    width:850px;
+    height:100px;
+    border: none;
+    background: transparent;
+    text-align: left;
+} /*이름 입력 창*/
+
+#container #id{
+    position: absolute;
+    top:1000px;
+    left:150px;
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 48px;
+    color:rgb(114, 111, 111);
+    width:850px;
+    height:100px;
+    border: none;
+    background: transparent;
+    text-align: left;
+} /*e-mail 입력 창*/
+
+#container #bar-01{
+    position: absolute;
+    top:920px;
+    left:150px;
+} /*name 언더바*/
+
+#container #bar-02{
+    position: absolute;
+    top:1120px;
+    left:150px;
+}  /*e-mail 언더바*/
+
+#container #barEmailck{
+    position: absolute;
+    top:1200px;
+    left:150px;
+    filter: drop-shadow(30px 30px 30px #e6e4e4); 
+} /*email 중복확인 bt 위치 설정*/
+
+#container #pwd{
+    position: absolute;
+    top:1400px;
+    left:150px;
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 48px;
+    color:rgb(114, 111, 111);
+    width:850px;
+    height:100px;
+    border: none;
+    background: transparent;
+    text-align: left;
+} /*pwd 입력창 위치 설정*/
+
+
+#container #pwdck{
+    position: absolute;
+    top:1600px;
+    left:150px;
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 48px;
+    color:rgb(114, 111, 111);
+    width:850px;
+    height:100px;
+    border: none;
+    background: transparent;
+    text-align: left;
+} /*pwd 입력창 위치 설정*/
+
+#container #bar-03{
+    position: absolute;
+    top:1520px;
+    left:150px;
+}  /*pw 언더바*/
+
+#container #bar-04{
+    position: absolute;
+    top:1720px;
+    left:150px;
+}  /*pw recheck 언더바*/
+
+#container #joinBt{
+    position: absolute;
+    top:1900px;
+    left:700px;
+    filter: drop-shadow(30px 30px 30px #e6e4e4); 
+} /*완료 bt 위치 설정*/
+
+input::-webkit-input-placeholder {
+    position: absolute;
+    color:rgb(184, 179, 179);
+    font-family:NotoSansCJKKR-Regular;
+    font-size:48px;
+} /*placeholder 보여지는 부분 css*/
+
+

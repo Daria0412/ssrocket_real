@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/main1.css' %}" type="text/css"> <!--main.css 링크-->
+        <script type="text/javascript"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+        <title>MAIN</title>
+    </head>
+    <body>
+        {% if okay == 1 %}
+        <script>location.href = "{% url 'index' %}"; </script>
+        {% endif %}
+        {% load static %}
+        {% load i18n %}
+        <div id="container">
+        <img id="main-setting" name="main-setting" src="{% static 'img/main-setting.png' %}" onclick="location.href='index/setting'"> <!--설정버튼 삽입-->
+        {% for user in users %}
+        <div id="name" name="name">{{user.name}}</div>
+        {% endfor %}
+
+        <div id="n_nim" name="n_nim">{% trans "님," %}</div>
+        <div id="n_welcome" name="n_welcome">{% trans "반갑습니다!" %}</div>
+        <a href = "{% url 'choose_loc'%}"><img id="main-bt01" name="main-bt01" src="{% static 'img/main-bt-01.png' %}" onclick="imgch01();"></a>
+        <a href = "{% url 'check_list'%}"><img id="main-bt02" name="main-bt02" src="{% static 'img/main-bt-02.png' %}" onclick="imgch02();"></a> <!--예약 확인 버튼 삽입-->
+        <a href = "{% url 'choose_end'%}"><img id="main-bt03" name="main-bt03" src="{% static 'img/main-bt-03.png' %}" onclick="imgch03();"></a> <!--대여점 위치 버튼 삽입 -->
+        <a href = "{% url 'notice'%}"><img id="main-bt04" name="main-bt04" src="{% static 'img/main-bt-04.png' %}" onclick="imgch04();"></a> <!--공지 버튼 삽입 -->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../font/NotoSansCJKkr-Bold.otf") }
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../font/NotoSansCJKkr-Medium.otf") } 
+
+
+body{
+    background-image: url("../img/main-compy-size-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+} /*bg img 설정*/
+
+#container #notice-main-box{
+    position: absolute;
+    top:1050px;
+    left:45px;
+}
+
+#container #member_name{
+    font-family: NotoSansCJKKR-Black;
+    position: absolute;
+    top:380px;
+    left:50px;
+    width:550px;
+    font-size:120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color:white;
+} /*자전거 대여소 이름 위치 설정*/
+
+#container #n{
+    font-family: NotoSansCJKKR-Regular;
+    position: absolute;
+    top:380px;
+    left:480px;
+    font-size:120px;
+    color:white;
+} /*'님,' 텍스트 설정*/
+
+#container #welcome{
+    font-family: NotoSansCJKKR-Regular;
+    position: absolute;
+    top:550px;
+    left:60px;
+    font-size:110px;
+    color:white;
+} /*'반갑습니다.' 텍스트 설정*/
+
+#container #notice-main #notice {
+    position: absolute;
+    top:550px;
+    left:100px;
+}
+
+#container #r_year{
+    appearance: none;
+    -webkit-appearance:none;
+    font-family:NotoSansCJKKR-Medium;
+    font-size: 45px;
+    background: url(../img/arrow-blue.png);
+    background-repeat: no-repeat ;
+    border:0px;
+    color:rgb(146, 146, 146);
+    position: absolute;
+    width:250px;
+    height:80px;
+    top:900px;
+    left:100px;
+} /*select box css*/
+
+#container #r_month{
+    appearance: none;
+    -webkit-appearance:none;
+    font-family:NotoSansCJKKR-Medium;
+    font-size: 45px;
+    background: url(../img/arrow-blue.png);
+    background-repeat: no-repeat ;
+    border:0px;
+    color:rgb(146, 146, 146);
+    position: absolute;
+    width:250px;
+    height:80px;
+    top:900px;
+    left:435px;
+} /*select box css*/
+
+#container #r_date{
+    appearance: none;
+    -webkit-appearance:none;
+    font-family:NotoSansCJKKR-Medium;
+    font-size: 45px;
+    background: url(../img/arrow-blue.png);
+    background-repeat: no-repeat ;
+    border:0px;
+    color:rgb(146, 146, 146);
+    position: absolute;
+    width:250px;
+    height:80px;
+    top:900px;
+    left:760px;
+} /*select box css*/
+
+#r_year option{
+    font-size:18px;
+} /*select box css*/
+
+#r_month option{
+    font-size:18px;
+} /*select box css*/
+
+#r_date option{
+    font-size:18px;
+} /*select box css*/
+
+#container #name{
+    font-family: NotoSansCJKKR-Medium;
+    position: absolute;
+    top:1100px;
+    left:100px;
+    width:200px;
+    font-size:40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color:black;
+}
+
+#container #nim{
+    font-family: NotoSansCJKKR-Medium;
+    position: absolute;
+    top:1105px;
+    left:210px;
+    width:200px;
+    font-size:36px;
+    color:black;
+}
+
+#container #r_day{
+    font-family: NotoSansCJKKR-Medium;
+    position: absolute;
+    top:1105px;
+    left:271px;
+    width:300px;
+    font-size:36px;
+    color:black;
+}
+
+
+#container #r_time{
+    font-family: NotoSansCJKKR-Bold;
+    position: absolute;
+    top:1165px;
+    left:100px;
+    width:100px;
+    font-size:40px;
+    color:black;
+}
+
+#container #r{
+    font-family: NotoSansCJKKR-Medium;
+    position: absolute;
+    top:1230px;
+    left:100px;
+    width:500px;
+    font-size:36px;
+    color:black;
+}
+
+#container #main-setting{
+    position: absolute;
+    top:100px;
+    left:920px;
+} /*설정 버튼 위치 설정*/
+
+#container #notice-bt-compy{
+    position: absolute;
+    top:110px;
+    left:620px;
+}
+
+div{display:inline}
+
+

@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../font/NotoSansCJKkr-Bold.otf")}
+@font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../font/NotoSansCJKkr-Medium.otf")}
+
+body{
+    background-image: url("../img/qa-bg-not.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+} /*bg img 설정*/
+
+
+#container #reservation2-bkbt{
+    position: absolute;
+    top:100px;
+    left:70px;
+} /*<- 버튼 위치 설정*/
+
+#container #reservation2-homebt{
+    position: absolute;
+    top:100px;
+    left:930px;
+} /*home 버튼 위치 설정*/
+
+
+#container #n_text{
+    font-family: NotoSansCJKKR-Black;
+    position: absolute;
+    top:300px;
+    left:60px;
+    font-size:100px;
+    color:rgb(255, 255, 255);
+}
+
+#container #m_text{
+    font-family: NotoSansCJKKR-Regular;
+    position: absolute;
+    top:750px;
+    left:78px;
+    font-size:36px;
+    color:rgb(143, 140, 140);
+}
+
+#container #m_title{
+    font-family: NotoSansCJKKR-Bold;
+    position: absolute;
+    width:900px;
+    height:100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    top:890px;
+    left:100px;
+    font-size:72px;
+    color:rgb(5, 5, 5);
+}
+
+#container #m_contents{
+    font-family: NotoSansCJKKR-Regular;
+    position: absolute;
+    width: 900px;
+    height: 300px;
+    top:1000px;
+    left:110px;
+    font-size:36px;
+    color:rgb(0, 0, 0);
+}
+
+#container #write-bt{
+    position: absolute;
+    top:2000px;
+    left:900px;
+}
+
+#container #white-box{
+    position: absolute;
+    top:850px;
+    left:40px;
+
+}
+
+
+
+
+
+

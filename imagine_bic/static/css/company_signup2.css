@@ -1,0 +1,956 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../font/NotoSansCJKkr-Bold.otf") }
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../font/NotoSansCJKkr-Medium.otf") } 
+
+body{
+    background: url("../img/compn2-join-bg.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#backbt{
+    width:9%;
+    margin-top:20px;
+    margin-left:20px;
+}
+#txt{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top:5%;
+    }
+
+#txt #join_b{
+    height:9%;
+    margin-top: -1.5px;
+}
+
+#form #c_addr{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:55px;
+    margin-bottom:2.055em;
+}
+
+#form #c_addr #company_addr{
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 16px;
+    color:rgb(114, 111, 111);
+    border:none;
+    width:230px;
+}
+
+#form #c_loc{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom:2.055em;
+}
+
+#form #c_loc #category{
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 16px;
+    color:rgb(114, 111, 111);
+    border:none;
+    width:230px; 
+}
+
+#form #c_phone{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom:2.055em;
+}
+
+#form #c_phone #company_phone{
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 16px;
+    color:rgb(114, 111, 111);
+    border:none;
+    width:230px; 
+}
+
+#form #c_bike{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom:2.055em;
+}
+
+#form #c_bike #bicycle_num{
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 16px;
+    color:rgb(114, 111, 111);
+    border:none;
+    width:230px; 
+}
+
+#form #c_time1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom:2.055em;
+}
+
+
+#form #c_time1 #s_business{
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 16px;
+    color:rgb(114, 111, 111);
+    border:none;
+    width:230px; 
+}
+
+
+#form #c_time2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom:2.055em;
+}
+ 
+#form #c_time2 #e_business{
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 16px;
+    color:rgb(114, 111, 111);
+    border:none;
+    width:230px; 
+}
+
+#form #c_info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom:2.055em;
+} 
+
+#form #c_info #company_info{
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 16px;
+    color:rgb(114, 111, 111);
+    border:1.5px solid rgb(175, 174, 174);
+    border-radius: 15px;
+    width:230px; 
+    height:100px;
+}
+#bt{
+    display: flex;
+    justify-content: center;
+}
+#joinBt{
+    width:90px;
+    height: auto;
+    margin-bottom:70px;
+    filter: drop-shadow(30px 30px 30px #dbdbdb); 
+}
+
+@media all and (min-width:500px){
+    body{
+        background: url("../img/join_bg_tb2.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    #backbt{
+        width:6%;
+        margin-top:40px;
+        margin-left:40px;
+    }
+    #txt{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top:10%;
+        }
+    
+    #txt #join_b{
+        width:11%;
+        margin-top: -1.5px;
+    }
+
+    #form #bar{
+        width:430px;
+
+    }
+    
+    #form #c_addr{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top:55px;
+        margin-bottom:2.055em;
+    }
+    
+    #form #c_addr #company_addr{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:430px;
+    }
+    
+    #form #c_loc{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:2.055em;
+    }
+    
+    #form #c_loc #category{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:430px; 
+    }
+    
+    #form #c_phone{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:2.055em;
+    }
+    
+    #form #c_phone #company_phone{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:430px; 
+    }
+    
+    #form #c_bike{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:2.055em;
+    }
+    
+    #form #c_bike #bicycle_num{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:430px; 
+    }
+    
+    #form #c_time1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:2.055em;
+    }
+    
+    
+    #form #c_time1 #s_business{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:430px; 
+    }
+    
+    
+    #form #c_time2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:2.055em;
+    }
+     
+    #form #c_time2 #e_business{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:430px; 
+    }
+    
+    #form #c_info{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:2.055em;
+    } 
+    
+    #form #c_info #company_info{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:430px; 
+        height:100px;
+        color:rgb(114, 111, 111);
+        border:1.5px solid rgb(175, 174, 174);
+        border-radius: 15px;    
+    }
+    
+    #bt{
+        display: flex;
+        justify-content: center;
+    }
+    
+    #joinBt{
+        width:170px;
+        height: auto;
+        margin-bottom:70px;
+        filter: drop-shadow(30px 30px 30px #dbdbdb); 
+    }
+
+}
+
+@media all and (min-width:500px){
+    body{
+        background: url("../img/join_bg_tb2.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    #backbt{
+        width:6%;
+        margin-top:40px;
+        margin-left:40px;
+    }
+    #txt{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top:5%;
+        }
+    
+    #txt #join_b{
+        width:11%;
+        margin-top: -1.5px;
+    }
+
+    #form #bar{
+        width:430px;
+    }
+    
+    #form #c_addr{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top:55px;
+        margin-bottom:3.055em;
+    }
+    
+    #form #c_addr #company_addr{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:430px;
+    }
+    
+    #form #c_loc{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:3.055em;
+    }
+    
+    #form #c_loc #category{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:430px; 
+    }
+    
+    #form #c_phone{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:3.055em;
+    }
+    
+    #form #c_phone #company_phone{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:430px; 
+    }
+    
+    #form #c_bike{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:3.055em;
+    }
+    
+    #form #c_bike #bicycle_num{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        background: transparent;
+        width:430px; 
+    }
+    
+    #form #c_time1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:3.055em;
+    }
+    
+    
+    #form #c_time1 #s_business{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:430px; 
+    }
+    
+    
+    #form #c_time2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:3.055em;
+    }
+     
+    #form #c_time2 #e_business{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:430px; 
+    }
+    
+    #form #c_info{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:3.055em;
+    } 
+    
+    #form #c_info #company_info{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:430px; 
+        height:100px;
+        color:rgb(114, 111, 111);
+        border:1.5px solid rgb(175, 174, 174);
+        border-radius: 15px;
+    }
+
+    
+    #bt{
+        display: flex;
+        justify-content:center;
+    }
+    
+    
+    #joinBt{
+        width:150px;
+        margin-bottom:70px;
+        filter: drop-shadow(30px 30px 30px #dbdbdb); 
+    }
+
+}
+
+        
+@media all and (min-width:814px){
+    body{
+        background: url("../img/join_bg_tb2.png") no-repeat center center fixed;
+        background-attachment:local;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    #backbt{
+        width:5.5%;
+        margin-top:60px;
+        margin-left:60px;
+    }
+    #txt{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top:4%;
+        }
+    
+    #txt #join_b{
+        width:11%;
+        margin-top: -1.5px;
+    }
+
+    #form #bar{
+        width:550px;
+
+    }
+    
+    #form #c_addr{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top:55px;
+        margin-bottom:3.555em;
+    }
+    
+    #form #c_addr #company_addr{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 34px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:550px;
+    }
+    
+    #form #c_loc{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:3.555em;
+    }
+    
+    #form #c_loc #category{
+        font-family:NotoSansCJKKR-Regular;
+        font-size:34px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:550px; 
+    }
+    
+    #form #c_phone{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:3.555em;
+    }
+    
+    #form #c_phone #company_phone{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 34px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:550px; 
+    }
+    
+    #form #c_bike{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:3.555em;
+    }
+    
+    #form #c_bike #bicycle_num{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 34px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:550px; 
+    }
+    
+    #form #c_time1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:3.555em;
+    }
+    
+    
+    #form #c_time1 #s_business{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 34px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:550px; 
+    }
+    
+    
+    #form #c_time2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:3.555em;
+    }
+     
+    #form #c_time2 #e_business{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 34px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:550px; 
+    }
+    
+    #form #c_info{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:3.555em;
+    } 
+    
+    #form #c_info #company_info{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 34px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:550px; 
+        height:300px;
+        color:rgb(114, 111, 111);
+        border:1.5px solid rgb(175, 174, 174);
+        border-radius: 15px;
+    }
+
+    #bt{
+        display: flex;
+        justify-content:center;
+    }
+    
+    #joinBt{
+        width:170px;
+        height: auto;
+        margin-bottom:70px;
+        margin-right:0px;
+        filter: drop-shadow(30px 30px 30px #dbdbdb); 
+    }
+}
+
+@media all and (min-width:1025px){  
+    body{
+        background: url("../img/cpj_bg_d.png") no-repeat center center fixed;
+        background-attachment:local;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    #backbt{
+        width:3%;
+        margin-top:80px;
+        margin-left:80px;
+    }
+
+    form{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: center;
+    }
+
+    #form{
+        width:500px;
+        height:auto;
+    }
+    #txt{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top:2%;
+        margin-bottom:5%;
+        }
+    
+    #txt #join_b{
+        width:6%;
+        height:auto;
+        margin-top: -1.5px;
+    }
+
+    #form #bar{
+        width:455px;
+        height:5px;
+    }
+    
+    #form #c_addr{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top:55px;
+        margin-bottom:4.555em;
+    }
+    
+    #form #c_addr #company_addr{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:450px;
+    }
+    
+    #form #c_loc{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:4.555em;
+    }
+    
+    #form #c_loc #category{
+        font-family:NotoSansCJKKR-Regular;
+        font-size:24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:450px; 
+    }
+    
+    #form #c_phone{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:4.555em;
+    }
+    
+    #form #c_phone #company_phone{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:450px; 
+    }
+    
+    #form #c_bike{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:4.555em;
+    }
+    
+    #form #c_bike #bicycle_num{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:450px; 
+    }
+    
+    #form #c_time1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:4.555em;
+    }
+    
+    
+    #form #c_time1 #s_business{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:450px; 
+    }
+    
+    
+    #form #c_time2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:4.555em;
+    }
+     
+    #form #c_time2 #e_business{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:450px; 
+    }
+    
+    #form #c_info{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:4.555em;
+    } 
+    
+    #form #c_info #company_info{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:450px; 
+        height:200px;
+        color:rgb(114, 111, 111);
+        border:1.5px solid rgb(175, 174, 174);
+        border-radius: 15px;
+    }
+
+    #bt{
+        display:flex;
+        justify-content: center;
+    }
+    
+    #joinBt{
+        width:150px;
+        height: auto;
+        margin-bottom:70px;
+        margin-right:0px;
+        filter: drop-shadow(30px 30px 30px #dbdbdb); 
+    }
+}
+
+@media  (min-width:1919px) and (min-height:1019px){
+    body{
+        background: url("../img/cpj_bg_d.png") no-repeat center center fixed;
+        background-attachment:local;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    #backbt{
+        width:3%;
+        margin-top:80px;
+        margin-left:80px;
+    }
+    #txt{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top:2%;
+        margin-bottom:5%;
+        }
+    
+    #txt #join_b{
+        width:6%;
+        height:auto;
+        margin-top: -1.5px;
+    }
+
+    #form #bar{
+        width:755px;
+        height:5px;
+    }
+    
+    #form #c_addr{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top:55px;
+        margin-bottom:4.555em;
+    }
+    
+    #form #c_addr #company_addr{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:750px;
+    }
+    
+    #form #c_loc{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:4.555em;
+    }
+    
+    #form #c_loc #category{
+        font-family:NotoSansCJKKR-Regular;
+        font-size:24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:750px; 
+    }
+    
+    #form #c_phone{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:4.555em;
+    }
+    
+    #form #c_phone #company_phone{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:750px; 
+    }
+    
+    #form #c_bike{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:4.555em;
+    }
+    
+    #form #c_bike #bicycle_num{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:750px; 
+    }
+    
+    #form #c_time1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:4.555em;
+    }
+    
+    
+    #form #c_time1 #s_business{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:750px; 
+    }
+    
+    
+    #form #c_time2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:4.555em;
+    }
+     
+    #form #c_time2 #e_business{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:750px; 
+    }
+    
+    #form #c_info{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom:4.555em;
+    } 
+    
+    #form #c_info #company_info{
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 24px;
+        color:rgb(114, 111, 111);
+        border:none;
+        width:750px; 
+        height:300px;
+        color:rgb(114, 111, 111);
+        border:1.5px solid rgb(175, 174, 174);
+        border-radius: 15px;
+    }
+
+    #bt{
+        display: flex;
+        justify-content:center;
+    }
+    
+    #joinBt{
+        width:170px;
+        height: auto;
+        margin-bottom:70px;
+        margin-right:0px;
+        filter: drop-shadow(30px 30px 30px #dbdbdb); 
+    }
+}

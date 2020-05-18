@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+
+body{
+    background-image: url("../img/final-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+} /*bg img 설정*/
+
+#container #course-bt-bl{
+    position: absolute;
+    top:1850px;
+    left:550px;
+    filter: drop-shadow(30px 30px 30px #e6e6e6); 
+} /*코스추천받기 bt 설정*/
+
+#container #h-bt{
+    position: absolute;
+    top:1850px;
+    left:100px;
+    filter: drop-shadow(30px 30px 30px #e6e6e6); 
+} /*홈으로 bt 설정*/
+
+#container #name{
+    font-family: NotoSansCJKKR-Black;
+    position: absolute;
+    top:1360px;
+    left:100px;
+    font-size:150px;
+    color:black;
+} /*'아인' 텍스트 설정*/
+
+#container #nim{
+    font-family: NotoSansCJKKR-Regular;
+    position: absolute;
+    top:1400px;
+    left:370px;
+    font-size:120px;
+    color:black;
+} /*'님,' 텍스트 설정*/
+
+#container #finish01{
+    font-family: NotoSansCJKKR-Regular;
+    position: absolute;
+    top:1550px;
+    left:110px;
+    font-size:72px;
+    color:black
+} /*'예약이~' txt 설정*/
+
+#container #finish02{
+    font-family: NotoSansCJKKR-Regular;
+    position: absolute;
+    top:1700px;
+    left:115px;
+    font-size:48px;
+    color:black
+} /*'예약이~' txt 설정*/

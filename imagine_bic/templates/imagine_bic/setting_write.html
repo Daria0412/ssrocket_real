@@ -1,0 +1,55 @@
+<!--<html>
+    <body>
+        <table>
+        {% for notice in notices %}
+            <tr>
+                <td>{{notice.num}}</td>
+                <td>{{notice.subject}}</td>
+                <td>{{notice.regdate}}</td>
+                <td>{{notice.writer}}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        {%load static%}
+        <meta charset="utf-8">
+        {% load static %}
+        {% if count == 1 %}<script>location.href="{% url 'write' %}"</script>{% endif %}
+    {% if count == 2 %}<script>alert("문의가 완료되었습니다.");location.href="/setting/counsel";</script>{% endif %}
+        <link rel="stylesheet" href="{% static 'css/write.css' %}" type="text/css"> <!--main.css 링크-->
+        {% if count == 2 %}<script>alert("문의가 완료되었습니다.");location.href="/setting/counsel";</script>{% endif %}
+        <link rel="stylesheet" href="{% static 'css/setting1_write.css' %}" type="text/css"> <!--main.css 링크-->
+        <script type="text/javascript"></script>
+        <script src="{% static 'js/setting1_write.js' %}"></script>
+        <title>setting_write</title>
+    </head>
+    <body>
+        {%load static%}
+        <div id="container">
+            <img id="reservation2-bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
+            <!--뒤로가기 버튼 삽입-->
+            <img id="reservation2-homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="hfun();">
+            <!--홈 버튼 삽입-->
+            <input type="text" name="w_title" id="w_title" placeholder="이곳에 제목을 입력하세요">
+            <img id="bar-wh" src="{%static 'img/bar-wh.png' %}">
+            <img id="bar-category" src="{%static 'img/bar-category.png' %}">
+            <select id="category" name="category">
+                <option selected value="문의 카테고리 선택">문의 카테고리 선택</option>
+                <option value="업체의 불친절">업체의 불친절</option>
+                <option value="자전거 상태">자전거 상태</option>
+                <option value="예약 오류">예약 오류</option>
+                <option value="예약 취소 및 환불">예약 취소 및 환불</option>
+                <option value="기타">기타</option>
+            </select>
+            <div id="d">문제 발생 일자 : </div><input type="date" name="w_date" id="w_date">
+            <div id="c">문의 내용 : </div><input type="text" name="w_contents" id="w_contents">
+            <img id="fin-bt" src="{% static 'img/fin-bt.png' %}">
+            </table>
+        </div>
+    </body>
+</html>

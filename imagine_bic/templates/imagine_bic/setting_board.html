@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        {%load static%}
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static 'css/setting_board.css' %}" type="text/css"> <!--main.css 링크-->
+        <script type="text/javascript"></script>
+        <script src="{% static 'js/setting_board.js' %}"></script>
+        <title>setting_counsel</title>
+    </head>
+    <body>
+        {%load static%}
+        <div id="container">
+            <img id="reservation2-bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
+            <!--뒤로가기 버튼 삽입-->
+            <img id="reservation2-homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="bkfun();">
+            <!--홈 버튼 삽입-->
+        </div>
+    </body>
+</html>
