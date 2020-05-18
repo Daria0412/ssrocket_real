@@ -88,3 +88,6 @@ function sm(){
             } 
         }); 
     });
+    function sm1(){
+        joinForm.submit();
+    }
