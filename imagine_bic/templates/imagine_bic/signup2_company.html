@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/company_signup2.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/signup2_company.css' %}" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript"></script>
         <script src="{% static 'js/signup2_company.js' %}"></script>
@@ -23,6 +23,7 @@
         <span id="ac">
             <form action = "{% url 'signup_company' %}" name = "joinForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
             <div id="form">
+                
                 <span id="c_addr">
                 <input type="text" name="company_addr" id="company_addr" placeholder="Company address"/>
                 <img id="bar" src="{% static 'img/bar-long.png' %}">
