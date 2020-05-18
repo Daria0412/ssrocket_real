@@ -116,7 +116,7 @@ def signin(request):
         pwd = request.POST['pwd']
         return Sign.signin(request,id,pwd)
     else:
-        return render(request, 'imagine_bic/signin.html')
+        return render(request, 'imagine_bic/login.html')
 
 def checkEmail(request):
     try:
