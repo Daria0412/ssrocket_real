@@ -1,3 +1,0 @@
-function n(){
-    history.back();
-}

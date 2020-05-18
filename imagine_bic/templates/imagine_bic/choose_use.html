@@ -16,8 +16,8 @@
       {% load static %}
         <form action = "{% url 'choose_use' %}" name = "useForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
           <div id="bt">
-            <img id="user" src="{% static 'img/user_b.png' %}" onclick="location.href='index/'">
-            <img id="company" src="{% static 'img/comp_b.png' %}" onclick="location.href='/index/company/'">
+            <img id="user" src="{% static 'img/user_b.png' %}" onclick="gou(); ch01();">
+            <img id="company" src="{% static 'img/comp_b.png' %}" onclick="goc(); ch02();">
           </div>
         <input type=hidden name = "user_info" id ="user_info" value="">
     </form>
