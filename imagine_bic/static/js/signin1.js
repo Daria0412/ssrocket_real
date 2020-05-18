@@ -1,5 +1,5 @@
 function chfun(){
-    location.href="signup/";
+    location.href="/signup";
 }
 
 function sm(){
