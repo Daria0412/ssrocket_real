@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../font/NotoSansCJKkr-Bold.otf")}
+@font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../font/NotoSansCJKkr-Medium.otf")}
+
+body{
+    background-image: url("../img/csd-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+} /*bg img 설정*/
+
+#backbt{
+    width:8.5%;
+    margin-top:5.5%;
+    margin-left:5%;
+}
+
+
+#goset{
+    float: right;
+    margin-top:4%;
+    margin-right:5%;
+    width:10.5%;
+}
+
+
+.info_shop{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:80%;
+    margin-left: 5%;
+    margin-right:5%;
+}
+
+
+.info_shop #member_name{
+    font-family: NotoSansCJKKR-Bold;
+    font-size:6em;
+    color:rgb(75, 72, 72);
+    width:99%;
+    margin-top: 15%;;
+}
+
+.info_shop #company_info{
+    font-family: NotoSansCJKKR-Medium;
+    font-size:2.8em;
+    color:rgb(100, 100, 100);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left:0.2%;
+    width:99%;
+}
+
+
+.info_shop #company_addr{
+    font-family: NotoSansCJKKR-Medium;
+    font-size:2em;
+    color:rgb(100, 100, 100);
+    width:99%;
+}
+
+
+.info_shop #company_phone{
+    font-family: NotoSansCJKKR-Medium;
+    font-size:2em;
+    color:rgb(100, 100, 100);
+    width:99%;
+}
+
+.info_shop #s_business{
+    font-family: NotoSansCJKKR-Medium;
+    font-size:2em;
+    color:rgb(100, 100, 100);
+    width:99%;
+}
+ #b{
+    position: relative;
+    width:30%;
+    height:auto;
+    margin-top:15%;
+    margin-left:60%;
+    filter: drop-shadow(30px 30px 30px hsl(0, 4%, 87%)); 
+} /*완료 버튼 위치 설정*/ 
+
+
+
+@media (min-width: 768px) {
+    #backbt{
+        width:6.2%;
+        margin-top:5.5%;
+        margin-left:5%;
+    }
+
+
+    #goset{
+        float: right;
+        margin-top:4%;
+        margin-right:5%;
+        width:7.5%;
+    }
+
+
+    .info_shop{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top:40%;
+        margin-left: 5%;
+        margin-right:5%;
+    }
+
+
+    .info_shop #member_name{
+        font-family: NotoSansCJKKR-Bold;
+        position: relative;;
+        font-size:6em;
+        color:rgb(75, 72, 72);
+        width:99%;
+        margin-top: 15%;;
+    }
+
+    .info_shop #company_info{
+        font-family: NotoSansCJKKR-Medium;
+        position: relative;;
+        font-size:2.8em;
+        color:rgb(100, 100, 100);
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left:0.2%;
+        width:99%;
+    }
+
+
+    .info_shop #company_addr{
+        font-family: NotoSansCJKKR-Medium;
+        position: relative;;
+        font-size:2em;
+        color:rgb(100, 100, 100);
+        width:99%;
+    }
+
+
+    .info_shop #company_phone{
+        font-family: NotoSansCJKKR-Medium;
+        position: relative;;
+        font-size:2em;
+        color:rgb(100, 100, 100);
+        width:99%;
+    }
+
+    .info_shop #s_business{
+        font-family: NotoSansCJKKR-Medium;
+        position: relative;
+        font-size:2em;
+        color:rgb(100, 100, 100);
+        width:99%;
+    }
+    #b{
+        position: relative;
+        width:20%;
+        height:auto;
+        margin-top:15%;
+        margin-left:72%;
+        margin-bottom:5%;
+        filter: drop-shadow(30px 30px 30px hsl(0, 4%, 87%)); 
+    } /*완료 버튼 위치 설정*/ 
+} 
+
+@media (min-width: 1200px) { 
+    
+    body{
+        background-image: url("../img/csd_bg_d.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    } /*bg img 설정*/
+
+    #backbt{
+        width:3.7%;
+        margin-top:4%;
+        margin-left:5%;
+    }
+
+
+    #goset{
+        float: right;
+        margin-top:4%;
+        margin-right:5%;
+        width:4.5%;
+    }
+
+
+    .info_shop{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top:15%;
+        margin-left: 30%;
+        margin-right:5%;
+    }
+
+
+    .info_shop #member_name{
+        font-family: NotoSansCJKKR-Bold;
+        position: relative;;
+        font-size:4em;
+        color:rgb(75, 72, 72);
+        width:99%;
+        margin-top: 5%;;
+    }
+
+    .info_shop #company_info{
+        font-family: NotoSansCJKKR-Medium;
+        position: relative;;
+        font-size:1.8em;
+        color:rgb(100, 100, 100);
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left:0.2%;
+        width:99%;
+    }
+
+
+    .info_shop #company_addr{
+        font-family: NotoSansCJKKR-Medium;
+        position: relative;;
+        font-size:1.6em;
+        color:rgb(100, 100, 100);
+        width:99%;
+    }
+
+
+    .info_shop #company_phone{
+        font-family: NotoSansCJKKR-Medium;
+        position: relative;;
+        font-size:1.6em;
+        color:rgb(100, 100, 100);
+        width:99%;
+    }
+
+    .info_shop #s_business{
+        font-family: NotoSansCJKKR-Medium;
+        position: relative;
+        font-size:1.6em;
+        color:rgb(100, 100, 100);
+        width:99%;
+    }
+    #b{
+        position: relative;
+        width:8%;
+        height:auto;
+        margin-top:5%;
+        margin-left:68%;
+        margin-bottom:5%;
+        filter: drop-shadow(30px 30px 30px hsl(0, 4%, 87%)); 
+    } /*완료 버튼 위치 설정*/ 
+ }
