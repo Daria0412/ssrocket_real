@@ -1,4 +1,5 @@
 function sm(){
+    location.href="/choose_time";
     shopForm.submit();
 }
 
