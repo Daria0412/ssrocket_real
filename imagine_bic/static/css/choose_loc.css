@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+
+body{
+    background-image: url("../img/where-bg.png");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+} /*bg img 설정*/
+
+#a{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#container #reservation2-bkbt{
+    position: relative;
+    float: left;
+    left:7%;
+    margin-top:7%;
+} /*<- 버튼 위치 설정*/
+
+#container #reservation2-homebt{
+    position: relative;
+    float: right;
+    margin-top:7%;
+    margin-right: 3%;
+} /*home 버튼 위치 설정*/
+
+#container #name{
+    position: relative;
+    font-family: NotoSansCJKKR-Black;
+    font-size:9.188em;
+    color:white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color:white;
+    width:410px;
+    margin-top:45%;
+} /*'아인' 텍스트 설정*/
+
+#container #nim{
+    font-family: NotoSansCJKKR-Regular;
+    font-size:7.688em;
+    color:white;
+    margin-top:-45%;
+    margin-left:100%;
+} /*'님,' 텍스트 설정*/
+
+#container #where{
+    font-family: NotoSansCJKKR-Regular;
+    font-size:4.988em;
+    color:white;
+} /*'어디서~' 텍스트 설정*/
+
+#container #whitemap{
+    position: relative;
+    width:100%;
+    height:auto;
+    margin-top:50%;
+    margin-left:10%;
+}
+
+#container #search{
+    position: relative;
+    font-family:NotoSansCJKKR-Regular;
+    font-size:3.159em;
+    margin-top:10%;
+    width:100%;
+    height:auto;
+    border: none;
+    background: transparent;
+    text-align: left;
+    border-bottom: 7px solid #ffffff;
+} /*검색창 위치 설정*/
+
+input::-webkit-input-placeholder {
+    position: relative;
+    color:rgb(255, 255, 255);
+    font-family:NotoSansCJKKR-Regular;
+    font-size:0.999em;
+} /*placeholder 보여지는 부분 css*/
+
+#container #dono{
+    font-family: NotoSansCJKKR-Bold;
+    color:black;
+    font-size: 3.2em;
+    position: relative;
+    margin-top:-30%;
+    margin-left:77%;
+}
+
+#container #juno{
+    font-family: NotoSansCJKKR-Bold;
+    color:black;
+    font-size: 3.2em;
+    position: relative;
+    margin-top:-40%;
+    margin-left:50%;
+}
+
+
+#container #seino{
+    font-family: NotoSansCJKKR-Bold;
+    color:black;
+    font-size: 3.2em;
+    position: relative;
+    margin-top:-39%;
+    margin-left:-21%;
+}
+
+
+#container #gifu{
+    font-family: NotoSansCJKKR-Bold;
+    color:black;
+    font-size: 3.2em;
+    position: relative;
+    margin-top:-40%;
+    margin-left:36%;
+}
+
+
+#container #hida{
+    font-family: NotoSansCJKKR-Bold;
+    color:black;
+    font-size: 3.2em;
+    position: relative;
+    margin-top:-80%;
+    margin-left:65%;
+}
+
+
+
+

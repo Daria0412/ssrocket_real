@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/choose1_loc.css' %}" type="text/css"> <!--main.css 링크-->
+        <link rel="stylesheet" href="{% static 'css/choose_loc.css' %}" type="text/css"> <!--main.css 링크-->
         <script type="text/javascript"></script>
         {% if count == 1 %}<script>location.href="{% url 'choose_loc' %}"</script>{% endif %}
-        <script src="{% static 'js/choose1_loc.js' %}"></script>
+        <script src="{% static 'js/choose_loc.js' %}"></script>
         <title>course_loc</title>
     </head>
     <body>
@@ -17,16 +17,31 @@
                 <!--뒤로가기 버튼 삽입-->
                 <img id="reservation2-homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="hfun();">
                 <!--홈 버튼 삽입-->
-                {% for user in users %}
-                <div id="name" name="name">{{user.name}}</div>
-                {% endfor %}
-                <div id="nim">님,</div>
-                <div id="where">어디로 여행하시나요?</div>
-                <input type="text"id="search" name="search"  placeholder="이곳에 입력하세요.">
-                <input type="hidden"id="company_loc" name="company_loc" value = "gifu">
-                <img id="bar-wh" src="{% static 'img/bar-wh.png' %}">
-                <img id="whitemap" src="{%static 'img/whitemap.png' %}">
-                <a onclick=sm()>밍</a>
+
+                <span id="a">
+
+                    <span id="namebbox">
+                        {% for user in users %}
+                        <div id="name" name="name">{{user.name}}</div>
+                        {% endfor %}
+                    
+                        <div id="nim">님,</div>
+                    </span>
+                    <div id="where">어디로 여행하시나요?</div>
+
+                    <input type="text"id="search" name="search"  placeholder="이곳에 입력하세요.">
+                    <input type="hidden"id="company_loc" name="company_loc" value = "gifu">
+                    <img id="whitemap" src="{%static 'img/whitemap.png' %}">
+
+    
+                        <span id="dono" onmouseover="onmdono();" onclick="oncdono();">도노</span>
+                        <span id="juno">주노</span>
+                        <span id="hida">히다</span>
+                        <span id="gifu">기<br>후</span>
+                        <span id="seino">세<br>이<br>노</span>
+            
+                    <a onclick=sm()>밍</a>
+                </span>
             </div>
         </form>
     </body>
