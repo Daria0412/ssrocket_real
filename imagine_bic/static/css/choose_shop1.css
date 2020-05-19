@@ -1,0 +1,409 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../font/NotoSansCJKkr-Bold.otf") }
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../font/NotoSansCJKkr-Medium.otf") } 
+
+body{
+    background: url("../img/mc_bg.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#backbt{
+    margin-top:5.5%;
+    margin-left:5%;
+}
+
+#goset{
+    float: right;
+    margin-top:5.5%;
+    margin-right:5%;
+    width:11.5%;
+}
+
+#text{
+    position: relative;
+    margin-top:7%;
+    margin-left:5%;
+}
+#text #this{
+    font-family: NotoSansCJKKR-Black;
+    font-size:2.688em;
+    color:white;
+}
+#text #from{
+    font-family: NotoSansCJKKR-Regular;
+    font-size:2.388em;
+    color:white;
+    margin-right:50%;
+}
+#text #rent{
+    margin-left:1%;
+    font-family: NotoSansCJKKR-Regular;
+    font-size:2.188em;
+    color:white;
+}
+#a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+#a .back{
+    position: relative;
+    display: flex;
+    justify-content:flex-start;
+    width:90%;
+    background-color: white;
+    border-radius: 25px;
+    filter: drop-shadow(30px 30px 30px #d9d9d9);
+    margin-top:7%;
+}
+
+.back .shop_list{
+    position: relative;
+    margin-top:0.5em;
+    margin-bottom: 0.7em;
+    margin-left:5%;
+    margin-right:3%;
+}
+
+.shop_list #member_name{
+    position: relative;
+    font-family: NotoSansCJKKR-Bold;
+    font-size:1em;
+}
+
+.shop_list #b_num{
+    position: relative;
+    font-family: NotoSansCJKKR-Regular;
+    font-size:0.8em;
+    top:4px;
+}
+
+.shop_list #info_tel{
+    position: relative;
+    font-family: NotoSansCJKKR-Regular;
+    font-size:0.7em;
+    top:7px;
+}
+
+.shop_list #tel_phone{
+    position: relative;
+    top:1px;
+}
+
+@media (min-width:320px) and (max-width:339px){
+    #text #from{
+        font-family: NotoSansCJKKR-Regular;
+        font-size:2.388em;
+        color:white;
+        margin-right:40%;
+    }
+}
+
+@media (min-width: 768px) { 
+    #backbt{
+        margin-top:2.5%;
+        margin-left:5%;
+        width:6%;
+    }
+    
+    #goset{
+        float: right;
+        margin-top:2.5%;
+        margin-right:5%;
+        width:6.5%;
+    }
+    
+    #text{
+        position: relative;
+        margin-bottom:10%;
+        margin-top:10%;
+    }
+
+    #text #this{
+        font-family: NotoSansCJKKR-Black;
+        font-size:4.888em;
+        color:white;
+    }
+    #text #from{
+        font-family: NotoSansCJKKR-Regular;
+        font-size:3.588em;
+        color:white;
+        margin-right: 0%;
+    }
+    #text #rent{
+        margin-left:1%;
+        font-family: NotoSansCJKKR-Regular;
+        font-size:3.288em;
+        color:white;
+      
+    }
+    #a .back{
+        position: relative;
+        display: flex;
+        justify-content:flex-start;
+        width:80%;
+        background-color: white;
+        border-radius: 25px;
+        filter: drop-shadow(30px 30px 30px #d9d9d9);
+        margin-top:7%;
+    }
+    .back .shop_list{
+        position: relative;
+        margin-top:1.0em;
+        margin-bottom: 1.4em;
+        margin-left:5%;
+        margin-right:3%;
+    }
+    .shop_list #member_name{
+        position: relative;
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.5em;
+    }
+    
+    .shop_list #b_num{
+        position: relative;
+        font-family: NotoSansCJKKR-Regular;
+        font-size:1.3em;
+        top:4px;
+    }
+    
+    .shop_list #info_tel{
+        position: relative;
+        font-family: NotoSansCJKKR-Regular;
+        font-size:1.2em;
+        top:7px;
+    }
+
+}
+
+@media (min-width: 992px){
+    body{
+        background: url("../img/shr_bg_tb.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    #backbt{
+        margin-top:2.5%;
+        margin-left:5%;
+        width:6%;
+    }
+    
+    #goset{
+        float: right;
+        margin-top:2.5%;
+        margin-right:5%;
+        width:7%;
+    }
+    
+    #text{
+        position: relative;
+        margin-bottom:10%;
+        margin-top:5%;
+        margin-right:7%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #text #this{
+        font-family: NotoSansCJKKR-Black;
+        font-size:5.888em;
+        color:white;
+        margin-top:-4%;
+    }
+    #text #from{
+        font-family: NotoSansCJKKR-Regular;
+        font-size:4.188em;
+        color:white;
+        margin-right:1%;
+    }
+    #text #rent{
+        margin-left:1%;
+        margin-top:1.9%;
+        font-family: NotoSansCJKKR-Regular;
+        font-size:3.288em;
+        color:white;
+      
+    }
+
+    #a .back{
+        position: relative;
+        display: flex;
+        justify-content:flex-start;
+        width:80%;
+        background-color: white;
+        border-radius: 25px;
+        filter: drop-shadow(30px 30px 30px #d9d9d9);
+        margin-top:7%;
+    }
+
+    .back .shop_list{
+        position: relative;
+        margin-top:2.0em;
+        margin-bottom: 2.4em;
+        margin-left:5%;
+        margin-right:3%;
+    }
+    .shop_list #member_name{
+        position: relative;
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.8em;
+    }
+    
+    .shop_list #b_num{
+        position: relative;
+        font-family: NotoSansCJKKR-Regular;
+        font-size:1.6em;
+        top:4px;
+    }
+    
+    .shop_list #info_tel{
+        position: relative;
+        font-family: NotoSansCJKKR-Regular;
+        font-size:1.5em;
+        top:7px;
+    }
+    
+}
+
+@media (min-width: 1200px) { 
+    body{
+        background: url("../img/cs_bg_t.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    
+    #backbt{
+        width:4%;
+        margin-left:5%;
+    }
+    
+    #goset{
+        float: right;
+        margin-right:5%;
+        width:5%;
+    }
+    
+    #text{
+        position: relative;
+        margin-left:5%;
+        margin-top:1%;
+    }
+    #text #this{
+        font-family: NotoSansCJKKR-Black;
+        font-size:6.688em;
+        color:white;
+    }
+    #text #from{
+        font-family: NotoSansCJKKR-Regular;
+        font-size:5.088em;
+        color:white;
+        margin-right:0%;
+        margin-top:-1%;
+   }
+    #text #rent{
+        margin-left:1%;
+        font-family: NotoSansCJKKR-Regular;
+        font-size:3.488em;
+        color:white;
+        margin-top:-0.1%;
+        margin-top:1.5%;
+    }
+    #a{
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    #a .back{
+        position: relative;
+        display: flex;
+        justify-content:flex-start;
+        width:60%;
+        background-color: white;
+        border-radius: 25px;
+        filter: drop-shadow(30px 30px 30px #d9d9d9);
+        margin-top:4%;
+    }
+    
+    .back .shop_list{
+        position: relative;
+        margin-top:2em;
+        margin-bottom: 2.7em;
+        margin-left:5%;
+        margin-right:3%;
+    }
+    
+    .shop_list #member_name{
+        position: relative;
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.6em;
+    }
+    
+    .shop_list #b_num{
+        position: relative;
+        font-family: NotoSansCJKKR-Regular;
+        font-size:1.4em;
+        top:4px;
+    }
+    
+    .shop_list #info_tel{
+        position: relative;
+        font-family: NotoSansCJKKR-Regular;
+        font-size:1.3em;
+        top:7px;
+    }
+    
+    .shop_list #tel_phone{
+        position: relative;
+        top:1px;
+    }
+
+}
+@media  (min-width:1919px) and (min-height:1019px){ 
+    
+    #backbt{
+    width:3%;
+    margin-left:5%;
+    }
+
+    #goset{
+        float: right;
+        margin-right:5%;
+        width:4%;
+    }
+
+    #text{
+        position: relative;
+        margin-left:5%;
+        margin-top:1%;
+    }
+    #text #this{
+        font-family: NotoSansCJKKR-Black;
+        font-size:6.688em;
+        color:white;
+    }
+    #text #from{
+        font-family: NotoSansCJKKR-Regular;
+        font-size:5.088em;
+        color:white;
+        margin-right:0%;
+        margin-top:-2%;
+    }
+    #text #rent{
+        margin-left:1%;
+        font-family: NotoSansCJKKR-Regular;
+        font-size:3.488em;
+        color:white;
+        margin-top:-0.11%;
+    }
+}

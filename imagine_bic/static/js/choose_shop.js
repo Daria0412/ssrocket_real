@@ -5,6 +5,6 @@ function hfun(){
     location.href="/index";
 }
 function sd(){
-    location.href="{% url 'shop_detail' pk=company.company_num %}"
+    location.href="/choose_shop/1/";
 }
 

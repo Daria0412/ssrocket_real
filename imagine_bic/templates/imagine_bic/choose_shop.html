@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/choose_shop.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/choose_shop1.css' %}" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript"></script>
         <script src="{% static 'js/choose_shop.js' %}"></script>
@@ -15,47 +15,63 @@
     <body>
        {% load static %} 
        <img id="backbt" src="{% static 'img/b_bt.png' %}" onclick="bkfun()">
-       <img id="goset" src="{% static 'img/st_bt.png' %}"  onclick="location.href='index/setting/'">
-
+       <img id="goset" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="hfun();">
+    
        <div id="text">
            <span id="this">이곳</span>
-           <span id="from">에서</span><br                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    >
+           <span id="from">에서</span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
            <span id="rent">대여할 수 있어요!</span>
        </div>
 
+       <div id="on" onclick="sd();">누르면 넘어가나 ??</div>
+         
+    
     <div id="a">
+        <div class="back">
+        <div class="shop_list">
+            <span id="member_name">세이노지점자전거대여소</span>
+            <br>
+                <span id="b_num">
+                <span id="bike">남은 자전거: </span>
+                <span id="bicycle_num">10</span>
+                <span id="dae">대</span>
+            <br>
+            </span>
+            <span id="info_tel">
+                <span id="user_info">24시간 운영! 번화가에 위치해 접근성이 좋으며, 역 근처에 위치해있습니다.</span>
+                <br>
+                <span id="tel_phone">
+                <span id="tel">TEL: </span>
+                <span id="company_phone">+86 10 1234 5678</span>
+                </span>
+                <br>
+            </span>
+        </div>
+      </div>
+      </div>
+
+      <div id="a">
         <div class="back">
         <div class="shop_list">
             <span id="member_name">기후현지점자전거대여소</span>
             <br>
-            <span id="bike">남은 자전거: </span>
-            <span id="bicycle_num">10</span>
-            <span id="dae">대</span>
+                <span id="b_num">
+                <span id="bike">남은 자전거: </span>
+                <span id="bicycle_num">10</span>
+                <span id="dae">대</span>
             <br>
-            <span id="user_date">24시간 운영! 번화가에 위치해 접근성이 좋으며, 역 근처에 위치해있습니다.</span>
-            <br>
-            <span id="tel">TEL: </span>
-            <span id="company_phone">+86 10 1234 5678</span>
-            <br>
+            </span>
+            <span id="info_tel">
+                <span id="user_info">24시간 운영! 번화가에 위치해 접근성이 좋으며, 역 근처에 위치해있습니다.</span>
+                <br>
+                <span id="tel_phone">
+                <span id="tel">TEL: </span>
+                <span id="company_phone">+86 10 1234 5678</span>
+                </span>
+                <br>
+            </span>
         </div>
       </div>
-    </div>
-    <div id="a">
-        <div class="back">
-        <div class="shop_list">
-            
-            <span id="member_name">기후현지점자전거대여소</span>
-            <br>
-            <span id="bike">남은 자전거: </span>
-            <span id="bicycle_num">10</span>
-            <span id="dae">대</span>
-            <br>
-            <span id="user_date">24시간 운영! 번화가에 위치해 접근성이 좋으며, 역 근처에 위치해있습니다.</span>
-            <br>
-            <span id="tel">TEL: </span>
-            <span id="company_phone">+86 10 1234 5678</span>
-            <br>
-        </div>
       </div>
-    </div>
+  
     </body>
