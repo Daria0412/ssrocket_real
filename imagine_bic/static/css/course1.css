@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../font/NotoSansCJKkr-Bold.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Bold.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../font/NotoSansCJKkr-Medium.otf") } 
+
+
+body{
+    background-image: url("../img/cs-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+} /*bg img 설정*/
+
+#backbt{
+    margin-top:5.5%;
+    margin-left:5%;
+}
+
+#goset{
+    float: right;
+    margin-top:5.5%;
+    margin-right:5%;
+    width:9.5%;
+}
+
+.img{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-left:8%;
+    margin-top:10%;
+}
+
+.img #rec_c{
+    font-family:NotoSansCJKKR-Black;
+    color:#64b9e3;
+    font-size:6em;
+    margin-bottom: 5%;
+}
+ 
+.img #c_map{
+    width:90%;
+    height:auto;
+    border-radius:40px;
+    margin-bottom: 5%;
+}
+.img #rec_h{
+    font-family:NotoSansCJKKR-Medium;
+    font-size:2.5em;
+}
+
+.text{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width:90%;
+    font-family:NotoSansCJKKR-Medium;
+    font-size: 22px;
+    margin-left:5%;
+    margin-right:2%;
+    margin-top:25%;
+}
+
+.text #rec_t{
+    font-family:NotoSansCJKKR-Bold;
+    font-size: 4em;
+}
+
+.text #rec_con{
+    margin-top:5%;
+    margin-bottom:5%;
+}
+
+.text #rec_time{
+    font-family:NotoSansCJKKR-Medium;
+    font-size: 16px;
+    width:100%;
+}
+
+.text #rec_loc{
+    font-family:NotoSansCJKKR-Medium;
+    font-size: 16px;
+    width:100%;
+    margin-bottom:7%;
+}
+#category{
+    margin-left:8%;
+    appearance: none;
+    -webkit-appearance:none;
+    font-family:NotoSansCJKKR-Bold;
+    font-size: 2.2em;
+    border:0px;
+    color:rgb(106, 177, 235);
+    position: relative;
+    width:800px;
+    height:100px;
+    background-color:white;
+    border-radius: 40px;
+    filter: drop-shadow(30px 30px 30px #cac9c9); 
+    margin-bottom:5%;
+}
+
+@media (min-width: 768px) { 
+    #backbt{
+        margin-top:5.5%;
+        margin-left:5%;
+        width:6%;
+    }
+    
+    #goset{
+        float: right;
+        margin-top:5.5%;
+        margin-right:5%;
+        width:6%;
+    }
+        
+    .text #rec_t{
+        font-family:NotoSansCJKKR-Bold;
+        font-size: 3.5em;
+    }
+
+    
+    .text #rec_con{
+        font-size: 29px;
+        margin-top:5%;
+        margin-bottom:5%;
+    }
+
+    .text #rec_time{
+        font-family:NotoSansCJKKR-Medium;
+        font-size: 22px;
+        width:100%;
+    }
+    
+    .text #rec_loc{
+        font-family:NotoSansCJKKR-Medium;
+        font-size: 22px;
+        width:100%;
+        margin-bottom:7%;
+    }
+}
+
+@media (min-width: 1200px) { 
+
+    
+body{
+    background-image: url("../img/csre-bg_d.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+} /*bg img 설정*/
+
+#backbt{
+    width:3%;
+    margin-top:3.5%;
+    margin-left:5%;
+}
+
+#goset{
+    margin-top:3.5%;
+    margin-right:5%;
+    width:3%;
+}
+
+.img{
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+    margin-top:2%;
+    width:60%;
+}
+
+.img #rec_c{
+    font-family:NotoSansCJKKR-Black;
+    color:#64b9e3;
+    font-size:4em;
+    margin-left:45%;
+}
+ 
+.img #c_map{
+    width:70%;
+    height:auto;
+    margin-left:48%;
+    border-radius:40px;
+}
+.img #rec_h{
+    font-family:NotoSansCJKKR-Medium;
+    font-size:1.5em;
+    margin-left:45%;
+}
+
+.text{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    font-family:NotoSansCJKKR-Medium;
+    font-size: 22px;
+    margin-left:35%;
+    margin-right:2%;
+    margin-top:2%;
+    width:40%;
+}
+
+.text #rec_t{
+    font-family:NotoSansCJKKR-Bold;
+    font-size: 3em;
+}
+
+.text #rec_con{
+    font-size: 1.2em;
+    margin-top:5%;
+    margin-bottom:5%;
+}
+
+.text #rec_time{
+    font-family:NotoSansCJKKR-Medium;
+    font-size: 22px;
+    width:100%;
+}
+
+.text #rec_loc{
+    font-family:NotoSansCJKKR-Medium;
+    font-size: 22px;
+    width:100%;
+    margin-bottom:7%;
+}
+#category{
+    margin-left:33%;
+    appearance: none;
+    -webkit-appearance:none;
+    font-family:NotoSansCJKKR-Bold;
+    font-size: 2.2em;
+    border:0px;
+    color:rgb(106, 177, 235);
+    position: relative;
+    width:45%;
+    height:100px;
+    background-color:white;
+    border-radius: 40px;
+    filter: drop-shadow(30px 30px 30px #cac9c9); 
+    margin-bottom:5%;
+}
+
+}
+
+
+
+

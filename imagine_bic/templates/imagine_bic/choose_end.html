@@ -9,14 +9,20 @@
         <title>choose1_end</title>
     </head>
     <body>
-        <div id="container">
+        <div class="text">
+            <span id="always">언제나</span>
+            <span id="fun">즐겁고</span>
+            <span id="happy">행복한</span>
+            <span id="trip">여행이 되시길 바랍니다.</span>
+        </div>
+
+        <div class="fin_text">
+            <!--<div id="name" name="name">{{user.name}}</div>-->
+            <span id="name" name="name">test1</span>
+            <span id="nim">님,</span>
+            <span id="finish01">예약이 완료 됐어요.</span>
+            <span id="finish02">예약확인은 홈에서 하실 수 있어요.</span>
             <img id="course-bt-bl" src="{% static 'img/course-bt-bl.png' %}" onclick="chfun01();">
-            <img id="h-bt" src="{% static 'img/h-bt.png' %}" onclick="chfun02();">
-            <div id="name" name="name">{{name}}</div>
-            <div id="nim">님,</div>
-            <div id="finish01">예약이 완료 됐어요.</div>
-            <div id="finish02">예약확인은 홈에서 하실 수 있어요.</div>
-            <!--테스트-->
         </div>
     </body>
 </html>
