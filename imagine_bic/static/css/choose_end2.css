@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+
+body{
+    background-image: url("../img/rf_bg.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+} /*bg img 설정*/
+
+#logo{
+    position: relative;
+    width:30%;
+    height:auto;
+    margin-top:10%;
+    margin-left:10%;
+    margin-bottom:7%;
+}
+
+.text{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    color:white;
+    margin-left:7%;
+}
+
+.text #always{
+    font-family: NotoSansCJKKR-Black;
+    font-size:8.8em;
+}
+
+.text #fun{
+    font-family: NotoSansCJKKR-Black;
+    font-size:8.8em;
+    margin-right:50%;
+}
+
+.text #happy{
+    font-family: NotoSansCJKKR-Black;
+    font-size:8.8em;
+}
+
+.text #trip{
+    font-family: NotoSansCJKKR-Regular;
+    font-size:4.2em;
+    margin-left:1%;
+}
+
+.fin_text{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    color:black;
+    margin-top:40%;
+    margin-left:10%;
+}
+
+.fin_text #name{
+    font-family: NotoSansCJKKR-Black;
+    font-size:7.5em;
+}
+.fin_text #nim{
+    font-family: NotoSansCJKKR-Regular;
+    font-size:5.5em;
+    margin-top:4%;
+}
+.fin_text #finish01{
+    font-family: NotoSansCJKKR-Regular;
+    font-size:4.2em;
+}
+.fin_text #finish02{
+    margin-top:4%;
+    font-family: NotoSansCJKKR-Regular;
+    font-size:2.5em;
+}
+
+.fin_bt{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:5%;
+    margin-bottom:10%;
+    filter: drop-shadow(30px 30px 30px #e6e6e6); 
+}
+
+.fin_bt #homebt{
+    width:35%;
+    height:auto;
+    margin-left:10%;
+}
+
+.fin_bt #coursebt{
+    width:35%;
+    height:auto;
+    margin-left:10%;
+}
+
+@media (min-width: 992px) { 
+    #logo{
+        position: relative;
+        width:25%;
+        height:auto;
+        margin-top:7%;
+        margin-left:10%;
+        margin-bottom:3%;
+    }
+    
+    .text{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        color:white;
+        margin-left:9%;
+    }
+    
+    .text #always{
+        font-family: NotoSansCJKKR-Black;
+        font-size:5.8em;
+    }
+    
+    .text #fun{
+        font-family: NotoSansCJKKR-Black;
+        font-size:5.8em;
+        margin-right:50%;
+    }
+    
+    .text #happy{
+        font-family: NotoSansCJKKR-Black;
+        font-size:5.8em;
+        margin-right: 50%;
+    }
+    
+    .text #trip{
+        font-family: NotoSansCJKKR-Regular;
+        font-size:2.7em;
+        margin-left:1%;
+    }
+    
+    .fin_text{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        color:black;
+        margin-top:40%;
+        margin-left:10%;
+    }
+    
+    .fin_text #name{
+        font-family: NotoSansCJKKR-Black;
+        font-size:4.5em;
+    }
+    .fin_text #nim{
+        font-family: NotoSansCJKKR-Regular;
+        font-size:2.5em;
+        margin-top:4%;
+    }
+    .fin_text #finish01{
+        font-family: NotoSansCJKKR-Regular;
+        font-size:1.2em;
+    }
+    .fin_text #finish02{
+        margin-top:4%;
+        font-family: NotoSansCJKKR-Regular;
+        font-size:1.5em;
+    }
+    
+    .fin_bt{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top:5%;
+        margin-bottom:10%;
+        filter: drop-shadow(30px 30px 30px #e6e6e6); 
+    }
+    
+    .fin_bt #homebt{
+        width:35%;
+        height:auto;
+        margin-left:10%;
+    }
+    
+    .fin_bt #coursebt{
+        width:35%;
+        height:auto;
+        margin-left:10%;
+    
+}
+}

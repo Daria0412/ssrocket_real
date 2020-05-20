@@ -3,12 +3,14 @@
     <head>
         <meta charset="utf-8">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/choose_end.css' %}" type="text/css"> <!--main.css 링크-->
+        <link rel="stylesheet" href="{% static 'css/choose_end2.css' %}" type="text/css"> <!--main.css 링크-->
         <script type="text/javascript"></script>
-        <script src="{% static 'js/choose1_end.js' %}"></script>
+        <script src="{% static 'js/choose_endjs' %}"></script>
         <title>choose1_end</title>
     </head>
     <body>
+
+        <img id="logo" src="{%static 'img/logo.png'%}">
         <div class="text">
             <span id="always">언제나</span>
             <span id="fun">즐겁고</span>
@@ -22,7 +24,12 @@
             <span id="nim">님,</span>
             <span id="finish01">예약이 완료 됐어요.</span>
             <span id="finish02">예약확인은 홈에서 하실 수 있어요.</span>
-            <img id="course-bt-bl" src="{% static 'img/course-bt-bl.png' %}" onclick="chfun01();">
         </div>
+
+        <div class="fin_bt">
+            <img id="homebt" name="homebt" src="{%static 'img/hcb_b.png' %}" onclick="hfun();">
+            <img id="coursebt" name="coursebt" src="{%static 'img/crc_b.png' %}" onclick="cfun();">
+        </div>
+        
     </body>
 </html>
