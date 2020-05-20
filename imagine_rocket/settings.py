@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'imagine_bic'
+    'imagine_bic',
+    'mathfilters'
 ]
 
 MIDDLEWARE = [
