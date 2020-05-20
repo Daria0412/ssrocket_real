@@ -3,29 +3,35 @@
     <head>
         <meta charset="utf-8">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/course.css' %}" type="text/css"> <!--main.css 링크-->
+        <link rel="stylesheet" href="{% static 'css/course1.css' %}" type="text/css"> <!--main.css 링크-->
         <script type="text/javascript"></script>
         <script src="{% static 'js/course.js' %}"></script>
         <title>course_rec</title>
     </head>
     <body>
-        <div id="container">
-            <img id="reservation2-bkbt" name="reservation2-bkbt" src="{% static 'img/back-bt-blue.png' %}" onclick="bkfun();">
-             <!--뒤로가기 버튼 삽입-->
-            <img id="reservation2-homebt" name="reservation2-homebt" src="{% static 'img/home-bt-blue.png' %}" onclick="hfun();">
-             <!--홈 버튼 삽입-->
-            <div id="rec_c">코스추천</div>
-            <div id="rec_h">#벚꽃길 #로맨틱 #신사 #봄</div>
-            <div id="rec_t">이나바신사 벚꽃길</div>
-            <div id="rec_con">이 길은 벚꽃 피는 계절인 4월에 가면 가장 좋습니다. <br> 
-                이나바 신사로 가는 길에 벚꽃나무가 놓여있기 때문에 자전거를 <br>
-                타면 낭만적인 기분을 잔뜩 느낄 수 있습니다.</div>
-            <div id="rec_time">소요시간 &nbsp; 평균 30분 ~ 1시간</div>
-            <div id="rec_loc">위치  &nbsp; &nbsp; &nbsp; 500-8043, 기후시, 이나바도리, 1 Chome-1</div>
-            <select id="category" name="category">
-                <option selected value="다른 코스 보기">다른 코스 보기</option>
-            </select>
-            <img id="cs-img01" src="{% static 'img/cs-img01'%}">
+
+    
+        <img id="backbt" src="{% static 'img/back-bt-blue.png' %}" onclick="bkfun()">
+        <img id="goset" src="{% static 'img/home-bt-blue.png' %}" onclick="hfun();">
+        
+
+    <div class="img">
+        <span id="rec_c">코스추천</span>
+        <img id="c_map" src="{% static 'img/c_map.png' %}">
+        <span id="rec_h">#벚꽃길 #로맨틱 #신사 #봄</span>
+    </div>
+        
+
+        <div class="text">
+            <span id="rec_t">이나바신사 벚꽃길</span>
+            <span id="rec_con">이 길은 벚꽃 피는 계절인 4월에 가면 가장 좋습니다.이나바 신사로 가는 길에 벚꽃나무가 놓여있기 때문에 자전거를 타면 낭만적인 기분을 잔뜩 느낄 수 있습니다.</span>
+            <span id="rec_time">소요시간:평균 1시간 </span>
+            <span id="rec_loc">위치: 500-8043, 기후현 기후시, 이나바도리, 1 Chome-1</span>
         </div>
+
+            <select id="category" name="category">
+                <option selected value="다른 코스 보기">&nbsp; 다른 코스 보기</option>
+                <option value="test">&nbsp; 테스트</option>
+            </select>
     </body>
 </html>

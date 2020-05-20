@@ -14,8 +14,6 @@
  
     <body>
        {% load static %} 
-       <!--이거 Form name 정확히 뭔지 모르겠어서 일단 lan Form으로 써뒀어! 수정 필요하면 알려줘!-->
-       <form action = "{% url 'shop_detail' pk=company.company_num %}" name = "lanForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %
        <img id="backbt" src="{% static 'img/b_bt.png' %}" onclick="bkfun()">
        <img id="goset" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="hfun();">
     
@@ -24,56 +22,32 @@
            <span id="from">에서</span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
            <span id="rent">대여할 수 있어요!</span>
        </div>
-
-       <div id="on" onclick="sd();">누르면 넘어가나 ??</div>
          
-    
-    <div id="a">
-        <div class="back">
-        <div class="shop_list">
-            <span id="member_name">세이노지점자전거대여소</span>
-            <br>
-                <span id="b_num">
-                <span id="bike">남은 자전거: </span>
-                <span id="bicycle_num">10</span>
-                <span id="dae">대</span>
-            <br>
-            </span>
-            <span id="info_tel">
-                <span id="user_info">24시간 운영! 번화가에 위치해 접근성이 좋으며, 역 근처에 위치해있습니다.</span>
-                <br>
-                <span id="tel_phone">
-                <span id="tel">TEL: </span>
-                <span id="company_phone">+86 10 1234 5678</span>
-                </span>
-                <br>
-            </span>
-        </div>
-      </div>
-      </div>
-
-      <div id="a">
-        <div class="back">
-        <div class="shop_list">
-            <span id="member_name">기후현지점자전거대여소</span>
-            <br>
-                <span id="b_num">
-                <span id="bike">남은 자전거: </span>
-                <span id="bicycle_num">10</span>
-                <span id="dae">대</span>
-            <br>
-            </span>
-            <span id="info_tel">
-                <span id="user_info">24시간 운영! 번화가에 위치해 접근성이 좋으며, 역 근처에 위치해있습니다.</span>
-                <br>
-                <span id="tel_phone">
-                <span id="tel">TEL: </span>
-                <span id="company_phone">+86 10 1234 5678</span>
-                </span>
-                <br>
-            </span>
-        </div>
-      </div>
-      </div>
+       {% load mathfilters %}
+       {% for company in companys %}
+            <div id="a">
+                <div class="back"  onclick="sd();">
+                <div class="shop_list">
+                    <span id="member_name" onclick="sd();">{{company.member_name}}</span>
+                    <br>
+                        <span id="b_num">
+                        <span id="bike">남은 자전거: </span>
+                        <span id="bicycle_num"> {{company.bicycle_num|sub:company.rent_num}}</span>
+                        <span id="dae">대</span>
+                    <br>
+                    </span>
+                    <span id="info_tel">
+                        <span id="user_info">{{company.company_info}}</span>
+                        <br>
+                        <span id="tel_phone">
+                        <span id="tel">TEL: </span>
+                        <span id="company_phone">{{company.company_phone}}</span>
+                        </span>
+                        <br>
+                    </span>
+                </div>
+            </div>
+            </div>
+      {% endfor %}
       </form>
     </body>

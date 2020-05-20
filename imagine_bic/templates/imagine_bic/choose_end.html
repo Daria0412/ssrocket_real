@@ -3,20 +3,33 @@
     <head>
         <meta charset="utf-8">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/choose_end.css' %}" type="text/css"> <!--main.css 링크-->
+        <link rel="stylesheet" href="{% static 'css/choose_end2.css' %}" type="text/css"> <!--main.css 링크-->
         <script type="text/javascript"></script>
-        <script src="{% static 'js/choose1_end.js' %}"></script>
+        <script src="{% static 'js/choose_endjs' %}"></script>
         <title>choose1_end</title>
     </head>
     <body>
-        <div id="container">
-            <img id="course-bt-bl" src="{% static 'img/course-bt-bl.png' %}" onclick="chfun01();">
-            <img id="h-bt" src="{% static 'img/h-bt.png' %}" onclick="chfun02();">
-            <div id="name" name="name">{{name}}</div>
-            <div id="nim">님,</div>
-            <div id="finish01">예약이 완료 됐어요.</div>
-            <div id="finish02">예약확인은 홈에서 하실 수 있어요.</div>
-            <!--테스트-->
+
+        <img id="logo" src="{%static 'img/logo.png'%}">
+        <div class="text">
+            <span id="always">언제나</span>
+            <span id="fun">즐겁고</span>
+            <span id="happy">행복한</span>
+            <span id="trip">여행이 되시길 바랍니다.</span>
         </div>
+
+        <div class="fin_text">
+            <!--<div id="name" name="name">{{user.name}}</div>-->
+            <span id="name" name="name">test1</span>
+            <span id="nim">님,</span>
+            <span id="finish01">예약이 완료 됐어요.</span>
+            <span id="finish02">예약확인은 홈에서 하실 수 있어요.</span>
+        </div>
+
+        <div class="fin_bt">
+            <img id="homebt" name="homebt" src="{%static 'img/hcb_b.png' %}" onclick="hfun();">
+            <img id="coursebt" name="coursebt" src="{%static 'img/crc_b.png' %}" onclick="cfun();">
+        </div>
+        
     </body>
 </html>
