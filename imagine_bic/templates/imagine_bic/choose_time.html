@@ -28,6 +28,7 @@
         <div id="rental_p4" name="rental_p4">남은 개수</div>
         <div id="rental_p5" name="rental_p5">{{shop.bicycle_num|sub:shop.rent_num}}</div>
         <div id="rental_p6" name="rental_p6">대</div>
+
         <form action = "{% url 'choose_time' %}" name = timeForm method = "POST" accept-charset="UTF-8"> {% csrf_token %}
             <select id="r_year" name="r_year" data-default-option="년도" data-unit="y" >
                 <option value="년도">년도</option>
@@ -95,6 +96,7 @@
                 <option value="23:00">PM 11:00</option>
             </select>
         </form>
+        
         <img id="reservation3-finish" name="reservation3-finish" src="{% static 'img/fin-bt.png' %}" onclick="f_fun();">
     </div>
     </body>
