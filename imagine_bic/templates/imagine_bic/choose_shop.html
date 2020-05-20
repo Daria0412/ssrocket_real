@@ -15,7 +15,7 @@
     <body>
        {% load static %} 
        <!--이거 Form name 정확히 뭔지 모르겠어서 일단 lan Form으로 써뒀어! 수정 필요하면 알려줘!-->
-       <form action = "{% url 'shop_detail' pk=company.company_num %}" name = "lanForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %
+       <form action = "" name = "lanForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
        <img id="backbt" src="{% static 'img/b_bt.png' %}" onclick="bkfun()">
        <img id="goset" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="hfun();">
     
