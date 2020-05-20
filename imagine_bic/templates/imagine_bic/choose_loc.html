@@ -13,9 +13,9 @@
 
         <form action = "{% url 'choose_loc' %}" name = "lanForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
             <div id="container">
-                <img id= name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
+                <img id="reservation2-bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
                 <!--뒤로가기 버튼 삽입-->
-                <img id= name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="hfun();">
+                <img id="reservation2-homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="hfun();">
                 <!--홈 버튼 삽입-->
 
                 <span id="a">

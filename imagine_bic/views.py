@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import *
 from django.http import HttpResponse, HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt,csrf_protect
@@ -47,15 +47,13 @@ def choose_loc(request):
     id = request.COOKIES.get('id') 
     users = User.objects.filter(id = id)
     if request.method == "POST":
-        response = render(request, 'imagine_bic/choose_shop.html',{"count":1})
-        response.set_cookie('company_loc',request.POST['company_loc'])
-        response.set_cookie('id',id)
-        return response
+        request.session['company_loc']=request.POST['search']
+        return redirect('/choose_shop')
     return render(request, 'imagine_bic/choose_loc.html',{"users":users})
 
 @csrf_exempt#,{"count":count}
 def choose_shop(request):
-    company_loc = request.COOKIES.get('company_loc') 
+    company_loc = request.session['company_loc'] 
     companys = Company.objects.filter(company_loc = company_loc)
     return render(request, 'imagine_bic/choose_shop.html',{"companys":companys})
 
