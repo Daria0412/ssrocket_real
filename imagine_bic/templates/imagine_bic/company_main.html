@@ -13,6 +13,7 @@
     </head>
  
     <body>
+
         {% load i18n %}
         <form action = "{% url 'company_main' %}" name = "lanForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
 
@@ -31,17 +32,18 @@
        
     {% for history in historys %}
     <div id="a">
-        <div class="back">
+        <div class="back" onclick="choose();">
         <div class="reservation_list">
-            <span id="user_name">{{history.member_id}}</span>
-            <span id="user_nim">님이</span>
-            <span id="user_date">2020년 05월 11일</span>
+            <span id="user_name" onclick="choose();">{{history.member_id}}</span>
+            <span id="user_nim" onclick="choose();">님이</span>
+            <span id="user_date" onclick="choose();">2020년 05월 11일</span>
             <br>
-            <span id="user_time">14:00~19:00</span>
+            <span id="user_time" onclick="choose();">14:00~19:00</span>
             <br>
-            <span id="user_num">1대</span>
-            <span id="user_end">예약하셨습니다.</span>
+            <span id="user_num" onclick="choose();">1대</span>
+            <span id="user_end" onclick="choose();">예약하셨습니다.</span>
             <br>
+            <!--back에 onclick이 먹히는지 확인이 안되어서 우선 온클릭 함수 다 넣어놨어!-->
         </div>
       </div>
     </div>

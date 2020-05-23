@@ -44,3 +44,11 @@ function adddate(){
         }
     }
 
+function choose(){
+    var result = confirm("예약을 수락하시겠습니까?");
+        if(result){
+            alert("예약을 수락하셨습니다!");
+        }else{
+            alert("예약을 거부하셨습니다!");
+        }
+}
