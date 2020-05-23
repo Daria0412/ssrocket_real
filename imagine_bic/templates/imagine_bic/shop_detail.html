@@ -10,6 +10,7 @@
     </head>
     <body>
         
+        <form action = "." name = "shopForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
         <img id="backbt" src="{% static 'img/b_bt.png' %}" onclick="bkfun()">
        <img id="goset" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="hfun();">
 
@@ -20,8 +21,6 @@
             <span id="company_phone" name="company_phone">전화번호 &nbsp; &nbsp; &nbsp;{{shop.company_phone}}</span>
             <span id="s_business" name="s_business">영업시간 &nbsp; &nbsp; &nbsp;XX시~XX시</span>
         </div>
-
-        <form action = "." name = "shopForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
             <input type = hidden name = company_num id = company_num value = {{shop.company_num}}>
             <img id="b" src="{% static 'img/rv_b.png' %}" onclick = "sm();">
             <!--<input type = submit value = "이 대여소 선택하기">-->
