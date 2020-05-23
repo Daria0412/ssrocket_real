@@ -13,6 +13,9 @@
     </head>
  
     <body>
+        {% load i18n %}
+        <form action = "{% url 'company_main' %}" name = "lanForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
+
        {% load static %}
        <img id="logo" src="{% static 'img/ss_lg.png' %}">
        <img id="gonotice" src="{% static 'img/if_b.png' %}"  onclick="location.href='/notice'">
@@ -25,6 +28,7 @@
            <span id="welcome">반갑습니다!</span>
        </div>
        {% endfor%}
+       
     {% for history in historys %}
     <div id="a">
         <div class="back">
@@ -35,7 +39,6 @@
             <br>
             <span id="user_time">14:00~19:00</span>
             <br>
-            <!--README보니까 날짜.시간 합쳐져 있는데 나눠서 써야할 것 같아서 방법 찾아볼게! key error 해결되어야 확인할 수 있어서 우선 변수명만 수정했어!-->
             <span id="user_num">1대</span>
             <span id="user_end">예약하셨습니다.</span>
             <br>
@@ -43,5 +46,7 @@
       </div>
     </div>
     {% endfor%}
+    
+      </form>
     </body>
 </html>

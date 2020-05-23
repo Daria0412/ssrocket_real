@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/choose_loc.css' %}" type="text/css"> <!--main.css 링크-->
+        <link rel="stylesheet" href="{% static 'css/choose_loc1.css' %}" type="text/css"> <!--main.css 링크-->
         <script type="text/javascript"></script>
         {% if count == 1 %}<script>location.href="{% url 'choose_loc' %}"</script>{% endif %}
         <script src="{% static 'js/choose1_loc.js' %}"></script>
@@ -31,7 +31,7 @@
 
                     <input type="text"id="search" name="search"  placeholder="이곳에 입력하세요.">
                     <input type="hidden"id="company_loc" name="company_loc" value = "gifu">
-                    <img id="whitemap" src="{%static 'img/whitemap.png' %}">
+                    <img id="whitemap" src="{%static 'img/colormap.png' %}">
 
     
                         <span id="dono" onmouseover="onmdono();" onclick="oncdono();">도노</span>
