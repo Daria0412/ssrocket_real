@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/signup.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/signup1.css' %}" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript"></script>
         <script src="{% static 'js/signup1.js' %}"></script>
@@ -43,11 +43,11 @@
                     <span id="input_pwchk">
                     <input type="password" name="pwdck" id="pwdck" placeholder="Password Re-Enter"/>
                     <img id="bar-04" src="{% static 'img/bar-long.png' %}">
-
-
                         <!-- 이거 비밀번호 확인 창 아래에 넣어주라. -->
+                    <span id="ch">
                     <div id="alert-success" style="display: none;">비밀번호가 일치합니다.</div>
                     <div id="alert-danger">비밀번호가 일치하지 않습니다.</div>
+                    </span>
                     </span>
                 </div>
             </span>

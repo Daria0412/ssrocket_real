@@ -110,6 +110,13 @@ body{
     filter: drop-shadow(30px 30px 30px #dbdbdb); 
 }
 
+#ch{
+    position: relative;
+    margin-top:10%;
+    font-family:NotoSansCJKKR-Regular;
+    color:red;
+}
+
 
 @media (min-width:359px) and (max-height:700px){
     
@@ -376,6 +383,13 @@ body{
                 margin-bottom:2.555em;
                 width:550px;
             }
+            #ch{
+                position: relative;
+                margin-top:10%;
+                font-family:NotoSansCJKKR-Regular;
+                font-size:30px;
+                color:red;
+            }
     
             #form #input_pw #bar-03{
                 width:550px;
@@ -421,7 +435,7 @@ body{
             
             #joinBt{
                 width:20%;
-                margin-top:70px;
+                margin-top:20px;
                 margin-bottom:100px;
                 filter: drop-shadow(30px 30px 30px #dbdbdb); 
             }
