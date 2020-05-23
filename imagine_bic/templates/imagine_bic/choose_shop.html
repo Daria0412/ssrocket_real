@@ -27,9 +27,9 @@
        {% load mathfilters %}
        {% for company in companys %}
             <div id="a">
-                <div class="back"  onclick="sd();">
+                <div class="back" onclick="location.href='choose_shop/{{ company.company_num}}'">
                 <div class="shop_list">
-                    <span id="member_name" onclick="sd();">{{company.member_name}}</span>
+                    <span id="member_name"onclick="location.href='choose_shop/{{ company.company_num}}'">{{company.member_name}}</span>
                     <br>
                         <span id="b_num">
                         <span id="bike">남은 자전거: </span>
