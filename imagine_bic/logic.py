@@ -19,7 +19,7 @@ class Sign:
                     if user.info == 0:
                         return render(request, 'imagine_bic/index.html',{"okay":1,"users":users})
                     else:
-                        return render(request,'imagine_bic/company_main.html',{"count":2,"users":users})
+                        return redirect('/index/company/')
         else : 
             return HttpResponse("<html><script>alert('로그인 오류입니다. 다시 시도해주세요');location.href='signin';</script></html>")
         return render(request, 'imagine_bic/login.html',{"okay":1,"users":users})
@@ -50,7 +50,7 @@ class Sign:
             company_info = request.POST['company_info']
             company = Company.objects.create(member_name = name, company_addr = company_addr,company_phone=company_phone,bicycle_num=bicycle_num,member_id=id, s_business=s_business,e_business=e_business,company_info=company_info,company_loc=company_loc,rent_num=0)
             request.session.clear()
-            return render(request, 'imagine_bic/login.html',{"count":1})
+            return redirect("/signin/")
         return render(request, 'imagine_bic/signup2_company.html')
 
 class Choose:

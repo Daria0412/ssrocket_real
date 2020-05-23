@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{% static 'css/company_main3.css' %}" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript"></script>
-        <script src="{% static 'js/coompany_main.js' %}"></script>
+        <script src="{% static 'js/main_company.js' %}"></script>
         <title>company_main</title>
     </head>
  
@@ -17,19 +17,19 @@
        <img id="logo" src="{% static 'img/ss_lg.png' %}">
        <img id="gonotice" src="{% static 'img/if_b.png' %}"  onclick="location.href='/notice'">
        <img id="goset" src="{% static 'img/st_bt.png' %}"  onclick="location.href='index/setting/'">
+       {% for company in companys %}
 
        <div id="text">
-           {% for company in companys %}
            <span id="user">{{company.member_name}}</span>
            <span id="nim">님,</span><br                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    >
            <span id="welcome">반갑습니다!</span>
-           {% endfor%}
        </div>
-
+       {% endfor%}
+    {% for history in historys %}
     <div id="a">
         <div class="back">
         <div class="reservation_list">
-            <span id="user_name">{{member_id}}</span>
+            <span id="user_name">{{history.member_id}}</span>
             <span id="user_nim">님이</span>
             <span id="user_date">2020년 05월 11일</span>
             <br>
@@ -42,5 +42,6 @@
         </div>
       </div>
     </div>
+    {% endfor%}
     </body>
 </html>

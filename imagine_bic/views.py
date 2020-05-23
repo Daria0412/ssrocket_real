@@ -106,8 +106,11 @@ def signup_company(request):
 
 def company_main(request):
     id = request.session['id']
-    users = User.objects.filter(id = id)
-    return render(request, 'imagine_bic/company_main.html',{"count":1,"users":users})
+    companys = Company.objects.filter(member_id = id)
+    for company in companys:
+        company_num = company.company_num
+    historys = History.objects.filter(company_num = company_num)
+    return render(request, 'imagine_bic/company_main.html',{"count":1,"companys":companys, "historys":historys})
 
 def course(request):
     return render(request, 'imagine_bic/course.html')
