@@ -22,7 +22,7 @@ SECRET_KEY = '4yvv&l0tu3&vj643#4w#j)r1q7#jwpm&s+j$*i9a&))^)ipqeb'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1','localhost', '.pythonanywhere.com','0.0.0.0','3.23.87.23']
 
 LANGUAGES = [
     ('ko', _('Korean')),
@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'ssrocket', # DB명
         'USER': 'ssrocket', # 데이터베이스 계정
         'PASSWORD': 'mirim2', # 계정 비밀번호
-        'HOST': '127.0.0.1', # 데이테베이스 주소(IP)
+        'HOST': '18.222.253.57', # 데이테베이스 주소(IP)
         'PORT': '3306', # 데이터베이스 포트(보통은 3306)
     }
 }
