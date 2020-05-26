@@ -5,7 +5,7 @@
 
         {% load static %}
         <meta charset="utf-8">
-        <link rel="stylesheet" href="{% static 'css/choose_time.css' %}" type="text/css"> <!--reservation_3.css 링크-->
+        <link rel="stylesheet" href="{% static 'css/choose_time1.css' %}" type="text/css"> <!--reservation_3.css 링크-->
         <script type="text/javascript"></script>
         {% if count == 1 %}<script>location.href="{% url 'choose_time' %}"</script>{% endif %}
         {% if count == 2 %}<script>location.href="/check/{{history_num}}";</script>{% endif %}
@@ -21,13 +21,13 @@
         <img id="reservation2-homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="hfun();">
         <!--홈 버튼 삽입-->
         
-        <div id="rental_p1" name="rental_p1">{{shop.member_name}}</div>
-        <div id="rental_p2" name="rental_p2">자전거 대여소</div>
-        <div id="rental_p3" name="rental_p3">{{shop.company_addr}} 
-        <br> TEL : {{shop.company_phone}}</div>
-        <div id="rental_p4" name="rental_p4">남은 개수</div>
-        <div id="rental_p5" name="rental_p5">{{shop.bicycle_num|sub:shop.rent_num}}</div>
-        <div id="rental_p6" name="rental_p6">대</div>
+        <span id="rental_p1" name="rental_p1">{{shop.member_name}}</span>
+        <span id="rental_p2" name="rental_p2">자전거 대여소</span>
+        <span id="rental_p3" name="rental_p3">{{shop.company_addr}} 
+        <br> TEL : {{shop.company_phone}}</span>
+        <span id="rental_p4" name="rental_p4">남은 개수</span>
+        <span id="rental_p5" name="rental_p5">{{shop.bicycle_num|sub:shop.rent_num}}</span>
+        <span id="rental_p6" name="rental_p6">대</span>
 
         <form action = "{% url 'choose_time' %}" name = timeForm method = "POST" accept-charset="UTF-8"> {% csrf_token %}
             <select id="r_year" name="r_year" data-default-option="년도" data-unit="y" >
