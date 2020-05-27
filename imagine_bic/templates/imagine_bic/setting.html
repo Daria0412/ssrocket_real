@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
+        {%load static%}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/setting_main.css" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/s_main.css' %}" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript"></script>
-        <script src="../js/setting_main.js"></script>
+        <script src="{% static 'js/setting_main.js' %}"></script>
         <title>setting_main</title>
     </head>
  
     <body>
         <div id="head">
         <div id="bt">
-            <img id="backbt" src="../img/bb_b.png" onclick="bkfun()">
-            <img id="homebt" src="../img/hb_b.png" onclick="gohome()">
+            <img id="reservation2-bkbt" name="reservation2-bkbt" src="{% static 'img/bb_b.png' %}" onclick="bkfun();">
+            <!--뒤로가기 버튼 삽입-->
+            <img id="reservation2-homebt" name="reservation2-homebt" src="{% static 'img/hb_b.png' %}" onclick="hfun();">
+            <!--홈 버튼 삽입-->
         </div>
 
         <div id="settxt">
             <span id="txt">설정 및 문의</span>
         </div>
+
+        <span id="s_txt">
+            <span id="modify" onclick="location.href='index/setting/?/';">개인정보수정</span>
+            <span id="out"  onclick="location.href='index/setting/?/';">회원탈퇴</span>
+            <span id="ask"  onclick="location.href='index/setting/?/';">1대 1문의 </span>
+        </span>
         </div>
         
     </body>
