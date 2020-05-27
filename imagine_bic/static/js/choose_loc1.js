@@ -6,5 +6,6 @@ function hfun(){
 }
 
 function sm(){
+    alert("HELLO");
     lanForm.submit();
 }

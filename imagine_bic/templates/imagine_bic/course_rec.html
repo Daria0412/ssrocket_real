@@ -3,25 +3,42 @@
     <head>
         <meta charset="utf-8">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/course1_rec.css' %}" type="text/css"> <!--main.css 링크-->
+        <link rel="stylesheet" href="{% static 'css/course_rec1.css' %}" type="text/css"> <!--main.css 링크-->
         <script type="text/javascript"></script>
         <script src="{% static 'js/course_rec.js' %}"></script>
         <title>course_rec</title>
     </head>
     <body>
-        {%for history in historys%}
-        <div id="container">
-            <img id="reservation2-bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
+       {%for history in historys%}
+            <img id="bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
              <!--뒤로가기 버튼 삽입-->
-            <img id="reservation2-homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="bkfun();">
+            <img id="homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="bkfun();">
              <!--홈 버튼 삽입-->
+
             <img id="bluebox" src="{% static 'img/bluebox.png' %}">
+
+            <span id="txt">
+                <div id="member_name">기후현본점</div>
+                <br>
+                <!--<div id="member_name">{{history.history_place}}</div>-->
+                <!--이렇게 쓰면 아무것도 안떠서 일단 이름 임의로 입력했어-->
+
+                <div id="company_addr">일본 기후현 기후시 200-993</div>
+                <br>
+                <!--history db에 주소는 없어서 주소도 추가해야할 것 같아-->
+                <div id="time">{{history.r_btime}} ~ {{history.r_rtime}}</div>
+                <br>
+                <div id="company_phone">01022922929</div>
+                <br>
+                <!--번호도 없어ㅜㅜ-->
+            </span>
+
             <img id="rsv-course" src="{% static 'img/rsv-course.png' %}">
+            <!--
             <div id="member_name">{{history.company_num}}</div>
             <div id="company_addr">{{history.company_addr}}</div>
             <div id="company_phone">{{history.company_phone}}</div>
-            <div id="time">{{history.r_btime}}~{{history.r_rtime}}</div>
-        </div>
-        {%endfor%}
+            <div id="time">{{history.r_btime}}~{{history.r_rtime}}</div>-->
+       {%endfor%}
     </body>
 </html>
