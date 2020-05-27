@@ -16,6 +16,7 @@ urlpatterns = [
     path('signup/',views.signup, name='signup'),#사용자 로그인
     path('signup/company/',views.signup_company, name = 'signup_company'), #업체 회원가입
     path('signup/check_email/',views.checkEmail, name='check_email'), #이메일 중복확인
+    path('signup/check_email_cp/',views.checkEmailCp, name='check_email_cp'), #이메일 중복확인
     path('notice/',views.notice,name = 'notice'),#공지사항
     path('notice/<int:pk>/',views.notice_detail,name = 'notice_detail'),#공지사항 상세
     path('index/setting/<slug:setUrl>/',views.setUrl,name = 'setUrl'),#설정 클릭한 페이지로
