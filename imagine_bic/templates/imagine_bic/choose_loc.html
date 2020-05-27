@@ -6,7 +6,11 @@
         <link rel="stylesheet" href="{% static 'css/choose_loc.css' %}" type="text/css"> <!--main.css 링크-->
         <script type="text/javascript"></script>
         {% if count == 1 %}<script>location.href="{% url 'choose_loc' %}"</script>{% endif %}
+<<<<<<< HEAD
         <script src="{% static 'js/choose1_loc1.js' %}"></script>
+=======
+        <script src="{% static 'js/choose_loc.js' %}"></script>
+>>>>>>> ebd9a93655c08be44186181701d919bb2c3408eb
         <title>course_loc</title>
     </head>
     <body>
@@ -30,15 +34,12 @@
                     <div id="where">어디로 여행하시나요?</div>
 
                     <input type="text"id="search" name="search"  placeholder="이곳에 입력하세요.">
-                    <input type="hidden"id="company_loc" name="company_loc" value = "gifu">
                     <img id="whitemap" src="{%static 'img/mp_color.png' %}">
-
-    
-                        <span id="dono" onclick="sm();">도노 <input type="hidden"id="company_loc" name="company_loc" value = "dono"></span>
-                        <span id="juno" onclick="sm();">주노 <input type="hidden"id="company_loc" name="company_loc" value = "juno"> </span>
-                        <span id="hida" onclick="sm();">히다  <input type="hidden"id="company_loc" name="company_loc" value = "hida"></span>
-                        <span id="gifu" onclick="sm();">기<br>후  <input type="hidden"id="company_loc" name="company_loc" value = "gifu"> </span>
-                        <span id="seino" onclick="sm();">세<br>이<br>노 <input type="hidden"id="company_loc" name="company_loc" value = "seino"></span>
+                        <span id="dono" onclick="sm('도노');">도노 </span>
+                        <span id="juno" onclick="sm('주노');">주노 </span>
+                        <span id="hida" onclick="sm('히다');">히다  </span>
+                        <span id="gifu" onclick="sm('기후');">기<br>후</span>
+                        <span id="seino" onclick="sm('세이노');">세<br>이<br>노</span>
             
                 </span>
             </div>
