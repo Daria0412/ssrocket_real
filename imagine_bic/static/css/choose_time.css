@@ -34,7 +34,7 @@ body{
 #container #rental_p1{
     font-family: NotoSansCJKKR-Black;
     position: absolute;
-    top:700px;
+    top:650px;
     left:70px;
     width:600px;
     font-size:120px;
@@ -47,7 +47,7 @@ body{
 #container #rental_p2{
     font-family: NotoSansCJKKR-Black;
     position: absolute;
-    top:850px;
+    top:800px;
     left:70px;
     font-size:90px;
     color:white;
@@ -56,7 +56,7 @@ body{
 #container #rental_p3{
     font-family: NotoSansCJKKR-Regular;
     position: absolute;
-    top:1000px;
+    top:950px;
     left:70px;
     font-size:48px;
     color:white;
@@ -65,8 +65,8 @@ body{
 #container #rental_p4{
     font-family: NotoSansCJKKR-Medium;
     position: absolute;
-    top:730px;
-    left:700px;
+    top:680px;
+    left:650px;
     font-size:78px;
     color:white;
 } /*남은개수 위치 설정*/
@@ -75,8 +75,8 @@ body{
 #container #rental_p5{
     font-family: NotoSansCJKKR-Medium;
     position: absolute;
-    top:800px;
-    left:720px;
+    top:750px;
+    left:650px;
     font-size:120px;
     color:white;
 } /* 자전거 수 위치 설정*/
@@ -84,8 +84,8 @@ body{
 #container #rental_p6{
     font-family: NotoSansCJKKR-Medium;
     position: absolute;
-    top:800px;
-    left:880px;
+    top:752px;
+    left:800px;
     font-size:120px;
     color:white;
 } /*10대 이름 위치 설정*/
@@ -94,7 +94,7 @@ body{
     appearance: none;
     -webkit-appearance:none;
     font-family:NotoSansCJKKR-Medium;
-    font-size: 45px;
+    font-size: 47px;
     background: url(../img/b.png);
     background-repeat: no-repeat ;
     border:0px;
@@ -102,15 +102,16 @@ body{
     position: relative;
     width:300px;
     height:80px;
-    top:1770px;
-    left:52px;
+    top:1480px;
+    left:190px;
+
 } /*select box css*/
 
 #container #r_rtime{
     appearance: none;
     -webkit-appearance:none;
     font-family:NotoSansCJKKR-Medium;
-    font-size: 45px;
+    font-size: 47px;
     background: url(../img/b.png);
     background-repeat: no-repeat ;
     border:0px;
@@ -118,15 +119,16 @@ body{
     position: relative;
     width:300px;
     height:80px;
-    top:1770px;
-    left:260px;
+    top:1400px;
+
+
 } /*select box css*/
 
 #container #r_year{
     appearance: none;
     -webkit-appearance:none;
     font-family:NotoSansCJKKR-Medium;
-    font-size: 45px;
+    font-size: 55px;
     background: url(../img/arrow-blue.png);
     background-repeat: no-repeat ;
     border:0px;
@@ -134,15 +136,15 @@ body{
     position: relative;
     width:250px;
     height:80px;
-    top:1600px;
-    left:50px;
+    top:1300px;
+    left:-80px;
 } /*select box css*/
 
 #container #r_month{
     appearance: none;
     -webkit-appearance:none;
     font-family:NotoSansCJKKR-Medium;
-    font-size: 45px;
+    font-size: 55px;
     background: url(../img/arrow-blue.png);
     background-repeat: no-repeat ;
     border:0px;
@@ -150,15 +152,15 @@ body{
     position: relative;
     width:250px;
     height:80px;
-    top:1600px;
-    left:130px;
+    top:1300px;
+    left:-50px;
 } /*select box css*/
 
 #container #r_date{
     appearance: none;
     -webkit-appearance:none;
     font-family:NotoSansCJKKR-Medium;
-    font-size: 45px;
+    font-size: 55px;
     background: url(../img/arrow-blue.png);
     background-repeat: no-repeat ;
     border:0px;
@@ -166,8 +168,8 @@ body{
     position: relative;
     width:250px;
     height:80px;
-    top:1600px;
-    left:200px;
+    top:1220px;
+    left:500px;
 } /*select box css*/
 
 #r_btime option {
@@ -192,8 +194,9 @@ body{
 
 #container #reservation3-finish{
     position:absolute;
-    top:2050px;
-    left:730px;
+    top:1800px;
+    width:25%;
+    height:auto;
+    left:65%;
     filter: drop-shadow(30px 30px 30px hsl(0, 4%, 87%)); 
 } /*완료 버튼 위치 설정*/ 
-

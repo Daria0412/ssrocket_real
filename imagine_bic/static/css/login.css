@@ -44,8 +44,9 @@ body{
 
 #w #welcome{
     width:55%;
-    height:auto;
+    height:5%;
 }
+
 #form #input_email{
     display: flex;
     flex-wrap: wrap;
