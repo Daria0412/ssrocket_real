@@ -5,7 +5,7 @@ function hfun(){
     location.href="/index";
 }
 
-function sm(){
-    alert("HELLO");
+function sm(company_loc){
+    document.getElementById("search").value = company_loc;
     lanForm.submit();
 }
