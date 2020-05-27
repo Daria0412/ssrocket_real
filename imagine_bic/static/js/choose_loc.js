@@ -6,7 +6,8 @@ function hfun(){
 }
 
 function sm(company_loc){
-    alert(document.getElementById("company_loc").value);
-    document.getElementById("company_loc").value = company_loc;
+    alert(document.getElementById("search").value);
+    document.getElementById("search").value = company_loc;
+    alert(document.getElementById("search").value);
     lanForm.submit();
 }
