@@ -44,7 +44,9 @@ body{
 
 #w #welcome{
     width:55%;
+    height:5%;
 }
+
 #form #input_email{
     display: flex;
     flex-wrap: wrap;
@@ -82,7 +84,7 @@ body{
 
 #joinBt{
     width:25%;
-    height: auto;
+    height:10%;
     filter: drop-shadow(30px 30px 30px #dbdbdb); 
 }
 

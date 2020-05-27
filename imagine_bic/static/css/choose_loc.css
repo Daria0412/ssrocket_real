@@ -24,7 +24,7 @@ body{
 #container #reservation2-bkbt{
     position: relative;
     float: left;
-    left:7%;
+    left:4%;
     margin-top:7%;
 } /*<- 버튼 위치 설정*/
 
@@ -32,7 +32,7 @@ body{
     position: relative;
     float: right;
     margin-top:7%;
-    margin-right: 3%;
+    margin-right: 4%;
 } /*home 버튼 위치 설정*/
 
 #container #name{
@@ -66,7 +66,7 @@ body{
     position: relative;
     width:100%;
     height:auto;
-    margin-top:55%;
+    margin-top:35%;
     margin-left:0%;
 }
 
@@ -95,7 +95,7 @@ input::-webkit-input-placeholder {
     color:black;
     font-size: 3.2em;
     position: relative;
-    margin-top:-30%;
+    margin-top:-32%;
     margin-left:77%;
 }
 
@@ -104,7 +104,7 @@ input::-webkit-input-placeholder {
     color:black;
     font-size: 3.2em;
     position: relative;
-    margin-top:-40%;
+    margin-top:-42%;
     margin-left:50%;
 }
 
@@ -114,8 +114,8 @@ input::-webkit-input-placeholder {
     color:black;
     font-size: 3.2em;
     position: relative;
-    margin-top:-39%;
-    margin-left:-34%;
+    margin-top:-41%;
+    margin-left:-25%;
 }
 
 
@@ -124,8 +124,8 @@ input::-webkit-input-placeholder {
     color:black;
     font-size: 3.2em;
     position: relative;
-    margin-top:-40%;
-    margin-left:36%;
+    margin-top:-41%;
+    margin-left:30.8%;
 }
 
 
@@ -134,7 +134,7 @@ input::-webkit-input-placeholder {
     color:black;
     font-size: 3.2em;
     position: relative;
-    margin-top:-80%;
+    margin-top:-90%;
     margin-left:65%;
 }
 
