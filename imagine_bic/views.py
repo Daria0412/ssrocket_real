@@ -59,6 +59,19 @@ def checkEmail(request):
     }
     return JsonResponse(result)
 
+def checkEmailCp(request):
+    try:
+        company = Company.objects.get(id=request.GET['id'])
+    except Exception as e:
+        company = None
+
+    result = {
+        'result':'success',
+        # 'data' : model_to_dict(user)  # console에서 확인
+        'data' : "not exist" if company is None else "exist"
+    }
+    return JsonResponse(result)
+
 
 def choose_use(request):
     return Choose.choose_use(request)
