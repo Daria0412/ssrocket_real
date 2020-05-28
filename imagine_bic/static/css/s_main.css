@@ -58,7 +58,7 @@ body{
 #s_txt #out{
     margin-bottom:10%;
     margin-top: 80%;
-    left:-20%;
+    left: -30%;
 }
 
 @media (max-height:700px) and (min-height:600px){
