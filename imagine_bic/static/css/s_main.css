@@ -47,7 +47,7 @@ body{
     font-family: NotoSansCJKKR-Medium;
     font-size:1.188em;
     color:#696969;
-    left:-20%;
+    left:-30%;
 }
 
 #s_txt #modify{
@@ -57,8 +57,9 @@ body{
 
 #s_txt #out{
     margin-bottom:10%;
+    margin-top: 60%;
+    left:-10%;
 }
-
 @media (max-height:700px) and (min-height:600px){
 
     #txt{
