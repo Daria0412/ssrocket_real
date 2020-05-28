@@ -43,21 +43,21 @@ body{
     position: relative;
     display:flex;
     flex-wrap: wrap;
+    justify-content:left;
     font-family: NotoSansCJKKR-Medium;
     font-size:1.188em;
     color:#696969;
-    left:-45%;
+    left:-20%;
 }
 
 #s_txt #modify{
-    margin-top:140%;
+    margin-top:100%;
     margin-bottom:10%;
 }
 
 #s_txt #out{
     margin-bottom:10%;
 }
-
 
 @media (max-height:700px) and (min-height:600px){
 
