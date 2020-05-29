@@ -218,9 +218,11 @@ class Check:
     def bic_rent(request):
         pk = int(request.POST['pk'])
         History.objects.filter(history_num = pk).update(btime = datetime.datetime.now())
-        return redirect("http://3.23.87.223:8000/check/company/"+str(pk)+"/")
+        return str(pk)
 
     def bic_return(request):
         pk = int(request.POST['pk'])
         History.objects.filter(history_num = pk).update(rtime = datetime.datetime.now())
-        return redirect("http://3.23.87.223:8000/check/company/"+str(pk)+"/")
+        history = get_object_or_404(History, history_num=pk)
+        Company.objects.filter(company_num = history.company_num).update(rent_num = rent_num - 1)
+        return str(pk)

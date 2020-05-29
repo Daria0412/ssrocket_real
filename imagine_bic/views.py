@@ -132,7 +132,12 @@ def company_check(request, pk):
     return Check.check_company(request, pk)
 
 def bic_rent(request):
-    return Check.bic_rent(request)
+    pk = Check.bic_rent(request)
+    print(pk)
+    return redirect("http://3.23.87.223:8000/check/company/"+pk+"/")
 
 def bic_return(request):
-    return Check.bic_return(request)
+    pk = Check.bic_return(request)
+    print(pk)
+    return redirect("http://3.23.87.223:8000/check/company/"+pk+"/")
+
