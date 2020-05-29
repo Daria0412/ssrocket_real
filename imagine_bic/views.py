@@ -132,7 +132,7 @@ def company_check(request, pk):
     return Check.check_company(request, pk)
 
 def bic_rent(request):
-    pass
+    return Check.bic_rent(request)
 
 def bic_return(request):
-    pass
+    return Check.bic_return(request)

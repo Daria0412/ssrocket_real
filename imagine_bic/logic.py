@@ -212,4 +212,15 @@ class Check:
         history = get_object_or_404(History, history_num=pk)
         print(pk)
         print(history)
-        return render(request, 'imagine_bic/company_check.html',{"history":history})
+        return render(request, 'imagine_bic/company_check.html',{"history":history, "pk":pk})
+
+
+    def bic_rent(request):
+        pk = int(request.POST['pk'])
+        History.objects.filter(history_num = pk).update(btime = datetime.datetime.now())
+        return redirect("http://3.23.87.223:8000/check/company/"+str(pk)+"/")
+
+    def bic_return(request):
+        pk = int(request.POST['pk'])
+        History.objects.filter(history_num = pk).update(rtime = datetime.datetime.now())
+        return redirect("http://3.23.87.223:8000/check/company/"+str(pk)+"/")
