@@ -1,40 +1,63 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/reservation_check.css' %}" type="text/css"> <!--main.css 링크-->
-        <script type="text/javascript"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
-        <script src="{% static 'js/reservation_check.js' %}"></script>
         <title>reservation_check</title>
     </head>
 
+
+    
+    <script>
+        CountDownTimer("2020-05-29 15:00:00", 'countdown');
+        function CountDownTimer(dt, id) {
+            var end = new Date(dt);
+            var _second = 1000;
+            var _minute = _second * 60;
+            var _hour = _minute * 60;
+            var _day = _hour * 24;
+            var timer;
+            function showRemaining() {
+                var now = new Date();
+                var distance = end - now;
+                // 시간 종료 시 뜨는 문구
+                if (distance < 0) {
+                    clearInterval(timer);
+                    document.getElementById(id).innerHTML = '카운트다운이 끝났습니다. 곧 오픈합니다!';
+                    return;
+                }
+                var days = Math.floor(distance / _day);
+                var hours = Math.floor((distance % _day) / _hour);
+                var minutes = Math.floor((distance % _hour) / _minute);
+                var seconds = Math.floor((distance % _minute) / _second);
+                document.getElementById(id).innerHTML = hours + '시간 ';
+                document.getElementById(id).innerHTML += minutes + '분 ';
+                document.getElementById(id).innerHTML += seconds + '초';
+            }
+            timer = setInterval(showRemaining, 1000);
+        }
+    </script>
     <body>
+        {% load static %}
         <div id="container">
-            <img id="reservation2-bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
-            <!--뒤로가기 버튼 삽입-->
-            <img id="reservation2-homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="bkfun();">
-            <!--홈 버튼 삽입-->
-            {{company}}
+            <img src="{% static 'img/qrcode/check1.png' %}">
+            <!-- <img src="{% static '{{imgurl}}' %}"> -->
+            imgurl:{{imgurl}}
             
-            <!-- 이거 CSS 적용해서 바코드 위치로 해줘 -->
-            <svg id="barcode"></svg>
-
-            <!-- {{company}} -->
-            <!-- 이것도 CSS 적용해서 위치 알맞게 해줘 ㅠㅠ 파이팅 -->
-            <div id="history_place" name="history_place">{{company.member_name}}</div>
-            <div id="r_btime" name="r_btime">{{history.r_btime}} <br> {{history.r_rtime}} </div>
+            <div id="history_place" name="history_place">대여장소 : {{company.member_name}}</div>
+            <div id="history_place" name="history_place">위치 : {{company.company_loc}} {{company.company_addr}}</div>
             <div id="company_phone" name="company_phone"> TEL:{{company.company_phone}} </div>
-            <div id="company_addr" name="company_addr">{{company.company_addr}}</div>
+            {%if history.btime == None%}<!--빌린 시간이 기본 값일 때, -> 아직 안 빌림 -->
+            <div id="r_btime" name="r_btime">대여 예정시간 : {{history.r_btime}} - {{history.r_rtime}} </div>
+            {%else%}
+                {%if history.rtime == None%}<!--반납 시간이 기본 값일 때, -> 아직 반납을 안 함 -->
+                    반납시간까지<div id="countdown"></div> 남았습니다.<br>
+                {%else%}
+                    반납완료
+                {%endif%}
+            {%endif%}
         </div>
-
-        <script>
-            JsBarcode("#barcode", "{{history.history_num}}", {
-                format: "CODE39",
-                text: Math.floor(Math.random()*(123452873739920)) + 10000,
-                flat: true
-            });
-        </script>
     </body>
+
+    
 </html>

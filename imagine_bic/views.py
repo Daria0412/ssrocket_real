@@ -127,3 +127,12 @@ def company_main(request):
 
 def course(request):
     return render(request, 'imagine_bic/course.html')
+
+def company_check(request, pk):
+    return Check.check_company(request, pk)
+
+def bic_rent(request):
+    pass
+
+def bic_return(request):
+    pass
