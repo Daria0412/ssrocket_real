@@ -55,32 +55,10 @@ body{
 }
 
 #s_txt #out{
+    left:-40%;
     margin-bottom:10%;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
 
-@media (max-height:700px) and (min-height:600px){
-
-    #txt{
-        float: left;
-        margin-top:45px;
-        margin-left:-30px;
-        font-family: NotoSansCJKKR-Black;
-        font-size:1.988em;
-        color:#64b9e3;
-    }
-    
-}
-
-@media (min-width:413px) and (max-height:740px){
-
-    #txt{
-        float: left;
-        margin-top:45px;
-        margin-left:-30px;
-        font-family: NotoSansCJKKR-Black;
-        font-size:1.988em;
-        color:#64b9e3;
-    }
-    
 }
