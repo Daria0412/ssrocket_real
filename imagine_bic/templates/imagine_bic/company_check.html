@@ -5,13 +5,13 @@
 
         {%if history.btime == None%}<!--빌린 시간이 기본 값일 때, -> 아직 안 빌림 -->
             <form action = "{% url 'bic_rent' %}" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
-                <input type = "hidden" value = "{{pk}}">
+                <input type = "hidden" name=pk value = "{{pk}}">
                 <input type = submit value="대여 확인">
             </form>
         {%else%}
                 {%if history.rtime == None%}<!--반납 시간이 기본 값일 때, -> 아직 반납을 안 함 -->
                     <form action = "{% url 'bic_return' %}" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
-                        <input type = "hidden" value = "{{pk}}">
+                        <input type = "hidden" name=pk value = "{{pk}}">
                         <input type = submit value="반납 확인">
                     </form>
                 {%else%}
