@@ -210,4 +210,6 @@ class Choose:
 class Check:
     def check_company(request, pk):
         history = get_object_or_404(History, history_num=pk)
+        print(pk)
+        print(history)
         return render(request, 'imagine_bic/company_check.html',{"history":history})
