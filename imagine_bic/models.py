@@ -24,12 +24,11 @@ class History(models.Model):
     history_num = models.AutoField(db_column='history_num',primary_key=True,blank=False)
     company_num = models.IntegerField(db_column='company_num',blank=False)
     member_id = models.CharField(db_column='member_id',max_length=200,blank=False)
-    r_btime = models.DateTimeField(db_column='r_btime',blank=False)
+    r_btime = models.DateTimeField(db_column='r_btime',blank=True)
     btime = models.DateTimeField(db_column='btime')
-    r_rtime = models.DateTimeField(db_column='r_rtime',blank=False)
+    r_rtime = models.DateTimeField(db_column='r_rtime',blank=True)
     rtime = models.DateTimeField(db_column='rtime')
     reserved_At = models.DateTimeField(db_column='reserved_At',blank=False)
-    barcode = models.CharField(db_column='barcode',max_length=50, blank=True)
 
     class Meta:
         managed = False

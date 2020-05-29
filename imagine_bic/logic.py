@@ -5,6 +5,7 @@ from django.views.decorators.csrf import csrf_exempt,csrf_protect
 from django.utils.translation import ugettext_lazy as _
 from django.utils import translation
 import datetime
+import qrcode
 class Sign:
     def __init__(self):
         pass
@@ -104,10 +105,8 @@ class Choose:
             r_r = request.POST['r_rtime']
             r_btime = "{}-{}-{} {}".format(r_year,r_month,r_date,r_b)#datetime formatting
             r_rtime = "{}-{}-{} {}".format(r_year,r_month,r_date,r_r)
-            btime = "1970-01-02 00:00:00"
-            rtime = "1970-01-02 00:00:00"
             #db insert
-            history = History.objects.create(company_num=company_num, member_id = id, r_btime = r_btime, r_rtime = r_rtime, reserved_At = datetime.datetime.now(), btime =btime, rtime = rtime)
+            history = History.objects.create(company_num=company_num, member_id = id, r_btime = r_btime, r_rtime = r_rtime, reserved_At = datetime.datetime.now())
             for company in companys:
                 Company.objects.update(rent_num=company.rent_num+1)
             return render(request, 'imagine_bic/choose_end.html',{"name":name,"history_num":history.history_num})
@@ -146,7 +145,7 @@ class Choose:
             return render(request, 'imagine_bic/setting_'+request.POST['setUrl']+".html", {"count":1,"user_info":user_info})
         return render(request, 'imagine_bic/setting.html',{"user_info":user_info})
 
-    def setUrl(request, setUrl):
+    def setUrl(request, setUrl):#setting 화면에서 넘어가는 용
         html = ""
         if setUrl == "" :
             html ='imagine_bic/setting.html'
@@ -161,7 +160,7 @@ class Choose:
         print(html)
         return render(request, html)
 
-    def counsel(request):
+    def counsel(request):#일대일 문의
         id = request.session['id']
         counsels = Counsel.objects.filter(member_id = id)
         if request.method == "POST":
@@ -180,18 +179,53 @@ class Choose:
             return render(request, 'imagine_bic/setting_write.html',{"count":2})
         return render(request, 'imagine_bic/setting_write.html')
 
-    def check_list(request):
+    def check_list(request):#예약내역
         id = request.session['id']
-        historys = History.objects.filter(member_id = id)
-        return render(request, 'imagine_bic/course_rec.html',{"count":1,"historys":historys})
+        companys = Company.objects.all()
+        historys = History.objects.filter(member_id = id, rtime = None).order_by('r_btime')
+        last_historys = History.objects.exclude(rtime = None).order_by('-rtime')
+        return render(request, 'imagine_bic/reservation_list.html',{"historys":historys,"last_historys":last_historys,"companys":companys})
     
-    def check_reservation(request, pk):
+    def check_reservation(request, pk):#qr코드 보여줌
         id = request.session['id']
         history = get_object_or_404(History, history_num=pk)
+        #qrcode 만들기
+        qr = qrcode.QRCode(version = 2,error_correction = qrcode.constants.ERROR_CORRECT_H,box_size = 2,border = 2)
+        url = 'http://3.23.87.223:8000/check/company/'+str(pk)
+        qr.add_data(url)
+        qr.make()
+        img = qr.make_image(fill_color="black", back_color="white")
+        imgurl = "img/qrcode/check{}.png".format(str(pk))
+        print(imgurl)
+        img.save("imagine_bic/static/{}".format(imgurl))
+        companys = Company.objects.filter(company_num = history.company_num)
+        #test용
+        # for company in companys:
+        #     return render(request, 'imagine_bic/reservation_check.html',{"history":history,"company":company,"imgurl":imgurl})
+        #real
         if history.member_id == id:
             companys = Company.objects.filter(company_num = history.company_num)
+            r_rtime = history.r_rtime
             for company in companys:
-                return render(request, 'imagine_bic/reservation_check.html',{"history":history,"company":company})
-        return HttpResponse("<html><script>alert('잘못된 경로입니다.');location.href='index';</script></html>")
+                return render(request, 'imagine_bic/reservation_check.html',{"history":history,"company":company,"imgurl":imgurl, "r_rtime":r_rtime})
+        return HttpResponse("<html><script>alert('잘못된 경로입니다.');location.href='/index';</script></html>")
 
-    
+class Check:
+    def check_company(request, pk):#업체에서 확인하는 용 
+        history = get_object_or_404(History, history_num=pk)
+        
+        return render(request, 'imagine_bic/company_check.html',{"history":history, "pk":pk})
+
+
+    def bic_rent(request):#빌렸을 때
+        pk = int(request.POST['pk'])
+        History.objects.filter(history_num = pk).update(btime = datetime.datetime.now())
+        return str(pk)
+
+    def bic_return(request):#반납할 때
+        pk = int(request.POST['pk'])
+        History.objects.filter(history_num = pk).update(rtime = datetime.datetime.now())
+        history = get_object_or_404(History, history_num=pk)
+        company = get_object_or_404(Company, company_num=history.company_num)
+        Company.objects.filter(company_num = history.company_num).update(rent_num = company.rent_num-1)
+        return str(pk)

@@ -22,6 +22,9 @@ urlpatterns = [
     path('index/setting/<slug:setUrl>/',views.setUrl,name = 'setUrl'),#설정 클릭한 페이지로
     path('index/setting/counsel/write/',views.write,name = 'write'),#1대1 문의 글쓰기
     path('check/',views.check_list,name = "check_list"),#예약 확인 리스트
+    path('check/company/<int:pk>/',views.company_check,name = "company_check"),
+    path('check/company/rent',views.bic_rent,name = "bic_rent"),
+    path('check/company/return',views.bic_return,name = "bic_return"),
     path('check/<int:pk>/',views.check_reservation, name = "check_reservation"),#예약 바코드
-    path('course/',views.course,name="course")
+    path('course/',views.course,name="course"),
 ]
