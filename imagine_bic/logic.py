@@ -198,20 +198,21 @@ class Choose:
         img.save("imagine_bic/static/{}".format(imgurl))
         companys = Company.objects.filter(company_num = history.company_num)
         #test용
-        for company in companys:
-            return render(request, 'imagine_bic/reservation_check.html',{"history":history,"company":company,"imgurl":imgurl})
+        # for company in companys:
+        #     return render(request, 'imagine_bic/reservation_check.html',{"history":history,"company":company,"imgurl":imgurl})
         #real
         if history.member_id == id:
             companys = Company.objects.filter(company_num = history.company_num)
+            r_rtime = history.r_rtime
+            print(r_rtime)
             for company in companys:
-                return render(request, 'imagine_bic/reservation_check.html',{"history":history,"company":company,"imgurl":imgurl})
-        return HttpResponse("<html><script>alert('잘못된 경로입니다.');location.href='index';</script></html>")
+                return render(request, 'imagine_bic/reservation_check.html',{"history":history,"company":company,"imgurl":imgurl, "r_rtime":r_rtime})
+        return HttpResponse("<html><script>alert('잘못된 경로입니다.');location.href='/index';</script></html>")
 
 class Check:
     def check_company(request, pk):
         history = get_object_or_404(History, history_num=pk)
-        print(pk)
-        print(history)
+        
         return render(request, 'imagine_bic/company_check.html',{"history":history, "pk":pk})
 
 
@@ -224,5 +225,6 @@ class Check:
         pk = int(request.POST['pk'])
         History.objects.filter(history_num = pk).update(rtime = datetime.datetime.now())
         history = get_object_or_404(History, history_num=pk)
-        Company.objects.filter(company_num = history.company_num).update(rent_num = rent_num - 1)
+        company = get_object_or_404(Company, company_num=history.company_num)
+        Company.objects.filter(company_num = history.company_num).update(rent_num = company.rent_num-1)
         return str(pk)
