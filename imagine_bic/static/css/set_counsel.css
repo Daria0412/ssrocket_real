@@ -7,29 +7,35 @@
 
 body{
     background-image: url("../img/qa-bg-not.png");
+    background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 } /*bg img 설정*/
 
-
 #container #reservation2-bkbt{
-    position: absolute;
-    top:100px;
-    left:70px;
-} /*<- 버튼 위치 설정*/
+    position: relative;
+    top:30px;
+    float:left;
+    left:3%;
+}
 
 #container #reservation2-homebt{
-    position: absolute;
-    top:100px;
-    left:930px;
+    position: relative;
+    top:30px;
+    float:right;
+    right:3%;
 } /*home 버튼 위치 설정*/
 
 
 #container #n_text{
     font-family: NotoSansCJKKR-Black;
     position: absolute;
-    top:300px;
-    left:60px;
+    top:180px;
+    left:40px;
     font-size:100px;
     color:rgb(255, 255, 255);
 }
@@ -37,50 +43,48 @@ body{
 #container #m_text{
     font-family: NotoSansCJKKR-Regular;
     position: absolute;
-    top:750px;
+    top:550px;
     left:78px;
     font-size:36px;
     color:rgb(143, 140, 140);
 }
 
+#container #list{
+    background-color: white;
+    border-radius: 25px;
+}
+
 #container #m_title{
     font-family: NotoSansCJKKR-Bold;
-    position: absolute;
-    width:900px;
-    height:100px;
+    position: relative;
+    width:800px;
+    height:auto;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    top:890px;
-    left:100px;
+    top:590px;
+    left:80px;
     font-size:72px;
     color:rgb(5, 5, 5);
+ 
 }
 
 #container #m_contents{
+    position: relative;
     font-family: NotoSansCJKKR-Regular;
-    position: absolute;
-    width: 900px;
-    height: 300px;
-    top:1000px;
-    left:110px;
+    width: 800px;
+    height: auto;
+    top:600px;
+    left:90px;
     font-size:36px;
     color:rgb(0, 0, 0);
 }
 
 #container #write-bt{
     position: absolute;
-    top:2000px;
-    left:900px;
+    top:1500px;
+    left:800px;
 }
-
-#container #white-box{
-    position: absolute;
-    top:850px;
-    left:40px;
-
-}
-
 
 
 
