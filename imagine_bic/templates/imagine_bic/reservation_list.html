@@ -10,12 +10,11 @@
     </head>
     <body>
 
-
-       
             <img id="bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
              <!--뒤로가기 버튼 삽입-->
             <img id="homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="bkfun();">
              <!--홈 버튼 삽입-->
+
             {%for history in historys%}
             <img id="bluebox" src="{% static 'img/bluebox.png' %}" onclick = location.href='{{history.history_num}}/'>
             <span id="txt">
@@ -25,15 +24,16 @@
                     <br>
                 <div id="company_addr">{{company.company_loc}}시 {{company.company_addr}}</div>
                 <br>
-                    <div id="company_phone">{{company.company_phone}</div>
+                    <div id="company_phone">{{company.company_phone}}</div>
                     {%endif%}
                 {%endfor%}
                 <div id="time">{{history.r_btime}} ~ {{history.r_rtime}}</div>
                 <br>
             </span>
             {%endfor%}
+            
             {%for history in last_historys%}
-            <img id="bluebox" src="{% static 'img/graybox.png' %}" onclick = location.href='{{history.history_num}}/'>
+            <img id="bluebox" src="{% static 'img/bluebox.png' %}" onclick = location.href='{{history.history_num}}/'>
             <span id="txt">
                 {%for company in companys%}
                     {%if company.company_num == history.company_num%}
@@ -41,7 +41,7 @@
                     <br>
                 <div id="company_addr">{{company.company_loc}}시 {{company.company_addr}}</div>
                 <br>
-                    <div id="company_phone">{{company.company_phone}</div>
+                    <div id="company_phone">{{company.company_phone}}</div>
                     {%endif%}
                 {%endfor%}
                 <div id="time">{{history.r_btime}} ~ {{history.r_rtime}}</div>

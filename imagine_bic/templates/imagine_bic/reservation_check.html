@@ -39,13 +39,15 @@
         }
     </script>
     <body>
+
         {% load static %}
         <div id="container">
-            <img src = "/static/{{imgurl}}">
+            <img src = "/static/{{%static 'img/blueboxpng' %}}">
             <!-- <img src="{% static '{{imgurl}}' %}"> -->            
             <div id="history_place" name="history_place">대여장소 : {{company.member_name}}</div>
             <div id="history_place" name="history_place">위치 : {{company.company_loc}} {{company.company_addr}}</div>
-            <div id="company_phone" name="company_phone"> TEL:{{company.company_phone}} </div>
+            <div id="company_phone" name="company_phone"> TEL: {{company.company_phone}} </div>
+
             {%if history.btime == None%}<!--빌린 시간이 기본 값일 때, -> 아직 안 빌림 -->
             <div id="r_btime" name="r_btime">대여 예정시간 : {{history.r_btime}} - {{history.r_rtime}} </div>
             {%else%}
@@ -56,6 +58,7 @@
                 {%endif%}
             {%endif%}
         </div>
+
     </body>
 
     
