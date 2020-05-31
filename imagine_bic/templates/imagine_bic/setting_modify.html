@@ -3,7 +3,7 @@
     <head>
         {%load static%}
         <meta charset="utf-8">
-        <link rel="stylesheet" href="{% static 'css/setting_modify.css' %}" type="text/css"> <!--reservation_3.css 링크-->
+        <link rel="stylesheet" href="{% static 'css/set_modify.css' %}" type="text/css"> <!--reservation_3.css 링크-->
         <script type="text/javascript"></script>
         {% if count == 1 %}<script>location.href="/index/setting/modify"</script>{% endif %}
         <script src="{% static 'js/setting_modify.js' %}"></script> <!--choose_time.js 링크-->
@@ -12,7 +12,9 @@
     </head>
     <body>
         {%load static%}
+    
         <div id="container"> 
+       
         <img id="reservation2-bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
         <!--뒤로가기 버튼 삽입-->
         <img id="reservation2-homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="bkfun();">
