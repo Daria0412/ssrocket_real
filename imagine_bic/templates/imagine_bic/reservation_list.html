@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/course_rec1.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/course_rec.css' %}" type="text/css">
         <script type="text/javascript"></script>
-        <script src="{% static 'js/course_rec.js' %}"></script>
+        <script src="{% static 'js/course_rec1.js' %}"></script>
         <title>reservation_list</title>
     </head>
     <body>
@@ -33,7 +33,7 @@
             {%endfor%}
             
             {%for history in last_historys%}
-            <img id="bluebox" src="{% static 'img/bluebox.png' %}" onclick = location.href='{{history.history_num}}/'>
+            <img id="bluebox" src="{% static 'img/graybox.png' %}" onclick = location.href='{{history.history_num}}/'>
             <span id="txt">
                 {%for company in companys%}
                     {%if company.company_num == history.company_num%}
@@ -48,6 +48,7 @@
                 <br>
             </span>
             {%endfor%}
+            
        <img id="rsv-course" src="{% static 'img/rsv-course.png' %}" onclick="location.href='/course/';">
     </body>
 </html>

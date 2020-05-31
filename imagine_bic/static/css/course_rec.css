@@ -62,8 +62,9 @@ body{
 #rsv-course{
     position: relative;
     display: flex;
-    width:30%;
+    width:40%;
     height: auto;
-    margin-top:100%;
+    margin-top:80%;
     margin-left:10%;
+    margin-bottom:10%;
 }
