@@ -7,10 +7,16 @@
 
 
 body{
-    background-image: url("../img/ntc-bg.png");
+    background-image: url("../img/ntc-detail-bg.png");
+    background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 } /*bg img 설정*/
+
 
 #head{
     position: relative;
@@ -34,34 +40,37 @@ body{
     float:right;
 } /*home 버튼 위치 설정*/
 
-#txt{
-    position: relative;
-    float: left;
-    margin-top:17%;
-    margin-left:0%;
-    font-family: NotoSansCJKKR-Black;
-    font-size:5.688em;
-    color:#64b9e3;
-    margin-bottom:10%;
-}
-
-#s_txt{
+#container{
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
+}
+
+#container #n_name{
+    font-family: NotoSansCJKKR-Bold;
+    position: relative;
+    font-size:3.599em;
+    color:rgb(0, 0, 0);
+    margin-top:25%;
+    width:1600px;
+}
+
+#container #n_text{
+    font-family: NotoSansCJKKR-Regular;
+    position: relative;
+    font-size:2.822em;
+    color:rgb(0, 0, 0);
+    margin-top:20%;
+    float:left;
+    left:-48%;
+}
+
+#container #r_date{
     font-family: NotoSansCJKKR-Medium;
-    font-size:2.855em;
-    width:800px;
-    left:5%;
+    position: relative;
+    font-size:2.088em;
+    color:rgb(80, 78, 78);
 }
 
-#s_txt #m_text{
-    margin-top:10%;
-}
 
-#s_txt #r_date{
-    font-family: NotoSansCJKR-Medium;
-    font-size:0.866em;
-    color:gray;
-}

@@ -39,9 +39,8 @@
     
             {% for notice in notices %}
             <span id="s_txt">
-                <div id="m_text" onclick="location.href='notice/{{notice.num}}'">[공지] {{notice.subject}}</div>
+                <div id="m_text" onclick="location.href='/notice/{{notice.num}}'">[공지] {{notice.subject}}</div>
                 <div id="r_date">{{notice.regdate}}</div>
-                <img id="bar-thingr" src="{% static 'img/bar-thingr.png' %}">
             </span>
             </div>
             {% endfor %}

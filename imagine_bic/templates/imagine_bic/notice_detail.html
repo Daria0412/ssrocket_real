@@ -24,21 +24,26 @@
     <head>
         <meta charset="utf-8">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/notice_detail.css' %}" type="text/css"> <!--main.css 링크-->
+        <link rel="stylesheet" href="{% static 'css/notice_detail1.css' %}" type="text/css"> <!--main.css 링크-->
         <script type="text/javascript"></script>
         <script src="{% static 'js/notice1_detail.js' %}"></script>
         <title>notice_detail</title>
     </head>
     <body>
+        <div id="head">
+            <div id="bt">
+                <img id="reservation2-bkbt" name="reservation2-bkbt" src="{% static 'img/bb_b.png' %}" onclick="bkfun();">
+                <!--뒤로가기 버튼 삽입-->
+                <img id="reservation2-homebt" name="reservation2-homebt" src="{% static 'img/hb_b.png' %}" onclick="hfun();">
+                <!--홈 버튼 삽입-->
+            </div>
+            
         <div id="container">
-            <img id="reservation2-bkbt" name="reservation2-bkbt" src="{% static 'img/back-bt-blue.png' %}" onclick="bkfun();">
-            <!--뒤로가기 버튼 삽입-->
-            <img id="reservation2-homebt" name="reservation2-homebt" src="{% static 'img/home-bt-blue.png' %}" onclick="hfun();">
-            <!--홈 버튼 삽입-->
             <div id="n_name">{{notice.subject}}</div>
-            <div id="n_text">{{notice.writer}}</div>
             <div id="r_date">{{notice.regdate}}</div>
     
+            <div id="n_text">{{notice.writer}}</div>
+          
         </div>
     </body>
 </html>
