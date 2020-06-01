@@ -24,7 +24,7 @@ body{
     float: right;
 }
 
-#bluebox{
+.bluebox{
     position: relative;
     display: flex;
     justify-content: center;
