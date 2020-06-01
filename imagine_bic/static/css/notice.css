@@ -12,48 +12,33 @@ body{
     background-size: cover;
 } /*bg img 설정*/
 
-#container #reservation2-bkbt{
-    position: absolute;
-    top:100px;
-    left:70px;
-} /*<- 버튼 위치 설정*/
-
-#container #reservation2-homebt{
-    position: absolute;
-    top:100px;
-    left:930px;
-} /*home 버튼 위치 설정*/
-
-#container #n_text{
-    font-family: NotoSansCJKKR-Black;
-    position: absolute;
-    top:220px;
-    left:60px;
-    font-size:100px;
-    color:rgb(137, 194, 228);
-}
-
-#container #m_text{
-    font-family: NotoSansCJKKR-Medium;
-    position: absolute;
-    top:530px;
-    left:60px;
-    font-size:48px;
-    color:rgb(0, 0, 0);
-}
-
-#container #r_date{
-    font-family: NotoSansCJKKR-Medium;
-    position: absolute;
-    top:530px;
-    left:800px;
-    font-size:30px;
-    color:rgb(80, 78, 78);
-}
-
-#container #bar-thingr{
+#head{
     position: relative;
-    top:600px;
-    left:20px;
 }
 
+#head #reservation2-bkbt{
+    position: relative;
+    width:8%;
+    margin-top:3%;
+    left:2%;
+    height:auto;
+    float:left;
+} /*<- 버튼 위치 설정*/
+
+#head #reservation2-homebt{
+    position: relative;
+    width:8%;
+    margin-top: 3%;
+    right:2%;
+    height:auto;
+    float:right;
+} /*home 버튼 위치 설정*/
+
+#txt{
+    float: left;
+    margin-top:14%;
+    margin-left:0%;
+    font-family: NotoSansCJKKR-Black;
+    font-size:1.688em;
+    color:#64b9e3;
+}
