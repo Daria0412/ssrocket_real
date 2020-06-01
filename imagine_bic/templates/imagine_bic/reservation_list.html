@@ -5,7 +5,7 @@
         {% load static %}
         <link rel="stylesheet" href="{% static 'css/course_rec.css' %}" type="text/css">
         <script type="text/javascript"></script>
-        <script src="{% static 'js/course_rec1.js' %}"></script>
+        <script src="{% static 'js/course_rec.js' %}"></script>
         <title>reservation_list</title>
     </head>
     <body>
@@ -31,7 +31,10 @@
                 <br>
             </span>
             {%endfor%}
+            <img id="rbt" onclick="a();" src="{%static 'img/next-r-bt.png'%}">
+            <img id="lbt" onclick="b();" src="{%static 'img/next-l-bt.png'%}">
             
+            <div id="a" style="display: none;">
             {%for history in last_historys%}
             <img id="bluebox" src="{% static 'img/graybox.png' %}" onclick = location.href='{{history.history_num}}/'>
             <span id="txt">
@@ -48,7 +51,7 @@
                 <br>
             </span>
             {%endfor%}
-            
+        </div>
        <img id="rsv-course" src="{% static 'img/rsv-course.png' %}" onclick="location.href='/course/';">
     </body>
 </html>

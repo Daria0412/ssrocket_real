@@ -29,7 +29,7 @@ body{
     display: flex;
     justify-content: center;
     margin-top:5%;
-    left:15%;
+    left:17%;
 }
 
 #txt{
@@ -59,6 +59,17 @@ body{
     margin-top:5%;
 }
 
+#rbt{
+    position: relative;
+    margin-top:-25%;
+    float:right;
+}
+
+#lbt{
+    position: relative;
+    margin-top:-25%;
+    float:left;
+}
 #rsv-course{
     position: relative;
     display: flex;
