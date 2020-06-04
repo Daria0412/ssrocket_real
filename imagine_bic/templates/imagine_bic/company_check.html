@@ -2,14 +2,15 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        {% load static %}
-        <link rel="stylesheet" href="{% static 'css/company_check1.css' %}" type="text/css"> <!--main.css 링크-->
+        <link rel="stylesheet" href="../../static/css/company_check1.css" type="text/css"> <!--main.css 링크-->
         <script type="text/javascript"></script>
-        <script src="{% static 'js/company_check.js' %}"></script>
+        <script src="../../static/js/comepany_check.js"></script>
         <title>company_check</title>
     </head>
     <body>
-        <!--대여 예정시간 : {{history.r_btime}} - {{history.r_rtime}} <br>
+        <!--
+        <span id="name"> {{history.member_name}}</span>
+        <span id="time"> {{history.r_btime}} - {{history.r_rtime}}> <br></span>
         {%if history.btime == None%} 빌린 시간이 기본 값일 때, -> 아직 안 빌림 -->
             <!--<form action = "{% url 'bic_rent' %}" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
                 <input type = "hidden" name=pk value = "{{pk}}">
@@ -17,7 +18,7 @@
             </form>
         {%else%}
                 {%if history.rtime == None%} 반납 시간이 기본 값일 때, -> 아직 반납을 안 함 -->
-                    <!--<form action = "{% url 'bic_return' %}" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
+                   <!-- <form action = "{% url 'bic_return' %}" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
                         <input type = "hidden" name=pk value = "{{pk}}">
                         <input type = submit value="반납 확인">
                     </form>
@@ -26,11 +27,17 @@
                 {%endif%}
         {%endif%}-->
 
-        <span id="txt">대여 예정시간 : </span>
-
-
-
-
-
+    <div id="txt">
+        <span id="name">오가키역점</span>
+            <div id="time">
+                <span id="r_time">2020년 05월 28일<br>오전 11:00시 부터</span>
+                <span id="b_time">2020년 05월 28일<br>오후 5:00시 까지</span>
+            </div>
+    </div>
+            
+                <span id="t"><img src="../../static/img/QR_rsv_text_m.png"></span>
+                <span id="img">
+                <input id="bt" type = submit value="대여 확인">
+            </span>
     </body>
 </html>

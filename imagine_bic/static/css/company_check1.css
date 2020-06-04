@@ -8,3 +8,63 @@
 body{
     background: url("../img/qrbg.png") no-repeat center center fixed;
 }
+#txt{
+    position: relative;
+    margin-top:120%;
+}
+#name{
+    position: relative;
+    font-family: NotoSansCJKKR-Bold;
+    font-size:4.588em;
+    color:#0f4581;
+    margin-left:5%;
+}
+
+#time{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top:7%;
+}
+
+#b_time{
+    font-family: NotoSansCJKKR-Bold;
+    color:black;
+    font-size:2.822em;
+}
+
+
+#r_time{
+    font-family: NotoSansCJKKR-Bold;
+    color:black;
+    font-size:2.822em;
+}
+ #t{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top:6%;
+    margin-bottom:5%;
+}
+
+#img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+ #bt{
+    width:400px;
+    height: 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom:5%;
+    font-family: NotoSansCJKKR-Bold;
+    color:#64b9e3;
+    font-size:3.122em;
+    background-color: white;
+    border:solid 1px white;
+    box-shadow: 5px 5px 5px 5px rgb(211, 210, 210);
+    border-radius: 30px;
+}
