@@ -55,8 +55,12 @@ body{
     left:-40%;
 }
 
-#s_txt #out{
+#s_txt #logout{
     margin-top:140%;
+    margin-bottom:20%;
+}
+
+#s_txt #out{
     margin-bottom:20%;
 }
 
