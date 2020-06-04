@@ -6,6 +6,10 @@ window.onload = function(){
 function sm() {
     lanForm.submit();
 }
+function put(borr){
+    document.getElementById("val").value = borr;
+    c.submit();
+}
 function setfun(){
     history.back();
 }

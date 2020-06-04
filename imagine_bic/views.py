@@ -31,6 +31,7 @@ def choose_end(request):
 @csrf_exempt
 def signup(request):
     user_info =request.session['user_info']
+    print(user_info)
     if request.method == "POST":
         return Sign.signup(request,user_info)
     if user_info == "0":
@@ -118,12 +119,25 @@ def signup_company(request):
 
 
 def company_main(request):
+    print("company_main")
     id = request.session['id']
     companys = Company.objects.filter(member_id = id)
     for company in companys:
         company_num = company.company_num
-    historys = History.objects.filter(company_num = company_num)
-    return render(request, 'imagine_bic/company_main.html',{"count":1,"companys":companys, "historys":historys})
+    if request.method=="POST":
+        print("post")
+        history_num = int(request.POST['history_num'])
+        print(history_num)
+        rorb = request.POST['val']
+        print(rorb)
+        if rorb == "r":
+            print(Check.bic_return(history_num))
+        elif rorb == "b":
+            print(Check.bic_rent(history_num))
+    historys = History.objects.filter(company_num = company_num, rtime=None)
+    last_historys = History.objects.exclude(rtime = None).filter(company_num = company_num)
+    print(historys)
+    return render(request, 'imagine_bic/company_main.html',{"companys":companys, "historys":historys, "last_historys":last_historys})
 
 def course(request):
     return render(request, 'imagine_bic/course.html')
@@ -132,12 +146,14 @@ def company_check(request, pk):
     return Check.check_company(request, pk)
 
 def bic_rent(request):
-    pk = Check.bic_rent(request)
+    pk1 = int(request.POST['pk'])
+    pk = Check.bic_rent(pk1)
     print(pk)
     return redirect("http://3.23.87.223:8000/check/company/"+pk+"/")
 
 def bic_return(request):
-    pk = Check.bic_return(request)
+    pk1 = int(request.POST['pk'])
+    pk = Check.bic_return(pk1)
     print(pk)
     return redirect("http://3.23.87.223:8000/check/company/"+pk+"/")
 

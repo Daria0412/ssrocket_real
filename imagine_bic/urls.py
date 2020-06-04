@@ -2,11 +2,11 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('',views.choose_lan,name='choose_lan'),#언어 선택
+    #path('',views.choose_lan,name='choose_lan'),#언어 선택
     path('index/', views.index, name='index'),#유저 main
     path('index/company/',views.company_main,name = "company_main"),#회사 main
     path('index/setting/', views.setting, name='setting'),#설정 메인
-    path('choose_use/',views.choose_use, name = 'choose_use'),#여행자 업체 선택
+    path('',views.choose_use, name = 'choose_use'),#여행자 업체 선택
     path('choose_loc/',views.choose_loc, name='choose_loc'),#여행자 지도 5개 중 선택
     path('choose_shop/',views.choose_shop, name='choose_shop'),#회사 정보 리스트
     path('choose_shop/<int:pk>/', views.shop_detail, name='shop_detail'),#회사 상세정보

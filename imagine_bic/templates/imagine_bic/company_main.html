@@ -48,6 +48,7 @@
     </span>
 
     {% for history in historys %}
+    <form method = post action = company_main name = c>
     <div id="a">
         <div class="back">
         <div class="reservation_list">
@@ -60,12 +61,37 @@
             <span id="user_num">1대</span>
             <span id="user_end"> 예약하셨습니다.</span>
             <br>
-            <span id="choose" name="choose" onclick="choose();">예약확인</span>
+            {% if history.btime == None %}
+            <button id="choose" name="choose" onclick="put('b');">대여확인</span>
+            {% else %}
+            <button
+            id="choose" name="choose" onclick="put('r');">반납확인</span>
+            {% endif %}
+            <input type = hidden name = history_num value = {{history.history_num}}>
+            <input type = hidden name = val id = val>
+        </div>
+      </div>
+    </div>
+    </form>
+    {% endfor%}
+    {% for history in last_historys %}
+    <div id="b"> <!--이 부분이 원래는 히든이고, 반납 완료 내역 보기 버튼 만들어서 그거 누르면 얘가 보이고 a가 히든 되도록!!-->
+        <div class="back">
+        <div class="reservation_list">
+            <span id="user_name">{{history.member_id}}</span>
+            <span id="user_nim" >님이</span>
+            <span id="user_date">{{history.r_btime|date:"Y년 M d일"}}</span>
+            <br>
+            <span id="user_time">{{history.r_btime|date:"A f:i"}} ~ {{history.r_rtime|date:"A f:i"}}</span>
+            <br>
+            <span id="user_num">1대</span>
+            <span id="user_end"> 예약하셨습니다.</span>
+            <br>
+            <span id="choose">반납완료</span>
         </div>
       </div>
     </div>
     {% endfor%}
-    
       </form>
     </body>
 </html>

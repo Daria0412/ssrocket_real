@@ -16,16 +16,15 @@ class Sign:
             for user in users:
                 if id == user.id and pwd == user.pwd:
                     request.session['id']=id
-                    request.session['user_info']=user.info
-                    if user.info == 0:
-                        return render(request, 'imagine_bic/index.html',{"okay":1,"users":users})
-                    else:
+                    print(user.info)
+                    if user.info == 1:
                         return redirect('/index/company/')
-        else : 
-            return HttpResponse("<html><script>alert('로그인 오류입니다. 다시 시도해주세요');location.href='signin';</script></html>")
-        return render(request, 'imagine_bic/login.html',{"okay":1,"users":users})
+                    else:
+                        return render(request, 'imagine_bic/index.html',{"users":users})
+        return HttpResponse("<html><script>alert('로그인 오류입니다. 다시 시도해주세요');location.href='signin';</script></html>")
     
     def signup(request,user_info): #회원가입
+        print(user_info)
         id = request.POST['id']
         name = request.POST['name']
         pwd = request.POST['pwd']
@@ -36,7 +35,6 @@ class Sign:
         return render(request, 'imagine_bic/signup2_company.html',{"count":1})
 
     def signup_company(request):
-        user_info =request.session['user_info']
         id = request.session['id']
         users = User.objects.filter(id = id)
         for user in users:
@@ -217,13 +215,11 @@ class Check:
         return render(request, 'imagine_bic/company_check.html',{"history":history, "pk":pk})
 
 
-    def bic_rent(request):#빌렸을 때
-        pk = int(request.POST['pk'])
+    def bic_rent(pk):#빌렸을 때
         History.objects.filter(history_num = pk).update(btime = datetime.datetime.now())
         return str(pk)
 
-    def bic_return(request):#반납할 때
-        pk = int(request.POST['pk'])
+    def bic_return(pk):#반납할 때
         History.objects.filter(history_num = pk).update(rtime = datetime.datetime.now())
         history = get_object_or_404(History, history_num=pk)
         company = get_object_or_404(Company, company_num=history.company_num)
