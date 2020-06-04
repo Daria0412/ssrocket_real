@@ -27,4 +27,5 @@ urlpatterns = [
     path('check/company/return',views.bic_return,name = "bic_return"),
     path('check/<int:pk>/',views.check_reservation, name = "check_reservation"),#예약 바코드
     path('course/',views.course,name="course"),
+    path('nearshop/',views.near_shop, name = "near_shop"),
 ]
