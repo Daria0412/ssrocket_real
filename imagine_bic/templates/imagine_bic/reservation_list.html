@@ -15,9 +15,7 @@
             <img id="homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="bkfun();">
              <!--홈 버튼 삽입-->
 
-   
-       
-        <img class="bluebox"  src="{% static 'img/bluebox.png' %}" onclick = location.href='1/'>
+        <img class="bluebox"  src="{% static 'img/bluebox.png' %}" onclick = location.href='/{{history.history_num}}'>
 
         {%for history in historys%}
         <div id="show" style="display: none;">
@@ -37,7 +35,7 @@
             </span>
         </div>
         {%endfor%}
-        
+
             <img id="rbt" onclick="a();" src="{%static 'img/next-r-bt.png'%}">
             <img id="lbt" onclick="b();" src="{%static 'img/next-l-bt.png'%}">
             

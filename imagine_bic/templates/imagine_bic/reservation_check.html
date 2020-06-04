@@ -3,10 +3,11 @@
     <head>
         <meta charset="utf-8">
         {% load static %}
+        <link rel="stylesheet" href="{% static 'css/reservation_check.css' %}" type="text/css"> <!--main.css 링크-->
+        <script type="text/javascript"></script>
+        <script src="{% static 'js/reservation_check.js' %}"></script>
         <title>reservation_check</title>
     </head>
-
-
 
     <script>
         console.log("{{r_rtime|date:'Y-m-d H:i' }}:00");
@@ -38,25 +39,36 @@
             timer = setInterval(showRemaining, 1000);
         }
     </script>
-    <body>
-        
-        {% load static %}
-        <div id="container">
-            <img src = "/static/{{imgurl}}">
-            <!-- <img src="{% static '{{imgurl}}' %}"> -->            
-            <div id="history_place" name="history_place">대여장소 : {{company.member_name}}</div>
-            <div id="history_place" name="history_place">위치 : {{company.company_loc}} {{company.company_addr}}</div>
-            <div id="company_phone" name="company_phone"> TEL: {{company.company_phone}} </div>
 
+    <body>
+        {% load static %}
+        <img id="bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
+        <!--뒤로가기 버튼 삽입-->
+       <img id="homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="bkfun();">
+        <!--홈 버튼 삽입-->
+        
+            <div id="history_place" name="history_place">{{company.member_name}}</div>
+            <span id="txt">  
+            <div id="history_loc" name="history_place">장소: {{company.company_loc}} {{company.company_addr}}</div>
+            <div id="company_phone" name="company_phone">TEL: {{company.company_phone}} </div>   
             {%if history.btime == None%}<!--빌린 시간이 기본 값일 때, -> 아직 안 빌림 -->
-            <div id="r_btime" name="r_btime">대여 예정시간 : {{history.r_btime}} - {{history.r_rtime}} </div>
+            <div id="r_btime" name="r_btime">대여 예정시간 <br> {{history.r_btime}} <br> {{history.r_rtime}} </div>
+            </span>
+
             {%else%}
+            <span id="timer">
                 {%if history.rtime == None%}<!--반납 시간이 기본 값일 때, -> 아직 반납을 안 함 -->
                     반납시간까지<div id="countdown"></div> 남았습니다.<br>
+            </span>
                 {%else%}
-                    반납완료
+                    <span id="fin">반납완료</span>
                 {%endif%}
             {%endif%}
+
+            <span id="img">
+            <img id="qr" src = "/static/{{imgurl}}">
+            </span>
+            <!-- <img src="{% static '{{imgurl}}' %}"> -->  
         </div>
     </body>
 
