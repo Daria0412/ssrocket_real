@@ -16,6 +16,7 @@ class Sign:
             for user in users:
                 if id == user.id and pwd == user.pwd:
                     request.session['id']=id
+                    request.session['name'] = user.name
                     print(user.info)
                     if user.info == 1:
                         return redirect('/index/company/')
