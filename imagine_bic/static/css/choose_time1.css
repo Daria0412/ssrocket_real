@@ -34,10 +34,10 @@ body{
 #container #rental_p1{
     font-family: NotoSansCJKKR-Black;
     position: absolute;
-    top:650px;
+    top:500px;
     left:70px;
     width:600px;
-    font-size:120px;
+    font-size:110px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -47,7 +47,7 @@ body{
 #container #rental_p2{
     font-family: NotoSansCJKKR-Black;
     position: absolute;
-    top:800px;
+    top:650px;
     left:70px;
     font-size:90px;
     color:white;
@@ -56,7 +56,7 @@ body{
 #container #rental_p3{
     font-family: NotoSansCJKKR-Regular;
     position: absolute;
-    top:950px;
+    top:800px;
     left:70px;
     font-size:48px;
     color:white;
@@ -65,7 +65,7 @@ body{
 #container #rental_p4{
     font-family: NotoSansCJKKR-Medium;
     position: absolute;
-    top:680px;
+    top:530px;
     left:650px;
     font-size:78px;
     color:white;
@@ -75,8 +75,8 @@ body{
 #container #rental_p5{
     font-family: NotoSansCJKKR-Medium;
     position: absolute;
-    top:750px;
-    left:650px;
+    top:600px;
+    left:710px;
     font-size:120px;
     color:white;
 } /* 자전거 수 위치 설정*/
@@ -84,7 +84,7 @@ body{
 #container #rental_p6{
     font-family: NotoSansCJKKR-Medium;
     position: absolute;
-    top:752px;
+    top:602px;
     left:800px;
     font-size:120px;
     color:white;
@@ -102,7 +102,7 @@ body{
     position: relative;
     width:300px;
     height:80px;
-    top:1480px;
+    top:1280px;
     left:190px;
 
 } /*select box css*/
@@ -119,7 +119,7 @@ body{
     position: relative;
     width:300px;
     height:80px;
-    top:1400px;
+    top:1200px;
 
 
 } /*select box css*/
@@ -136,7 +136,7 @@ body{
     position: relative;
     width:250px;
     height:80px;
-    top:1300px;
+    top:1150px;
     left:-80px;
 } /*select box css*/
 
@@ -152,7 +152,7 @@ body{
     position: relative;
     width:250px;
     height:80px;
-    top:1300px;
+    top:1150px;
     left:-50px;
 } /*select box css*/
 
@@ -168,7 +168,7 @@ body{
     position: relative;
     width:250px;
     height:80px;
-    top:1220px;
+    top:1070px;
     left:500px;
 } /*select box css*/
 
@@ -194,9 +194,9 @@ body{
 
 #container #reservation3-finish{
     position:absolute;
-    top:1800px;
-    width:25%;
+    top:1560px;
+    width:20%;
     height:auto;
-    left:65%;
+    left:70%;
     filter: drop-shadow(30px 30px 30px hsl(0, 4%, 87%)); 
 } /*완료 버튼 위치 설정*/ 

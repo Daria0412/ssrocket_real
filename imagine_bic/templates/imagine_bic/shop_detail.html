@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/s_detail.css' %}" type="text/css"> <!--main.css 링크-->
+        <link rel="stylesheet" href="{% static 'css/s_detail1.css' %}" type="text/css"> <!--main.css 링크-->
         <script type="text/javascript"></script>
         <script src="{% static 'js/shop_detail.js' %}"></script>
         <title>choose_shop_detail</title>
@@ -19,7 +19,7 @@
             <span id="company_info" name="company_info">{{shop.company_info}}</span>
             <span id="company_addr" name="company_addr">주소 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{shop.company_addr}}</span>
             <span id="company_phone" name="company_phone">전화번호 &nbsp; &nbsp; &nbsp;{{shop.company_phone}}</span>
-            <span id="s_business" name="s_business">영업시간 &nbsp; &nbsp; &nbsp;XX시~XX시</span>
+            <span id="s_business" name="s_business">영업시간 &nbsp; &nbsp; &nbsp;{{shop.s_business|date:"a f:i"}} ~ {{shop.e_business|date:"a f:i"}}</span>
         </div>
             <input type = hidden name = company_num id = company_num value = {{shop.company_num}}>
             <img id="b" src="{% static 'img/rv_b.png' %}" onclick = "sm();">

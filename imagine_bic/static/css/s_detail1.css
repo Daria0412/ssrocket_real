@@ -35,7 +35,7 @@ body{
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    margin-top:90%;
+    margin-top:55%;
     margin-left: 5%;
     margin-right:5%;
 }
@@ -83,9 +83,9 @@ body{
 }
  #b{
     position: relative;
-    width:30%;
+    width:23%;
     height:auto;
     margin-top:15%;
-    margin-left:60%;
+    margin-left:70%;
     filter: drop-shadow(30px 30px 30px hsl(0, 4%, 87%)); 
 } /*완료 버튼 위치 설정*/ 
