@@ -1,22 +1,36 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/company_check1.css' %}" type="text/css"> <!--main.css 링크-->
+        <script type="text/javascript"></script>
+        <script src="{% static 'js/company_check.js' %}"></script>
+        <title>company_check</title>
+    </head>
     <body>
-        대여 예정시간 : {{history.r_btime}} - {{history.r_rtime}} <br>
-
-
-        {%if history.btime == None%}<!--빌린 시간이 기본 값일 때, -> 아직 안 빌림 -->
-            <form action = "{% url 'bic_rent' %}" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
+        <!--대여 예정시간 : {{history.r_btime}} - {{history.r_rtime}} <br>
+        {%if history.btime == None%} 빌린 시간이 기본 값일 때, -> 아직 안 빌림 -->
+            <!--<form action = "{% url 'bic_rent' %}" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
                 <input type = "hidden" name=pk value = "{{pk}}">
                 <input type = submit value="대여 확인">
             </form>
         {%else%}
-                {%if history.rtime == None%}<!--반납 시간이 기본 값일 때, -> 아직 반납을 안 함 -->
-                    <form action = "{% url 'bic_return' %}" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
+                {%if history.rtime == None%} 반납 시간이 기본 값일 때, -> 아직 반납을 안 함 -->
+                    <!--<form action = "{% url 'bic_return' %}" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
                         <input type = "hidden" name=pk value = "{{pk}}">
                         <input type = submit value="반납 확인">
                     </form>
                 {%else%}
                     반납완료
                 {%endif%}
-        {%endif%}
+        {%endif%}-->
+
+        <span id="txt">대여 예정시간 : </span>
+
+
+
+
+
     </body>
 </html>
