@@ -3,6 +3,13 @@ window.onload = function(){
     addmonth();
     adddate();
 }
+function h(){
+    var a=document.getElementById("a");
+    var ba=document.getElementById("ba");
+    a.style.display='none';
+    ba.style.display='flex';
+
+}
 function sm() {
     lanForm.submit();
 }

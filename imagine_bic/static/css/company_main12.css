@@ -416,7 +416,7 @@ body{
         display: flex;
         flex-wrap:wrap;
         justify-content: center;
-        margin-top:10%;
+        margin-top:5%;
         text-align: center;
         margin-right: 9%;
         margin-bottom:5%;
@@ -446,6 +446,23 @@ body{
         position: relative;
         display: flex;
         justify-content: center;
+    }
+    #ba{
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    #ba .back{
+        position: relative;
+        display: flex;
+        justify-content:flex-start;
+        width:35%;
+        background-color: white;
+        border-radius: 45px;
+        filter: none;
+        margin-top:3%;
+       
     }
     
     #a .back{
@@ -508,10 +525,26 @@ body{
 
     .reservation_list #choose{
         font-family: NotoSansCJKKR-Bold;
-        font-size:1.888em;
+        font-size:1.788em;
         color:#64b9e3;
-        margin-top:-20%;
-        margin-left:80%;
+        background-color: white;
+        margin-top:-15%;
+        margin-left:79%;
+        border:none;
+    }
+    #bannap{
+        display: flex;
+        justify-content:center;
+        position: relative;
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.788em;
+        color:#64b9e3;
+        background-color: white;
+        border-radius: 15px;
+        margin-bottom:3%;
+        margin-top:-2%;
+        width:15%;
+        margin-left:42%;
     }
 
     #s{
