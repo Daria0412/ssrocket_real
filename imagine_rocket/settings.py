@@ -22,7 +22,7 @@ SECRET_KEY = '4yvv&l0tu3&vj643#4w#j)r1q7#jwpm&s+j$*i9a&))^)ipqeb'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['0.0.0.0','3.23.87.223','127.0.0.1']
+ALLOWED_HOSTS = ['*','3.23.87.223','127.0.0.1']
 
 LANGUAGES = [
     ('ko', _('Korean')),
