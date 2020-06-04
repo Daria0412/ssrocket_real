@@ -75,3 +75,11 @@ body{
     font-size:2.388em;
     color:#63788d;
 }
+
+#qt{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:40%;
+}
