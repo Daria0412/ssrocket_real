@@ -12,7 +12,6 @@ window.onload = function () {
 function a(){
     var el=document.getElementById("show");
         el.style.display='none';
-    
 }
 
 function b(){

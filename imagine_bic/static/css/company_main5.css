@@ -420,7 +420,7 @@ body{
         margin-top:10%;
         text-align: center;
         margin-right: 9%;
-        margin-bottom:10%;
+        margin-bottom:5%;
     }
     
     #text #user{
@@ -453,7 +453,7 @@ body{
         position: relative;
         display: flex;
         justify-content:flex-start;
-        width:40%;
+        width:35%;
         background-color: white;
         border-radius: 45px;
         filter: none;
@@ -505,5 +505,64 @@ body{
         font-size: 1.688em;
         color:black;
         margin-bottom:1em;
+    }
+
+    .reservation_list #choose{
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.888em;
+        color:#64b9e3;
+        margin-top:-20%;
+        margin-left:80%;
+    }
+
+    #s{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #s #sbt{
+        position: relative;
+        width:3%;
+        height:3%;
+        margin-left:5%;
+    }
+
+    #s #c_year{
+        appearance: none;
+        -webkit-appearance:none;
+        font-family:NotoSansCJKKR-Medium;
+        font-size: 2.222em;
+        background: url(../img/b.png);
+        background-repeat: no-repeat ;
+        border:0px;
+        color:white;
+        position: relative;
+        border-bottom-width: 2px solid white;
+    }
+    #s #c_month{
+        appearance: none;
+        -webkit-appearance:none;
+        font-family:NotoSansCJKKR-Medium;
+        font-size: 2.222em;
+        background: url(../img/b.png);
+        background-repeat: no-repeat ;
+        border:0px;
+        color:white;
+        position: relative;
+        margin-left:5%;
+    }
+    #s #c_date{
+        appearance: none;
+        -webkit-appearance:none;
+        font-family:NotoSansCJKKR-Medium;
+        font-size: 2.222em;
+        background: url(../img/b.png);
+        background-repeat: no-repeat ;
+        border:0px;
+        color:white;
+        position: relative;
+        margin-left:5%;
     }
 }

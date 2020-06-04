@@ -3,17 +3,15 @@
     <head>
         <meta charset="utf-8">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/course_rec.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/course_rec1.css' %}" type="text/css">
         <script type="text/javascript"></script>
         <script src="{% static 'js/course_rec.js' %}"></script>
         <title>reservation_list</title>
     </head>
     <body>
 
-            <img id="bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
-             <!--뒤로가기 버튼 삽입-->
-            <img id="homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="bkfun();">
-             <!--홈 버튼 삽입-->
+     <img id="bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
+     <img id="homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="bkfun();">
 
         <img class="bluebox"  src="{% static 'img/bluebox.png' %}" onclick = location.href='/{{history.history_num}}'>
 
@@ -35,12 +33,8 @@
             </span>
         </div>
         {%endfor%}
-
             <img id="rbt" onclick="a();" src="{%static 'img/next-r-bt.png'%}">
             <img id="lbt" onclick="b();" src="{%static 'img/next-l-bt.png'%}">
-            
-        
-        
        <img id="rsv-course" src="{% static 'img/rsv-course.png' %}" onclick="location.href='/course/';">
     </body>
 </html>

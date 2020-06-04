@@ -3,10 +3,13 @@ window.onload = function(){
     addmonth();
     adddate();
 }
+function sm() {
+    lanForm.submit();
+}
 
 function addyear(){
     var year=new Date().getFullYear();
-    var obj = document.getElementById("r_year");
+    var obj = document.getElementById("c_year");
     var opt = "";
 
 for(var i=year; i<=(year+1); i++){
@@ -18,7 +21,7 @@ for(var i=year; i<=(year+1); i++){
 }
 
 function addmonth(){
-    var obj = document.getElementById("r_month");
+    var obj = document.getElementById("c_month");
     var opt = "";
 
 for(var i=1; i<=12; i++){
@@ -30,7 +33,7 @@ for(var i=1; i<=12; i++){
 }
 
 function adddate(){
-    var obj = document.getElementById("r_date");
+    var obj = document.getElementById("c_date");
     var opt = "";
     var y= new Date().getFullYear();
     var m= (new Date().getMonth())-1;
