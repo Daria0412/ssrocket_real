@@ -141,6 +141,6 @@ def bic_return(request):
     print(pk)
     return redirect("http://3.23.87.223:8000/check/company/"+pk+"/")
 
-def near_shop(request):
-    return render(request, "near_shop.html")
+def nearshop(request):
+    return render(request, "imagine_bic/near_shop.html")
 
