@@ -59,5 +59,38 @@ body{
         font-size:1.988em;
         color:#64b9e3;
     }
+
+@media (min-width:1919px) and (min-height:1079px){
+    body{
+        background: url("../img/set_dt_bg.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    #head{
+        position: relative;
+    }
+    #head #backbt{
+        float: left;
+        margin-left:15px;
+        margin-top: 10px;
+    }
+    #head #homebt{
+        float: right;
+        margin-right:15px;
+        margin-top: 10px;
+    }
+    
+    #txt{
+        float: left;
+        margin-top:200px;
+        margin-left:-30px;
+        font-family: NotoSansCJKKR-Black;
+        font-size:1.988em;
+        color:#64b9e3;
+    }
+    
+}
     
 }

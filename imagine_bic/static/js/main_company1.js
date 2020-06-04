@@ -6,6 +6,9 @@ window.onload = function(){
 function sm() {
     lanForm.submit();
 }
+function setfun(){
+    history.back();
+}
 
 function addyear(){
     var year=new Date().getFullYear();
