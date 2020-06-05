@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="{% static 'css/company_main15.css' %}" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript"></script>
-        <script src="{% static 'js/main_company22.js' %}"></script>
+        <script src="{% static 'js/main_company4.js' %}"></script>
         <title>company_main</title>
     </head>
  
@@ -50,7 +50,7 @@
     </span>
 
     {% for history in historys %}
-    <form method = post name = c> {% csrf_token %}
+    <form id="abc" method = post name = c> {% csrf_token %}
     <div id="a" style="display: flex;">
         <div class="back">
         <div class="reservation_list">
@@ -64,9 +64,9 @@
             <span id="user_end"> 예약하셨습니다.</span>
             <br>
             {% if history.btime == None %}
-            <button onclick="put('b');">대여확인</button>
+            <button id="choose" onclick="put('b');">대여확인</button>
             {% else %}
-            <button onclick="put('r');">반납확인</button>
+            <button id="choose" onclick="put('r');">반납확인</button>
             {% endif %}
             <input type = hidden name = history_num value = {{history.history_num}}>
             <input type = hidden name = val id = val>
