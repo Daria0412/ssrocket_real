@@ -8,10 +8,12 @@
 body{
     background: url("../img/qrbg.png") no-repeat center center fixed;
 }
+
 #txt{
     position: relative;
     margin-top:120%;
 }
+
 #name{
     position: relative;
     font-family: NotoSansCJKKR-Bold;

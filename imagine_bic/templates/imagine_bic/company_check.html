@@ -3,28 +3,41 @@
     <head>
         {% load static %}
         <meta charset="utf-8">
-        <link rel="stylesheet" href="{% static 'css/company_check.css' %}" type="text/css"> <!--main.css 링크-->
+        <link rel="stylesheet" href="{% static 'css/company_check1.css' %}" type="text/css"> <!--main.css 링크-->
         <script type="text/javascript"></script>
         <script src="{% static 'js/company_check.js' %}"></script>
         <title>company_check</title>
     </head>
     <body>
+    <div id="txt">
         <span id="name"> {{history.member_name}}</span>
-        <span id="time"> {{history.r_btime}} - {{history.r_rtime}}> <br></span>
+        <span id="time">    
+            <span id="r_time">{{history.r_btime|date:"Y년 m월 d일"}}<br>{{history.r_btime|date:"a f:i"}} 부터</span>
+            <span id="b_time">{{history.r_rtime|date:"Y년 m월 d일"}}<br>{{history.r_rtime|date:"a f:i"}}까지</span>   
+        </span>
+
         {%if history.btime == None%} <!--빌린 시간이 기본 값일 때, -> 아직 안 빌림 -->
             <form action = "{% url 'bic_rent' %}" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
                 <input type = "hidden" name=pk value = "{{pk}}">
-                <input type = submit value="대여 확인">
+                <span id="t"><img src="{%static 'img/QR_rsv_text_m.png'%}"></span>
+            <span id="img">
+                <input id="bt" type = submit value="대여 확인">
+            </span>
             </form>
         {%else%}
-                {%if history.rtime == None%} <!--반납 시간이 기본 값일 때, -> 아직 반납을 안 함 -->
-                   <form action = "{% url 'bic_return' %}" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
-                        <input type = "hidden" name=pk value = "{{pk}}">
-                        <input type = submit value="반납 확인">
-                    </form>
-                {%else%}
-                    반납완료
-                {%endif%}
-        {%endif%}
+
+        {%if history.rtime == None%} <!--반납 시간이 기본 값일 때, -> 아직 반납을 안 함 -->
+            <form action = "{% url 'bic_return' %}" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
+                    <input type = "hidden" name=pk value = "{{pk}}">
+                    <span id="t"><img src="{%static 'img/QR_rsv_text_m.png'%}"></span>
+                <span id="img">
+                    <input id="bt" type = submit value="반납 확인">
+                </span>
+            </form>
+            {%else%}
+                 반납완료
+            {%endif%}
+        {%endif%}                 
+    </div>
     </body>
 </html>
