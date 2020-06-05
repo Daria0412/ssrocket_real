@@ -3,13 +3,21 @@
     <head>
         {% load static %}
         <meta charset="utf-8">
+<<<<<<< HEAD
+        <link rel="stylesheet" href="../../static/css/company_check.css" type="text/css"> <!--main.css 링크-->
+=======
         <link rel="stylesheet" href="{% static 'js/company_check1.css %}" type="text/css"> <!--main.css 링크-->
+>>>>>>> e79f7678230c23d058bdd7df7a5073f1a3753983
         <script type="text/javascript"></script>
         <script src="{% static 'js/company_check.js %}"></script>
         <title>company_check</title>
     </head>
     <body>
+<<<<<<< HEAD
+
+=======
         {% load static %}
+>>>>>>> e79f7678230c23d058bdd7df7a5073f1a3753983
         <span id="name"> {{history.member_name}}</span>
         <span id="time"> {{history.r_btime}} - {{history.r_rtime}}> <br></span>
         {%if history.btime == None%} <!--빌린 시간이 기본 값일 때, -> 아직 안 빌림 -->
@@ -27,5 +35,21 @@
                     반납완료
                 {%endif%}
         {%endif%}
+<<<<<<< HEAD
+        
+    <div id="txt">
+        <span id="name">오가키역점</span>
+            <div id="time">
+                <span id="r_time">2020년 05월 28일<br>오전 11:00시 부터</span>
+                <span id="b_time">2020년 05월 28일<br>오후 5:00시 까지</span>
+            </div>
+    </div>
+            
+                <span id="t"><img src="../../static/img/QR_rsv_text_m.png"></span>
+                <span id="img">
+                <input id="bt" type = submit value="대여 확인">
+            </span>
+=======
+>>>>>>> e79f7678230c23d058bdd7df7a5073f1a3753983
     </body>
 </html>

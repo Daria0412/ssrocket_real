@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/reservation_check1.css' %}" type="text/css"> <!--main.css 링크-->
+        <link rel="stylesheet" href="{% static 'css/reservation_check13.css' %}" type="text/css"> <!--main.css 링크-->
         <script type="text/javascript"></script>
         <script src="{% static 'js/reservation_check1.js' %}"></script>
         <title>reservation_check</title>
@@ -58,7 +58,7 @@
             {%else%}
             <span id="timer">
                 {%if history.rtime == None%}<!--반납 시간이 기본 값일 때, -> 아직 반납을 안 함 -->
-                    반납시간까지<div id="countdown"></div> 남았습니다.<br>
+                    <div id="r_btime">반납시간까지<div id="countdown"></div> 남았습니다.<br></div>
             </span>
                 {%else%}
                     <span id="fin">반납완료</span>
