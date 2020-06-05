@@ -5,6 +5,6 @@ function sm(){
     lanForm.submit();
 }
 
-function bkHome(){
+function home(){
     location.href="/index";
 }
