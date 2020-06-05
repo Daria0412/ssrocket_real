@@ -8,12 +8,7 @@
 
 body{
     background-image: url("../img/wirte-bg.png");
-    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 } /*bg img 설정*/
 
