@@ -5,3 +5,7 @@ function bkfun(){
 function hfun(){
     location.href="/index";
 }
+
+function sm(){
+    
+}

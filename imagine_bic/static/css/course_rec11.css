@@ -23,7 +23,7 @@ body{
     float: right;
 }
 
-.bluebox{
+#bluebox{
     position: relative;
     display: flex;
     justify-content: center;
@@ -37,7 +37,7 @@ body{
     flex-wrap: wrap;
     justify-content: start;
     font-family: NotoSansCJKKR-Regular;
-    font-size:2.688em;
+    font-size:2.388em;
     color:white;
     margin-top:-92%;
     margin-left:20%;

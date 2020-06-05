@@ -3,17 +3,18 @@
     <head>
         <meta charset="utf-8">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/course_rec1.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/course_rec11.css' %}" type="text/css">
         <script type="text/javascript"></script>
-        <script src="{% static 'js/course_rec.js' %}"></script>
+        <script src="{% static 'js/course_rec1.js' %}"></script>
         <title>reservation_list</title>
     </head>
     <body>
 
      <img id="bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
-     <img id="homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="bkfun();">
+     <img id="homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="hfun();">
 
         {%for history in historys%}
+        <div id="first" style="display: none;">
             <img id="bluebox" src="{% static 'img/bluebox.png' %}" onclick = location.href='{{history.history_num}}/'>
             <span id="txt">
                 {%for company in companys%}
@@ -25,10 +26,12 @@
                     <div id="company_phone">{{company.company_phone}}</div>
                     {%endif%}
                 {%endfor%}
-                <div id="time">{{history.r_btime}} ~ {{history.r_rtime}}</div>
+                <div id="time">{{history.r_btime|date:"Y년 m월 d일 a f:i시"}} ~ {{history.r_rtime|date:"Y년 m월 d일 a f:i시"}}</div>
                 <br>
             </span>
-            {%endfor%}
+        </div>
+       {%endfor%}
+  
         
             <img id="rbt" onclick="a();" src="{%static 'img/next-r-bt.png'%}">
             <img id="lbt" onclick="b();" src="{%static 'img/next-l-bt.png'%}">

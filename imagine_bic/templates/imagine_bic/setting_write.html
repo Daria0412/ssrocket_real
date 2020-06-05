@@ -30,6 +30,7 @@
     </head>
     <body>
         {%load static%}
+        <form>
         <div id="container">
             <img id="reservation2-bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
             <!--뒤로가기 버튼 삽입-->
@@ -48,8 +49,9 @@
             </select>
             <div id="d">문제 발생 일자 : </div><input type="date" name="w_date" id="w_date">
             <div id="c">문의 내용 : </div><input type="text" name="w_contents" id="w_contents">
-            <img id="fin-bt" src="{% static 'img/fin-bt.png' %}">
+            <img id="fin-bt" src="{% static 'img/fin-bt.png' %}" onclick="sm();">
             </table>
         </div>
+    </form>
     </body>
 </html>
