@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/reservation_check.css' %}" type="text/css"> <!--main.css 링크-->
+        <link rel="stylesheet" href="{% static 'css/reservation_check1.css' %}" type="text/css"> <!--main.css 링크-->
         <script type="text/javascript"></script>
-        <script src="{% static 'js/reservation_check.js' %}"></script>
+        <script src="{% static 'js/reservation_check1.js' %}"></script>
         <title>reservation_check</title>
     </head>
 
@@ -44,7 +44,7 @@
         {% load static %}
         <img id="bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
         <!--뒤로가기 버튼 삽입-->
-       <img id="homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="bkfun();">
+       <img id="homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="hfun();">
         <!--홈 버튼 삽입-->
         
             <div id="history_place" name="history_place">{{company.member_name}}</div>

@@ -49,7 +49,7 @@ body{
 }
 #history_place{
     position: relative;
-    margin-top:20%;
+    margin-top:18%;
     margin-left:20%;
     font-family: NotoSansCJKKR-Bold;
     font-size:4.588em;
@@ -81,5 +81,5 @@ body{
     position: relative;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top:40%;
+    margin-top:35%;
 }

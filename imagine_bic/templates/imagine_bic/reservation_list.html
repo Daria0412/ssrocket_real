@@ -13,26 +13,22 @@
      <img id="bkbt" name="reservation2-bkbt" src="{% static 'img/reservation2-bkbt.png' %}" onclick="bkfun();">
      <img id="homebt" name="reservation2-homebt" src="{% static 'img/reservation2-homebt.png' %}" onclick="bkfun();">
 
-        <img class="bluebox"  src="{% static 'img/bluebox.png' %}" onclick = location.href='/{{history.history_num}}'>
-
         {%for history in historys%}
-        <div id="show" style="display: none;">
-          <input type="hidden" id="h" value={{history.history_num}}>
+            <img id="bluebox" src="{% static 'img/bluebox.png' %}" onclick = location.href='{{history.history_num}}/'>
             <span id="txt">
                 {%for company in companys%}
                     {%if company.company_num == history.company_num%}
                     <div id="member_name">{{company.member_name}}</div>
                     <br>
-                    <div id="company_addr">{{company.company_loc}}시 {{company.company_addr}}</div>
-                    <br>
+                <div id="company_addr">{{company.company_loc}}시 {{company.company_addr}}</div>
+                <br>
                     <div id="company_phone">{{company.company_phone}}</div>
                     {%endif%}
                 {%endfor%}
                 <div id="time">{{history.r_btime}} ~ {{history.r_rtime}}</div>
                 <br>
             </span>
-        </div>
-        {%endfor%}
+            {%endfor%}
         
             <img id="rbt" onclick="a();" src="{%static 'img/next-r-bt.png'%}">
             <img id="lbt" onclick="b();" src="{%static 'img/next-l-bt.png'%}">

@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/company_main1.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/company_main12.css' %}" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript"></script>
-        <script src="{% static 'js/main_company1.js' %}"></script>
+        <script src="{% static 'js/main_company121.js' %}"></script>
         <title>company_main</title>
     </head>
  
@@ -29,6 +29,8 @@
            <span id="welcome">반갑습니다!</span>
        </div>
        {% endfor%}
+    <span id="bannap" name="bannap" onclick="h();">반납 목록 보기</span>
+
     <span id="s">
         <select id="c_year" name="c_year" data-default-option="년도" data-unit="y" >
             <option id="y" value="년도">년도</option>
@@ -64,8 +66,7 @@
             {% if history.btime == None %}
             <button id="choose" name="choose" onclick="put('b');">대여확인</span>
             {% else %}
-            <button
-            id="choose" name="choose" onclick="put('r');">반납확인</span>
+            <button id="choose" name="choose" onclick="put('r');">반납확인</span>
             {% endif %}
             <input type = hidden name = history_num value = {{history.history_num}}>
             <input type = hidden name = val id = val>
@@ -75,7 +76,7 @@
     </form>
     {% endfor%}
     {% for history in last_historys %}
-    <div id="b"> <!--이 부분이 원래는 히든이고, 반납 완료 내역 보기 버튼 만들어서 그거 누르면 얘가 보이고 a가 히든 되도록!!-->
+    <div id="ba" style="display: none;"> <!--이 부분이 원래는 히든이고, 반납 완료 내역 보기 버튼 만들어서 그거 누르면 얘가 보이고 a가 히든 되도록!!-->
         <div class="back">
         <div class="reservation_list">
             <span id="user_name">{{history.member_id}}</span>

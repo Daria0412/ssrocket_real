@@ -66,8 +66,8 @@ body{
     font-family: NotoSansCJKKR-Medium;
     position: absolute;
     top:530px;
-    left:650px;
-    font-size:78px;
+    left:655px;
+    font-size:73px;
     color:white;
 } /*남은개수 위치 설정*/
 
@@ -76,7 +76,7 @@ body{
     font-family: NotoSansCJKKR-Medium;
     position: absolute;
     top:600px;
-    left:710px;
+    left:660px;
     font-size:120px;
     color:white;
 } /* 자전거 수 위치 설정*/
