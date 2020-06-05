@@ -22,7 +22,7 @@ class Sign:
                         return redirect('/index/company/')
                     else:
                         return render(request, 'imagine_bic/index.html',{"users":users})
-        return HttpResponse("<html><script>alert('로그인 오류입니다. 다시 시도해주세요');location.href='signin';</script></html>")
+        return HttpResponse("<html><script>alert('로그인 오류입니다. 다시 시도해주세요');location.href='/signin';</script></html>")
     
     def signup(request,user_info): #회원가입
         print(user_info)
