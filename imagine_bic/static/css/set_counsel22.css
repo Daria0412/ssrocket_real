@@ -29,7 +29,7 @@ body{
 #container #n_text{
     font-family: NotoSansCJKKR-Black;
     position: absolute;
-    top:180px;
+    top:200px;
     left:40px;
     font-size:100px;
     color:rgb(255, 255, 255);
@@ -38,7 +38,7 @@ body{
 #container #m_text{
     font-family: NotoSansCJKKR-Regular;
     position: absolute;
-    top:550px;
+    top:600px;
     left:78px;
     font-size:36px;
     color:rgb(143, 140, 140);

@@ -29,7 +29,7 @@ body{
 #container #rental_p1{
     font-family: NotoSansCJKKR-Black;
     position: absolute;
-    top:500px;
+    top:600px;
     left:70px;
     width:600px;
     font-size:110px;
@@ -42,7 +42,7 @@ body{
 #container #rental_p2{
     font-family: NotoSansCJKKR-Black;
     position: absolute;
-    top:650px;
+    top:750px;
     left:70px;
     font-size:90px;
     color:white;
@@ -51,7 +51,7 @@ body{
 #container #rental_p3{
     font-family: NotoSansCJKKR-Regular;
     position: absolute;
-    top:800px;
+    top:900px;
     left:70px;
     font-size:48px;
     color:white;
@@ -60,7 +60,7 @@ body{
 #container #rental_p4{
     font-family: NotoSansCJKKR-Medium;
     position: absolute;
-    top:530px;
+    top:630px;
     left:655px;
     font-size:73px;
     color:white;
@@ -70,7 +70,7 @@ body{
 #container #rental_p5{
     font-family: NotoSansCJKKR-Medium;
     position: absolute;
-    top:600px;
+    top:700px;
     left:660px;
     font-size:120px;
     color:white;
@@ -79,7 +79,7 @@ body{
 #container #rental_p6{
     font-family: NotoSansCJKKR-Medium;
     position: absolute;
-    top:602px;
+    top:702px;
     left:800px;
     font-size:120px;
     color:white;
@@ -114,7 +114,7 @@ body{
     position: relative;
     width:300px;
     height:80px;
-    top:1200px;
+    top:1230px;
 
 
 } /*select box css*/
@@ -131,7 +131,7 @@ body{
     position: relative;
     width:250px;
     height:80px;
-    top:1150px;
+    top:1180px;
     left:-80px;
 } /*select box css*/
 
@@ -147,7 +147,7 @@ body{
     position: relative;
     width:250px;
     height:80px;
-    top:1150px;
+    top:1180px;
     left:-50px;
 } /*select box css*/
 
@@ -163,7 +163,7 @@ body{
     position: relative;
     width:250px;
     height:80px;
-    top:1070px;
+    top:1100px;
     left:500px;
 } /*select box css*/
 
