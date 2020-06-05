@@ -6,12 +6,7 @@
 @font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../font/NotoSansCJKkr-Medium.otf") } 
 
 body{
-    background-attachment:local;
     background: url("../img/near-rental-bg-img.png") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
     }
 
     
