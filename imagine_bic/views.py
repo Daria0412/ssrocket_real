@@ -149,13 +149,13 @@ def bic_rent(request):
     pk1 = int(request.POST['pk'])
     pk = Check.bic_rent(pk1)
     print(pk)
-    return redirect("http://3.23.87.223:8000/check/company/"+pk+"/")
+    return redirect("http://ssrocket.emirim.kr/check/company/"+pk+"/")
 
 def bic_return(request):
     pk1 = int(request.POST['pk'])
     pk = Check.bic_return(pk1)
     print(pk)
-    return redirect("http://3.23.87.223:8000/check/company/"+pk+"/")
+    return redirect("http://ssrocket.emirim.kr/check/company/"+pk+"/")
 
 def nearshop(request):
     return render(request, "imagine_bic/near_shop.html")
