@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/reservation_check13.css' %}" type="text/css"> <!--main.css 링크-->
+        <link rel="stylesheet" href="{% static 'css/reservation_check1.css' %}" type="text/css"> <!--main.css 링크-->
         <script type="text/javascript"></script>
         <script src="{% static 'js/reservation_check1.js' %}"></script>
         <title>reservation_check</title>
@@ -54,23 +54,28 @@
             {%if history.btime == None%}<!--빌린 시간이 기본 값일 때, -> 아직 안 빌림 -->
             <div id="r_btime" name="r_btime">대여 예정시간 <br> {{history.r_btime}} <br> {{history.r_rtime}} </div>
             </span>
+            <span id="img">
+                <img id="qr" src = "/static/{{imgurl}}">
+                </span>
+                <!-- <img src="{% static '{{imgurl}}' %}"> -->  
+            </div>
+            <span id="qt"><img src="{%static 'img/QR_text.png'%}"></span>
 
             {%else%}
             <span id="timer">
                 {%if history.rtime == None%}<!--반납 시간이 기본 값일 때, -> 아직 반납을 안 함 -->
-                    <div id="r_btime">반납시간까지<div id="countdown"></div> 남았습니다.<br></div>
+                <div id="r_btime" name="r_btime">반납시간까지<div id="countdown"></div> 남았습니다.<br>
             </span>
+            <span id="img1">
+                <img id="qr1" src = "/static/{{imgurl}}">
+                </span>
+                <!-- <img src="{% static '{{imgurl}}' %}"> -->  
+            </div>
+            <span id="qt1"><img src="{%static 'img/QR_text.png'%}"></span>
                 {%else%}
                     <span id="fin">반납완료</span>
                 {%endif%}
             {%endif%}
-
-            <span id="img">
-            <img id="qr" src = "/static/{{imgurl}}">
-            </span>
-            <!-- <img src="{% static '{{imgurl}}' %}"> -->  
-        </div>
-        <span id="qt"><img src="{%static 'img/QR_text.png'%}"></span>
     </body>
 
     
