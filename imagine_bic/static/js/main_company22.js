@@ -5,10 +5,8 @@ window.onload = function(){
 }
 function h(){
     var a=document.getElementById("a");
-    var k=document.getElementById("k");
     var ba=document.getElementById("ba");
     a.style.display='none';
-    k.style.display='none';
     ba.style.display='flex';
 
 }

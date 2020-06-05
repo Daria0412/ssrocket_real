@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{% static 'css/company_main15.css' %}" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript"></script>
-        <script src="{% static 'js/main_company1.js' %}"></script>
+        <script src="{% static 'js/main_company22.js' %}"></script>
         <title>company_main</title>
     </head>
  
@@ -29,6 +29,7 @@
            <span id="welcome">반갑습니다!</span>
        </div>
        {% endfor%}
+
     <span id="bannap" name="bannap" onclick="h();">반납 목록 보기</span>
 
     <span id="s">
@@ -50,7 +51,7 @@
     </span>
 
     {% for history in historys %}
-    <form id="k" method = post action = company_main name = c>
+    <form method = post action = company_main name = c>
     <div id="a" style="display: flex;">
         <div class="back">
         <div class="reservation_list">
