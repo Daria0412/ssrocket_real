@@ -190,7 +190,7 @@ class Choose:
         history = get_object_or_404(History, history_num=pk)
         #qrcode 만들기
         qr = qrcode.QRCode(version = 2,error_correction = qrcode.constants.ERROR_CORRECT_H,box_size = 2,border = 2)
-        url = 'http://3.23.87.223:8000/check/company/'+str(pk)
+        url = 'http://ssrocket.emirim.kr/check/company/'+str(pk)
         qr.add_data(url)
         qr.make()
         img = qr.make_image(fill_color="black", back_color="white")
