@@ -160,3 +160,6 @@ def bic_return(request):
 def nearshop(request):
     return render(request, "imagine_bic/near_shop.html")
 
+def introduce(request):
+    return render(request, "imagine_bic/introduce.html")
+
