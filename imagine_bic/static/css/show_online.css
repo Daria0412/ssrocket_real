@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../fonts/NotoSansCJKkr-Bold.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../fonts/NotoSansCJKkr-Bold.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../fonts/NotoSansCJKkr-Regular.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../fonts/NotoSansCJKkr-Medium.otf") } 
+
+body{
+    background-color: white;
+}
+
+.navbar{
+    z-index: 2;
+}
+.navbar-default{
+    background-color:white;
+    position: fixed;
+    top:0;
+    width:100%;
+}
+
+.navbar-brand{
+    font-family: NotoSansCJKKR-Bold;
+    font-size:1.5em;
+    color:#64b9e3;
+}
+
+.navbar-brand:hover{
+    color:#64b9e3;
+}
+
+.nav-link{
+    color: #64b9e3;
+    font-family:NotoSansCJKKR-Regular;
+    font-size:1.0em;
+}
+
+.nav-link:hover{
+    font-family: NotoSansCJKKR-Bold;
+    color:#0f4581;
+}
+
+.dropdown-menu{
+    border: none;
+}
+
+.dropdown-item{
+    color: #64b9e3;
+    font-family:NotoSansCJKKR-Regular;
+    font-size:0.9em;
+}
+
+.dropdown-item:hover{
+    font-family: NotoSansCJKKR-Bold;
+    color:#0f4581;
+}
+
+.form-control{
+    border:none;
+    font-family:NotoSansCJKKR-Regular;
+}
+
+.carousel{
+    margin-bottom:5%;
+}
+
+.btn-outline-success{
+    border:none;
+    background-color:#64b9e3;
+    font-family:NotoSansCJKKR-Bold;
+    color:white;
+}
+
+.btn-outline-success:hover{
+    background-color:white;
+    color:#0f4581;
+}
+
+.navbar-toggler{
+    background-image: url("../img/nav_list.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    position: relative;
+    float: right;
+    right:-3%;
+}  
+
+.jumbotron{
+    background-color: #64b9e3;
+    width: 100%;
+    color:white;
+}
+
+.jumbotron #jtitle{
+    font-family: NotoSansCJKKR-Bold;
+    font-size:2.2em;
+}
+
+.jumbotron #jq{
+    margin-top:1%;
+    margin-bottom:5%;
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 1.2em;
+}
+
+.jumbotron .btn{
+    background-color: white;
+    font-family: NotoSansCJKKR-Bold;
+    font-size:1.2em;
+    color:#64b9e3;
+    border-radius: 18px;
+}
+
+.jumbotron .btn:hover{
+    background-color:#64b9e3;
+    color:white;
+}
+
+.section-heading{
+    margin-top:10%;
+    font-family:NotoSansCJKKR-Bold;
+    color:#64b9e3;
+    font-size:3.5em;
+}
+
+.section-subheading{
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 1.7em;
+    margin-bottom:5%;
+}
+
+#aboutimg{
+    width:65%;
+}
+
+#about_txt{
+    color:black;
+    font-family:NotoSansCJKKR-Regular;
+    font-size: 1.5Em;
+}
+
+#center{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#center img{
+    width:25%;
+    height:auto;
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    background-color: white; 
+    color:#64b9e3;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
+#ser{
+    width:55%;
+    margin-top:10%;
+    margin-bottom:5%;
+}
+
+#ser_title{
+    font-family:NotoSansCJKKR-Bold;
+    font-size:2.3em;
+}
+
+#ser_txt{
+    margin-top:25%;
+    font-family:NotoSansCJKKR-Regular;
+    font-size:1.3em;
+}
+
+#lightbox{
+    margin-bottom:1%;
+}
+
+.team4 {
+    font-family:NotoSansCJKKR-Regular;
+    color: #8d97ad;
+    font-weight: 300;
+}
+
+.team4 h1, .team4 h2, .team4 h3, .team4 h4, .team4 h5, .team4 h6 {
+  color: #3e4555;
+}
+
+.team4 .font-weight-medium {
+	font-weight: 500;
+}
+
+.team4 h5 {
+    font-family:NotoSansCJKKR-Bold;
+    line-height: 22px;
+    font-size: 18px;
+}
+
+.team4 .subtitle {
+    font-family:NotoSansCJKKR-Regular;
+    color: #8d97ad;
+    line-height: 24px;
+	font-size: 13px;
+}
+
+.team4 ul li a {
+  color: #8d97ad;
+  padding-right: 15px;
+  -webkit-transition: 0.1s ease-in;
+  -o-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+}
+
+.team4 ul li a:hover {
+  -webkit-transform: translate3d(0px, -5px, 0px);
+  transform: translate3d(0px, -5px, 0px);
+	color: #316ce8;
+}
+
+@media (max-width:767px){
+    
+    .jumbotron #jtitle{
+        font-family: NotoSansCJKKR-Bold;
+        font-size:2.0em;
+    }
+
+    .jumbotron #jq{
+        margin-top:5%;
+        margin-bottom: 5%;
+        font-family:NotoSansCJKKR-Regular;
+        font-size: 1.1em;
+    }
+
+    .jumbotron .btn{
+        background-color: white;
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.2em;
+        color:#64b9e3;
+        border-radius: 18px;
+    }
+
+    #center img{
+        width:65%;
+        height:auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-toggler{
+        background-image: url("../img/nav_list.png");
+        background-size:contain;
+        background-repeat: no-repeat;
+        position: relative;
+        float: right;
+        right:-7%;
+    }
+}
