@@ -6,20 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <title>MAIN</title>
-
+        {% load static %}
         <!--<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="../css/bootstrap.css" type="text/css">
-        <link rel="stylesheet" href="../css/show_online.css" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/show_online.css'%}" type="text/css">
 
         <!-- Owl Carousel  -->
-        <link rel="stylesheet" href="css/owl.carousel.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.css'%}">
+        <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
 
         <!-- Animate.css -->
-        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="{% static 'css/animate.css'%}">
         
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -27,8 +27,10 @@
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="{%static 'js/show_online.js' %}"></script>
     </head>
     <body>
+      {% load static %}
         <nav class="navbar navbar-default navbar-expand-lg">
             <a class="navbar-brand" href="#">SSROCKET</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -69,7 +71,7 @@
             <div class="jumbotron" id="home">
               <div class="container">
                 <p id="center">
-                <img class="text-center" src="../img/logo_white.png">
+                <img class="text-center" src="{% static 'img/logo_white.png'%}">
                 </p>
                 <h1 class="text-center" id="jtitle">SSROCKET 자전거 대여 서비스를 소개합니다!</h1>
                 <p class="text-center" id="jq">2019 일본 글로벌 인턴쉽 SSROCKET팀의 작품이 궁금하신가요?</p>
@@ -92,21 +94,21 @@
                 </ul>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="../img/about_1.JPG" alt="Los Angeles">
+                    <img src="{% static 'img/about_1.JPG'%}" alt="Los Angeles">
                     <div class="carousel-caption">
                       <h3>SSROCKET 프로젝트 발표</h3>
                       <p>3주간의 인턴쉽을 통한 결과물을 발표하는 모습입니다!</p>
                     </div>   
                   </div>
                   <div class="carousel-item">
-                    <img src="../img/about_2.JPG" alt="Chicago">
+                    <img src="{% static 'img/about_2.JPG'}" alt="Chicago">
                     <div class="carousel-caption">
                       <h3>SSROCKET 프로젝트 UI맵 제작</h3>
                       <p>프로젝트에 필요한 페르소나와 UI맵의 모습입니다!</p>
                     </div>   
                   </div>
                   <div class="carousel-item">
-                    <img src="../img/about_3.JPG" alt="New York">
+                    <img src="{% static 'img/about_3.JPG'}" alt="New York">
                     <div class="carousel-caption">
                       <h3>SSROCKET 프로젝트 진행</h3>
                       <p>회사 임직원분들과 대화하는 모습입니다!</p>
@@ -142,7 +144,7 @@
                       <!-- Row -->
                       <div class="row">
                         <div class="col-md-12">
-                          <img src="../img/Ha.jpg" alt="wrapkit" class="img-fluid rounded-circle" />
+                          <img src="{% static 'img/Ha.jpg'%}" alt="wrapkit" class="img-fluid rounded-circle" />
                         </div>
                         <div class="col-md-12 text-center">
                           <div class="pt-2">
@@ -166,13 +168,13 @@
                       <!-- Row -->
                       <div class="row">
                         <div class="col-md-12">
-                          <img src="../img/Ain.png" alt="wrapkit" class="img-fluid rounded-circle" />
+                          <img src="{% static 'img/Jung.jpg'%}" alt="wrapkit" class="img-fluid rounded-circle" />
                         </div>
                         <div class="col-md-12 text-center">
                           <div class="pt-2">
                             <h5 class="mt-4 font-weight-medium mb-0">남정윤</h5>
                             <h6 class="subtitle mb-3">뉴미디어웹솔루션과</h6>
-                            <p>웹 백엔드</p>
+                            <p>웹 백엔드 --소개멘트</p>
                             <ul class="list-inline">
                               <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i class="icon-social-facebook"></i></a></li>
                               <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i class="icon-social-twitter"></i></a></li>
@@ -190,7 +192,7 @@
                       <!-- Row -->
                       <div class="row">
                         <div class="col-md-12">
-                          <img src="../img/Jung.jpg"alt="wrapkit" class="img-fluid rounded-circle" />
+                          <img src="{% static 'img/Eun.jpg'%}"alt="wrapkit" class="img-fluid rounded-circle" />
                         </div>
                         <div class="col-md-12 text-center">
                           <div class="pt-2">
@@ -214,7 +216,7 @@
                       <!-- Row -->
                       <div class="row">
                         <div class="col-md-12">
-                          <img src="../img/Eun.jpg" alt="wrapkit" class="img-fluid rounded-circle" />
+                          <img src="{% static 'img/Ain.png'%}" alt="wrapkit" class="img-fluid rounded-circle" />
                         </div>
                         <div class="col-md-12 text-center">
                           <div class="pt-2">
@@ -246,30 +248,30 @@
                 <h3 class="section-subheading text-muted">SSROCKET 팀의 활동 사진을 구경하세요 :D</h3>
                 <div class="w3-row-padding">
                   <div class="w3-container w3-third" id="lightbox">
-                    <img src="../img/port_1.JPG" style="width:100%;cursor:pointer" 
+                    <img src="{% static 'img/port_1.JPG'%}" style="width:100%;cursor:pointer" 
                     onclick="onClick(this)" class="w3-hover-opacity" id="lightbox">
                   </div>
                   <div class="w3-container w3-third">
-                    <img src="../img/port_2.JPG" style="width:100%;cursor:pointer" 
+                    <img src="{% static 'img/port_2.JPG'%}" style="width:100%;cursor:pointer" 
                     onclick="onClick(this)" class="w3-hover-opacity" id="lightbox">
                   </div>
                   <div class="w3-container w3-third">
-                    <img src="../img/port_3.JPG" style="width:100%;cursor:pointer" 
+                    <img src="{% static 'img/port_3.JPG'%}" style="width:100%;cursor:pointer" 
                     onclick="onClick(this)" class="w3-hover-opacity" id="lightbox">
                   </div>
                 </div>
 
                 <div class="w3-row-padding">
                   <div class="w3-container w3-third">
-                    <img src="../img/port_4.JPG" style="width:100%;cursor:pointer" 
+                    <img src="{% static 'img/port_4.JPG'%}" style="width:100%;cursor:pointer" 
                     onclick="onClick(this)" class="w3-hover-opacity" id="lightbox">
                   </div>
                   <div class="w3-container w3-third">
-                    <img src="../img/port_5.JPG" style="width:100%;cursor:pointer" 
+                    <img src="{% static 'img/port_5.JPG'%}" style="width:100%;cursor:pointer" 
                     onclick="onClick(this)" class="w3-hover-opacity" id="lightbox">
                   </div>
                   <div class="w3-container w3-third">
-                    <img src="../img/port_6.JPG" style="width:100%;cursor:pointer" 
+                    <img src="{% static 'img/port_6.JPG'%}" style="width:100%;cursor:pointer" 
                     onclick="onClick(this)" class="w3-hover-opacity" id="lightbox">
                   </div>
                 </div>
@@ -292,15 +294,15 @@
               <h2 class="section-heading text-uppercase">SSROCKET 자전거 대여 서비스 주요기능</h2>
               <h3 class="section-subheading text-muted">SSROCKET 자전거 대여 서비스의 주요 기능을 살펴보세요!</h3>
             
-	<div class="curved-bg-div wow animated fadeIn" data-wow-delay="0.15s"></div>
-	<div id="fh5co-features" class="fh5co-features-outer">
-		<div class="container">
+   <div class="curved-bg-div wow animated fadeIn" data-wow-delay="0.15s"></div>
+   <div id="fh5co-features" class="fh5co-features-outer">
+      <div class="container">
         <div class="row fh5co-features-grid-columns">
 
           
             <div class="col-sm-6 in-order-1 wow animated fadeInLeft" data-wow-delay="0.22s">
               <div class="col-sm-image-container">
-                <img class="img-float-left" id="ser" src="../img/rent1.png" alt="smartphone-1">
+                <img class="img-float-left" id="ser" src="{% static 'img/rent1.png'%}" alt="smartphone-1">
               </div>
             </div>
             <section class="page-section" id="rental"></section>
@@ -314,14 +316,14 @@
               </div>
               <section class="page-section"  id="qrcode"></section>
               <div class="col-sm-6 in-order-4 wow animated fadeInRight" data-wow-delay="0.22s">
-                <img class="img-float-right" id="ser" src="../img/qr1.png" alt="smartphone-2">
+                <img class="img-float-right" id="ser" src="{% static 'img/qr1.png'%}" alt="smartphone-2">
               </div>
   
 
         
             <div class="col-sm-6 in-order-5 wow animated fadeInLeft" data-wow-delay="0.22s">
               <div class="col-sm-image-container">
-                <img class="img-float-left" id="ser" src="../img/timer.png" alt="smartphone-3">
+                <img class="img-float-left" id="ser" src="{% static 'img/timer.png'%}" alt="smartphone-3">
               </div>
             </div>
             <section class="page-section"  id="timer"></section>
@@ -336,7 +338,7 @@
             </div>
             <section class="page-section"  id="check"></section>
             <div class="col-sm-6 in-order-4 wow animated fadeInRight" data-wow-delay="0.22s">
-              <img class="img-float-right" id="ser" src="../img/com_check.png" alt="smartphone-2">
+              <img class="img-float-right" id="ser" src="{% static 'img/com_check.png'%}" alt="smartphone-2">
             </div>
 
 
