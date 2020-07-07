@@ -524,12 +524,11 @@ body{
     }
 
     .reservation_list #choose{
+        float:right;
         font-family: NotoSansCJKKR-Bold;
         font-size:1.788em;
         color:#64b9e3;
         background-color: white;
-        margin-top:-15%;
-        margin-left:76%;
         border:none;
     }
     

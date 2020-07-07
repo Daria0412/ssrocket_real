@@ -14,6 +14,7 @@ function h(){
     ba.style.display='flex';
     c.style.display='none';
     d.style.display='flex';
+
 }
 
 function k(){
@@ -27,6 +28,7 @@ function k(){
     ba.style.display='none';
     c.style.display='flex';
     d.style.display='none';
+
 }
 
 function sm() {

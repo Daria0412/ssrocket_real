@@ -4,10 +4,9 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/company_main_real.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/company_main_r.css' %}" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script type="text/javascript"></script>
-        <script src="{% static 'js/main_company_real.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/main_company_real1.js' %}"></script>
         <title>company_main</title>
     </head>
  
@@ -29,8 +28,8 @@
        </div>
        {% endfor%}
 
-    <span id="bannap" name="bannap" onclick="h();" style="display: flex;">반납 목록 보기</span>
-    <span id="bannap1" name="bannap" onclick="k();" style="display:none;">전체 목록 보기</span>
+    <span id="bannap" name="bannap" onclick="h();" style="display:none;">반납 목록 보기</span>
+    <span id="bannap1" name="bannap" onclick="k();" style="display:flex;">전체 목록 보기</span>
 
     <span id="s">
         <select id="c_year" name="c_year" data-default-option="년도" data-unit="y" >
@@ -90,7 +89,7 @@
             <span id="user_num">1대</span>
             <span id="user_end"> 예약하셨습니다.</span>
             <br>
-            <span id="choose">반납완료</span>
+            <dutton id="choose" disabled="disabled">반납완료</span>
         </div>
       </div>
     </div>
