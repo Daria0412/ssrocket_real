@@ -28,6 +28,6 @@ urlpatterns = [
     path('check/<int:pk>/',views.check_reservation, name = "check_reservation"),#예약 바코드
     path('course/',views.course,name="course"),
     path('nearshop/',views.nearshop, name = "nearshop"),
-    path('/',views.introduce, name = "introduce"),
+    path('',views.introduce, name = "introduce"),
 
 ]
