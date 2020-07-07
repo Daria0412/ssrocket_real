@@ -39,6 +39,7 @@ body{
 
 #text{
     position: relative;
+    margin-top:10%;
     margin-left:3%;
     margin-bottom:10%;
 }
@@ -46,20 +47,20 @@ body{
 #text #user{
     font-family: NotoSansCJKKR-Black;
     font-size:2.688em;
-    color:rgb(0, 0, 0);
+    color:white;
 }
 
 #text #nim{
     font-family: NotoSansCJKKR-Regular;
     font-size:2.388em;
-    color:rgb(0, 0, 0);
+    color:white;
 }
 
 #text #welcome{
     margin-left:1%;
     font-family: NotoSansCJKKR-Regular;
     font-size:2.188em;
-    color:rgb(0, 0, 0);
+    color:white;
 }
 #a{
     position: relative;
@@ -89,26 +90,26 @@ body{
     margin-left: 2em;
     font-family: NotoSansCJKKR-Bold;
     font-size:0.888em;
-    color:white;
+    color:black;
 }
 
 .reservation_list #user_nim{
     font-family: NotoSansCJKKR-Regular;
     font-size:0.888em;
-    color:white;
+    color:black;
 }
 
 .reservation_list #user_date{
     font-family: NotoSansCJKKR-Bold;
     font-size:0.888em;
-    color:white;
+    color:black;
 }
 
 .reservation_list #user_time{
     margin-left: 2em;
     font-family: NotoSansCJKKR-Bold;
     font-size:0.888em;
-    color:white;
+    color:black;
 }
 
 .reservation_list #user_num{
@@ -121,7 +122,7 @@ body{
 .reservation_list #user_end{
     font-family: NotoSansCJKKR-Regular;
     font-size: 0.888em;
-    color:white;
+    color:black;
     margin-bottom:1em;
 }
 
@@ -416,10 +417,10 @@ body{
         display: flex;
         flex-wrap:wrap;
         justify-content: center;
-        margin-top:5%;
+        margin-top:10%;
         text-align: center;
         margin-right: 9%;
-        margin-bottom:5%;
+        margin-bottom:10%;
     }
     
     #text #user{
@@ -447,29 +448,12 @@ body{
         display: flex;
         justify-content: center;
     }
-    #ba{
-        position: relative;
-        display: flex;
-        justify-content: center;
-    }
-
-    #ba .back{
-        position: relative;
-        display: flex;
-        justify-content:flex-start;
-        width:35%;
-        background-color: white;
-        border-radius: 45px;
-        filter: none;
-        margin-top:3%;
-       
-    }
     
     #a .back{
         position: relative;
         display: flex;
         justify-content:flex-start;
-        width:35%;
+        width:40%;
         background-color: white;
         border-radius: 45px;
         filter: none;
@@ -521,80 +505,5 @@ body{
         font-size: 1.688em;
         color:black;
         margin-bottom:1em;
-    }
-
-    .reservation_list #choose{
-        font-family: NotoSansCJKKR-Bold;
-        font-size:1.788em;
-        color:#64b9e3;
-        background-color: white;
-        margin-top:-15%;
-        margin-left:76%;
-        border:none;
-    }
-    #bannap{
-        display: flex;
-        justify-content:center;
-        position: relative;
-        font-family: NotoSansCJKKR-Bold;
-        font-size:1.788em;
-        color:#64b9e3;
-        background-color: white;
-        border-radius: 15px;
-        margin-bottom:3%;
-        margin-top:-2%;
-        width:15%;
-        margin-left:42%;
-    }
-
-    #s{
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #s #sbt{
-        position: relative;
-        width:3%;
-        height:3%;
-        margin-left:5%;
-    }
-
-    #s #c_year{
-        appearance: none;
-        -webkit-appearance:none;
-        font-family:NotoSansCJKKR-Medium;
-        font-size: 2.222em;
-        background: url(../img/b.png);
-        background-repeat: no-repeat ;
-        border:0px;
-        color:rgb(0, 0, 0);
-        position: relative;
-        border-bottom-width: 2px solid white;
-    }
-    #s #c_month{
-        appearance: none;
-        -webkit-appearance:none;
-        font-family:NotoSansCJKKR-Medium;
-        font-size: 2.222em;
-        background: url(../img/b.png);
-        background-repeat: no-repeat ;
-        border:0px;
-        color:rgb(0, 0, 0);
-        position: relative;
-        margin-left:5%;
-    }
-    #s #c_date{
-        appearance: none;
-        -webkit-appearance:none;
-        font-family:NotoSansCJKKR-Medium;
-        font-size: 2.222em;
-        background: url(../img/b.png);
-        background-repeat: no-repeat ;
-        border:0px;
-        color:rgb(0, 0, 0);
-        position: relative;
-        margin-left:5%;
     }
 }
