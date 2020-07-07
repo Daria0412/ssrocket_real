@@ -436,7 +436,7 @@ body{
     }
     
     
-    @media  (min-width:1919px) and (min-height:1019px){
+    @media  (min-width:1200px){
 
         #txt{
             position: relative;

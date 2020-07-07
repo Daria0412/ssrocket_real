@@ -378,7 +378,7 @@ body{
     }
 }
 
-@media (min-width:1919px) and (min-height:1079px){
+@media (min-width:1200px){
     body{
         background: url("../img/um_bg_d.png") no-repeat center center fixed;
         -webkit-background-size: cover;
@@ -388,7 +388,7 @@ body{
     }
     #logo{
         position: relative;
-        width:13%;
+        width:10%;
         height:auto;
         margin-top:5%;
         margin-left:10%;
