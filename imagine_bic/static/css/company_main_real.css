@@ -548,6 +548,21 @@ body{
         margin-left:42%;
     }
 
+    #bannap1{
+        display: flex;
+        justify-content:center;
+        position: relative;
+        font-family: NotoSansCJKKR-Bold;
+        font-size:1.788em;
+        color:#64b9e3;
+        background-color: white;
+        border-radius: 15px;
+        margin-bottom:3%;
+        margin-top:-2%;
+        width:15%;
+        margin-left:42%;
+    }
+
     #s{
         position: relative;
         display: flex;

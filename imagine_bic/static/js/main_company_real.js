@@ -5,13 +5,30 @@ window.onload = function(){
 }
 function h(){
     var a=document.getElementById("a");
-    var abc=document.getElementById("abc")
+    var abc=document.getElementById("abc");
     var ba=document.getElementById("ba");
+    var c=document.getElementById("bannap");
+    var d=document.getElementById("bannap1");
     a.style.display='none';
     abc.style.display='none';
     ba.style.display='flex';
-
+    c.style.display='none';
+    d.style.display='flex';
 }
+
+function k(){
+    var a=document.getElementById("a");
+    var abc=document.getElementById("abc");
+    var ba=document.getElementById("ba");
+    var c=document.getElementById("bannap");
+    var d=document.getElementById("bannap1");
+    a.style.display='flex';
+    abc.style.display='inline';
+    ba.style.display='none';
+    c.style.display='flex';
+    d.style.display='none';
+}
+
 function sm() {
     lanForm.submit();
 }

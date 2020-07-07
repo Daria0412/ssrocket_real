@@ -53,7 +53,19 @@ function adddate(){
         opt.value = i;
         obj.add(opt);
         }
+}
+
+function check(){
+    var c=document.timeForm;
+    if(c.r_year.value==""||c.r_year.value=="년"||c.r_month.value==""||c.r_month.value=="월"||c.r_date.value==""||c.r_date.value=="일"||c.r_btime.value==""||c.r_btime.value=="시간선택"||c.r_rtime.value=="시간선택"||c.r_rtime.value=="")
+    {
+        alert("입력되지 않은 값이 있습니다!");
+        return false;
     }
+    else{
+    return true;
+    }
+}
 
 
 
