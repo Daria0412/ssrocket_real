@@ -48,7 +48,7 @@
 
         <input type="image" id="sbt" name="sbt" src="{% static 'img/sb.png' %}" alt="Submit" onclick = "sm()">
     </span>
-
+</form>
     {% for history in historys %}
     <form id="abc" method = post name = c> {% csrf_token %}
     <div id="a" style="display: flex;">
@@ -94,6 +94,5 @@
       </div>
     </div>
     {% endfor%}
-    </form>
     </body>
 </html>
