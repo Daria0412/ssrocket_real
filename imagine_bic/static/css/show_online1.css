@@ -1,9 +1,9 @@
 @charset "utf-8";
 
-@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../fonts/NotoSansCJKkr-Bold.otf") } 
-@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../fonts/NotoSansCJKkr-Bold.otf") } 
-@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../fonts/NotoSansCJKkr-Regular.otf") } 
-@font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../fonts/NotoSansCJKkr-Medium.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../font/NotoSansCJKkr-Bold.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../font/NotoSansCJKkr-Medium.otf") } 
 
 body{
     background-color: white;

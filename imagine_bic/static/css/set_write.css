@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../font/NotoSansCJKkr-Bold.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Bold.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Medium'; src: url("../font/NotoSansCJKkr-Medium.otf") } 
+
+
+body{
+    background-image: url("../img/wirte-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+} /*bg img 설정*/
+
+#container #write-bt{
+    position: absolute;
+    top:800px;
+    left:500px;
+    filter: drop-shadow(30px 30px 30px hsl(0, 4%, 87%)); 
+}
+
+#container #reservation2-bkbt{
+    position: absolute;
+    top:80px;
+    left:60px;
+} /*<- 버튼 위치 설정*/
+
+#container #reservation2-homebt{
+    position: absolute;
+    top:80px;
+    right:40px;
+} /*home 버튼 위치 설정*/
+
+#container #fin-bt{
+    position: absolute;
+    top:1600px;
+    left:700px;
+    width:20%;
+    filter: drop-shadow(30px 30px 30px #e6e4e4); 
+} /*완료 bt 위치 설정*/
+
+
+#container #w_title{
+    position: absolute;
+    top:220px;
+    left:80px;
+    font-family:NotoSansCJKKR-Bold;
+    font-size: 60px;
+    color:rgb(255, 255, 255);
+    width:850px;
+    height:100px;
+    border: none;
+    background: transparent;
+} /*제목 입력 위치 설정*/
+
+
+#container #w_contents{
+    position: absolute;
+    top:715px;
+    left:300px;
+    font-family:NotoSansCJKKR-Bold;
+    font-size: 40px;
+    color:rgb(0, 0, 0);
+    width:500px;
+    height:100px;
+    border: none;
+    background: transparent;
+} /*제목 입력 위치 설정*/
+
+
+#container #w_date{
+    position: absolute;
+    font-family:NotoSansCJKKR-Bold;
+    font-size: 40px;
+    color:rgb(2, 2, 2);
+    top:625px;
+    left:400px;
+    width:500px;
+    height:100px;
+    border: none;
+    background: transparent;
+} /*제목 입력 위치 설정*/
+
+#container #d{
+    position: absolute;
+    font-family:NotoSansCJKKR-Bold;
+    font-size: 36px;
+    color:rgb(0, 0, 0);
+    top:650px;
+    left:100px;
+}
+
+#container #c{
+    position: absolute;
+    font-family:NotoSansCJKKR-Bold;
+    font-size: 36px;
+    color:rgb(0, 0, 0);
+    top:750px;
+    left:100px;
+}
+
+#container #bar-wh{
+    position: absolute;
+    top:320px;
+    left:80px;
+    width:820px;
+}
+
+#container #category{
+    appearance: none;
+    -webkit-appearance:none;
+    font-family:NotoSansCJKKR-Medium;
+    font-size: 45px;
+    background: url(../img/tri-blue.png);
+    background-repeat: no-repeat ;
+    border:0px;
+    color:rgb(106, 177, 235);
+    position: absolute;
+    width:800px;
+    height:80px;
+    top:500px;
+    left:100px;
+} /*select box css*/
+
+#category option {
+    font-size:18px;
+} /*select box css*/
+
+#container #bar-category{
+    position: absolute;
+    top:480px;
+    left:60px;
+    filter: drop-shadow(30px 30px 30px #e6e4e4); 
+}
+
+input::-webkit-input-placeholder {
+    position: absolute;
+    font-family:NotoSansCJKKR-Bold;
+    font-size:60px;
+    color: rgb(255, 255, 255);
+    opacity: 80%;
+} /*placeholder 보여지는 부분 css*/
+
+
+

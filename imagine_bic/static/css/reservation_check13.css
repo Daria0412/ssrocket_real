@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+@font-face { font-family: 'NotoSansCJKKR-Black'; src: url("../font/NotoSansCJKkr-Black.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Bold'; src: url("../font/NotoSansCJKkr-Bold.otf") } 
+@font-face { font-family: 'NotoSansCJKKR-Regular'; src: url("../font/NotoSansCJKkr-Regular.otf") } 
+
+body{
+    background-image: url("../img/barcode_bg_mb.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+} /*bg img 설정*/
+#bkbt{
+    position: relative;
+    float: left;
+    margin-top:-18%;
+    margin-left:3%;
+
+}
+#homebt{
+    position: relative;
+    float: right;
+    margin-top:-18%;
+    margin-right:3%;
+}
+#img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#img #qr{
+    position: relative;
+    width:40%;
+<<<<<<< HEAD:imagine_bic/static/css/reservation_check13.css
+<<<<<<< HEAD:imagine_bic/static/css/reservation_check2.css
+    height:auto;
+    margin-top:10%;
+=======
+=======
+>>>>>>> 42dbbbb... timertxt:imagine_bic/static/css/reservation_check1.css
+    height:40%;
+    margin-top:15%;
+>>>>>>> 7965471dc55dfb0ee07530503e55c216efc3ca76:imagine_bic/static/css/reservation_check13.css
+}
+#txt{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    width:50%;
+    margin-left:20%;
+    margin-top:5%;
+}
+#history_place{
+    position: relative;
+    margin-top:18%;
+    margin-left:20%;
+    font-family: NotoSansCJKKR-Bold;
+    font-size:4.588em;
+    color:#0f4581;
+}
+
+#txt #history_loc{
+    font-family: NotoSansCJKKR-Regular;
+    font-size:2.388em;
+    color:#63788d;
+    margin-bottom:5%;
+}
+
+#txt #company_phone{
+    font-family: NotoSansCJKKR-Regular;
+    font-size:2.388em;
+    color:#63788d;
+    margin-bottom:5%;
+}
+
+#txt #r_btime{
+    font-family: NotoSansCJKKR-Regular;
+    font-size:2.388em;
+    color:#63788d;
+}
+
+#qt{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:40%;
+}
+#img1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#img1 #qr1{
+    position: relative;
+    width:60%;
+    height:auto;
+    margin-left:-20%;
+    margin-top:10%;
+}
+
+#qt1{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left:-20%;
+    margin-top:53%;
+}
