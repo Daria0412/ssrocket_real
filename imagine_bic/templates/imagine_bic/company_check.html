@@ -3,7 +3,7 @@
     <head>
         {% load static %}
         <meta charset="utf-8">
-        <link rel="stylesheet" href="{% static 'css/company_check11.css' %}" type="text/css"> <!--main.css 링크-->
+        <link rel="stylesheet" href="{% static 'css/company_check1.css' %}" type="text/css"> <!--main.css 링크-->
         <script type="text/javascript"></script>
         <script src="{% static 'js/company_check.js' %}"></script>
         <title>company_check</title>
@@ -35,7 +35,8 @@
                 </span>
             </form>
             {%else%}
-                 반납완료
+                 <span id="img">
+                     <span id="bt">반납완료</span></span>
             {%endif%}
         {%endif%}                 
     </div>

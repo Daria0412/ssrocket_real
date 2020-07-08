@@ -28,6 +28,11 @@
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        <script>function onClick(element) {
+          document.getElementById("img01").src = element.src;
+          document.getElementById("modal01").style.display = "block";
+        }</script>
     </head>
     <body>
       {% load static %}
@@ -52,6 +57,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#picture">사진</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#use">사용안내</a>
+                  </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#sevices" id="navbarDropdown" role="button" data-toggle="dropdown" 
                   aria-haspopup="true" aria-expanded="false">
@@ -68,7 +76,7 @@
           </nav>
 
         
-            <div class="jumbotron" id="home">
+            <div class="jumbotron" id="home" >
               <div class="container">
                 <p id="center">
                 <img class="text-center" src="{% static 'img/logo_white.png' %}">
@@ -144,7 +152,7 @@
                       <!-- Row -->
                       <div class="row">
                         <div class="col-md-12">
-                          <img src="{% static 'img/Ha.jpg' %}" alt="wrapkit" class="img-fluid rounded-circle" />
+                          <img src="{% static 'img/Ha.jpg' %}" alt="wrapkit" class="img-fluid rounded-circle" style="width:300px; height:320px;" />
                         </div>
                         <div class="col-md-12 text-center">
                           <div class="pt-2">
@@ -168,13 +176,13 @@
                       <!-- Row -->
                       <div class="row">
                         <div class="col-md-12">
-                          <img src="{% static 'img/Ain.png' %}" alt="wrapkit" class="img-fluid rounded-circle" />
+                          <img src="{% static 'img/Jung.jpg' %}" alt="wrapkit" class="img-fluid rounded-circle" style="width:300px; height:320px;" />
                         </div>
                         <div class="col-md-12 text-center">
                           <div class="pt-2">
                             <h5 class="mt-4 font-weight-medium mb-0">남정윤</h5>
                             <h6 class="subtitle mb-3">뉴미디어웹솔루션과</h6>
-                            <p>웹 백엔드</p>
+                            <p>웹 백엔드를 맡은 남정윤입니다. 서버느 django framework를 사용하여 구축했습니다!</p>
                             <ul class="list-inline">
                               <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i class="icon-social-facebook"></i></a></li>
                               <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i class="icon-social-twitter"></i></a></li>
@@ -192,13 +200,13 @@
                       <!-- Row -->
                       <div class="row">
                         <div class="col-md-12">
-                          <img src="{% static 'img/Jung.jpg' %}"alt="wrapkit" class="img-fluid rounded-circle" />
+                          <img src="{% static 'img/Eun.jpg' %}"alt="wrapkit" class="img-fluid rounded-circle" style="width:300px; height:320px;"/>
                         </div>
                         <div class="col-md-12 text-center">
                           <div class="pt-2">
                             <h5 class="mt-4 font-weight-medium mb-0">전은정</h5>
                             <h6 class="subtitle mb-3">뉴미디어웹솔루션과</h6>
-                            <p>웹 백엔드</p>
+                            <p>웹 백엔드를 맡은 전은정입니다. DB로는 mysql을 사용하였습니다!</p>
                             <ul class="list-inline">
                               <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i class="icon-social-facebook"></i></a></li>
                               <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i class="icon-social-twitter"></i></a></li>
@@ -216,13 +224,13 @@
                       <!-- Row -->
                       <div class="row">
                         <div class="col-md-12">
-                          <img src="{% static 'img/Eun.jpg' %}" alt="wrapkit" class="img-fluid rounded-circle" />
+                          <img src="{% static 'img/Ain.png' %}" alt="wrapkit" class="img-fluid rounded-circle" style="width:300px; height:320px;"/>
                         </div>
                         <div class="col-md-12 text-center">
                           <div class="pt-2">
                             <h5 class="mt-4 font-weight-medium mb-0">이아인</h5>
                             <h6 class="subtitle mb-3">뉴미디어디자인과</h6>
-                            <p>웹 디자인</p>
+                            <p>SSROCKET팀 자전거 대여 서비스 디자인 담당을 맡은 뉴미디어디자인과 이아인입니다! 포토샵, 일러스트를 위주로 사용하여 UI/UX 작업을 했습니다.</p>
                             <ul class="list-inline">
                               <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i class="icon-social-facebook"></i></a></li>
                               <li class="list-inline-item"><a href="#" class="text-decoration-none d-block px-1"><i class="icon-social-twitter"></i></a></li>
