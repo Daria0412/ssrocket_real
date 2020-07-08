@@ -523,7 +523,7 @@ body{
         margin-bottom:1em;
     }
 
-    .reservation_list #choose{
+    .back #choose{
         float:right;
         font-family: NotoSansCJKKR-Bold;
         font-size:1.788em;

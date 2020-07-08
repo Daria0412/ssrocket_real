@@ -13,7 +13,6 @@
     <body>
 
         {% load i18n %}
-        <form action = "{% url 'company_main' %}" name = "lanForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
 
        {% load static %}
        <img id="logo" src="{% static 'img/ss_lg.png' %}">
@@ -28,9 +27,9 @@
        </div>
        {% endfor%}
 
-    <span id="bannap" name="bannap" onclick="h();" style="display:none;">반납 목록 보기</span>
-    <span id="bannap1" name="bannap" onclick="k();" style="display:flex;">전체 목록 보기</span>
-
+    <span id="bannap" name="bannap" onclick="h();" style="display:flex;">반납 목록 보기</span>
+    <span id="bannap1" name="bannap" onclick="k();" style="display:none;">전체 목록 보기</span>
+<!-- <form action = "{% url 'company_main' %}" name = "lanForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
     <span id="s">
         <select id="c_year" name="c_year" data-default-option="년도" data-unit="y" >
             <option id="y" value="년도">년도</option>
@@ -48,14 +47,17 @@
 
         <input type="image" id="sbt" name="sbt" src="{% static 'img/sb.png' %}" alt="Submit" onclick = "sm()">
     </span>
-</form>
+</form> -->
+    <div id ='aa'>
     {% for history in historys %}
+    
     <form id="abc" method = post name = c> {% csrf_token %}
-    <div id="a" style="display: flex;">
+    <div id="a">
         <div class="back">
         <div class="reservation_list">
             <span id="user_name">{{history.member_id}}</span>
-            <span id="user_nim" >님이</span>
+            <br>
+            <span id="user_nim" style="margin-left: 50px;" >님이</span>
             <span id="user_date">{{history.r_btime|date:"Y년 M d일"}}</span>
             <br>
             <span id="user_time">{{history.r_btime|date:"A f:i"}} ~ {{history.r_rtime|date:"A f:i"}}</span>
@@ -63,34 +65,34 @@
             <span id="user_num">1대</span>
             <span id="user_end"> 예약하셨습니다.</span>
             <br>
-            {% if history.btime == None %}
+            <input type = hidden name = history_num value = {{history.history_num}}>
+            <input type = hidden name = val id = val>
+        </div>
+        {% if history.btime == None %}
             <button id="choose" onclick="put('b');">대여확인</button>
             {% else %}
             <button id="choose" onclick="put('r');">반납확인</button>
             {% endif %}
-            <input type = hidden name = history_num value = {{history.history_num}}>
-            <input type = hidden name = val id = val>
-        </div>
       </div>
     </div>
+
     </form>
     {% endfor%}
+</div>
 
     {% for history in last_historys %}
-    <div id="ba" style="display: none;"> <!--이 부분이 원래는 히든이고, 반납 완료 내역 보기 버튼 만들어서 그거 누르면 얘가 보이고 a가 히든 되도록!!-->
+    <div id="ba"> <!--이 부분이 원래는 히든이고, 반납 완료 내역 보기 버튼 만들어서 그거 누르면 얘가 보이고 a가 히든 되도록!!-->
         <div class="back">
         <div class="reservation_list">
             <span id="user_name">{{history.member_id}}</span>
-            <span id="user_nim" >님이</span>
+            <br>
+            <span id="user_nim" style="margin-left: 50px;" >님이</span>
             <span id="user_date">{{history.r_btime|date:"Y년 M d일"}}</span>
             <br>
             <span id="user_time">{{history.r_btime|date:"A f:i"}} ~ {{history.r_rtime|date:"A f:i"}}</span>
             <br>
-            <span id="user_num">1대</span>
-            <span id="user_end"> 예약하셨습니다.</span>
-            <br>
-            <dutton id="choose" disabled="disabled">반납완료</span>
         </div>
+        <span id="choose" disabled="disabled">반납완료</span>
       </div>
     </div>
     {% endfor%}

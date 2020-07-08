@@ -91,6 +91,7 @@ def notice_detail(request, pk):
 def setting(request):
     return Choose.setting(request)
 
+
 def setUrl(request, setUrl):
     return Choose.setUrl(request,setUrl)
 
@@ -137,6 +138,8 @@ def company_main(request):
     historys = History.objects.filter(company_num = company_num, rtime=None)
     last_historys = History.objects.exclude(rtime = None).filter(company_num = company_num)
     print(historys)
+    print("last")
+    print(last_historys)
     return render(request, 'imagine_bic/company_main.html',{"companys":companys, "historys":historys, "last_historys":last_historys})
 
 def course(request):
