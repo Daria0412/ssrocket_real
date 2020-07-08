@@ -25,8 +25,13 @@ class Sign:
         return HttpResponse("<html><script>alert('로그인 오류입니다. 다시 시도해주세요');location.href='/signin';</script></html>")
     
     def signup(request,user_info): #회원가입
+        
         print(user_info)
         id = request.POST['id']
+        okay = User.objects.filter(id = id)
+        for a in okay :
+            if a !=None:
+                return HttpResponse("<html><script>alert('회원가입 오류입니다. 다시 시도해주세요');location.href='/signup';</script></html>")
         name = request.POST['name']
         pwd = request.POST['pwd']
         user = User.objects.create(id = id, name = name, pwd = pwd, info = user_info)
