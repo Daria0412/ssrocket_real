@@ -481,6 +481,7 @@ body{
         position: relative;
         margin-top:3em;
         margin-bottom: 3em;
+        width:350px;
     }
     
     .reservation_list #user_name{
@@ -523,15 +524,25 @@ body{
         margin-bottom:1em;
     }
 
-    .back #choose{
-        float:right;
+    button{
         font-family: NotoSansCJKKR-Bold;
         font-size:1.788em;
         color:#64b9e3;
         background-color: white;
-        border:none;
+        border:none;  
+        left:70px;
+        width:200px;
     }
-    
+
+    #y{
+        position: relative;
+    }
+
+    #y2{
+        color:gray;
+        position: relative;
+    }
+   
     #bannap{
         display: flex;
         justify-content:center;

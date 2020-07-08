@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load static %}
-        <link rel="stylesheet" href="{% static 'css/company_main_r.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/company_main_21.css' %}" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript" src="{% static 'js/main_company_real1.js' %}"></script>
         <title>company_main</title>
@@ -69,13 +69,12 @@
             <input type = hidden name = val id = val>
         </div>
         {% if history.btime == None %}
-            <button id="choose" onclick="put('b');">대여확인</button>
-            {% else %}
-            <button id="choose" onclick="put('r');">반납확인</button>
-            {% endif %}
+        <button id="y" onclick="put('b');">대여확인</button>
+        {% else %}
+        <button id="y" onclick="put('r');">반납확인</button>
+        {% endif %}
       </div>
-    </div>
-
+     </div>
     </form>
     {% endfor%}
 </div>
@@ -92,7 +91,7 @@
             <span id="user_time">{{history.r_btime|date:"A f:i"}} ~ {{history.r_rtime|date:"A f:i"}}</span>
             <br>
         </div>
-        <span id="choose" disabled="disabled">반납완료</span>
+        <button id="y2" disabled="disabled">반납완료</span>
       </div>
     </div>
     {% endfor%}
