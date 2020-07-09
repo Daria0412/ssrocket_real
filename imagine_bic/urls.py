@@ -29,5 +29,5 @@ urlpatterns = [
     path('course/',views.course,name="course"),
     path('nearshop/',views.nearshop, name = "nearshop"),
     path('',views.introduce, name = "introduce"),
-
+    path('logout/', views.logout, name='logout'),
 ]
