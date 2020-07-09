@@ -320,15 +320,15 @@
                       <div class="container-fluid">
                         <div class="row" style="position: relative; margin-top:20%;">
                           <div class="col-lg-6">
-                            <div class="feature-item" style="position: relative; margin-bottom:30%; margin-right:10%;">
-                              <img src="{% static 'img/use_s.png'%}" class="img-fluid" alt="" style="position: relative; margin-bottom:5%; width:90px; height:90px;">
+                            <div class="feature-item" >
+                              <img src="{% static 'img/use_s.png'%}" class="img-fluid" alt="" style=" width:90px; height:90px;">
                               <h3>모바일 환경</h3>
                               <p class="text-muted" id="use_s">여행자를 선택해주세요!</p>
                             </div>
                           </div>
                           <div class="col-lg-6">
                             <div class="feature-item" >
-                              <img src="{% static 'img/use_n.png'%}" class="img-fluid" alt="" style="position: relative; margin-bottom:5%; width:90px; height:90px;">
+                              <img src="{% static 'img/use_n.png'%}" class="img-fluid" alt="" style="width:90px; height:90px;">
                               <h3>노트북, 데스크탑 환경</h3>
                               <p class="text-muted">업체를 선택해주세요!<br>(다양한 목록을 원하시면 <br>ID: company3@gmail.com | PW: company3)</p>
                             </div>
@@ -336,15 +336,15 @@
                         </div>
                         <div class="row">
                           <div class="col-lg-6">
-                            <div class="feature-item" style="position: relative; margin-bottom:40%; margin-right:10%;">
-                              <img src="{% static 'img/use_q.png'%}" class="img-fluid" alt="" style="position: relative; margin-bottom:5%; width:90px; height:90px;">
+                            <div class="feature-item" >
+                              <img src="{% static 'img/use_q.png'%}" class="img-fluid" alt="" style="width:90px; height:90px;">
                               <h3>QR 코드</h3>
-                              <p class="text-muted">좌측 스마트폰 화면의 자전거 이미지를 클릭하시면 업체 쪽에서 확인 가능한 QR코드가 보여집니다!</p>
+                              <p class="text-muted">좌측 (모바일 : 상단) 스마트폰 화면의 자전거 이미지를 클릭하시면 업체 쪽에서 확인 가능한 QR코드가 보여집니다!</p>
                             </div>
                           </div>
                           <div class="col-lg-6">
                             <div class="feature-item">
-                              <img src="{% static 'img/use_r.png'%}" class="img-fluid" alt="" style="position: relative; margin-bottom:5%; width:90px; height:90px;">
+                              <img src="{% static 'img/use_r.png'%}" class="img-fluid" alt="" style="width:90px; height:90px;">
                               <h3>자전거 예약</h3>
                               <p class="text-muted">자전거 예약 시 기후현 선택을 추천드립니다!<br>(다른 지역의 자전거 대여소가 많지 않아요!)</p>
                             </div>
@@ -371,7 +371,7 @@
 		<div class="container">
         <div class="row fh5co-features-grid-columns">
 
-          
+          <div id="m">
             <div class="col-sm-6 in-order-1 wow animated fadeInLeft" data-wow-delay="0.22s">
               <div class="col-sm-image-container">
                 <img class="img-float-left" id="ser" src="{% static 'img/rent1.png' %}" alt="smartphone-1">
@@ -382,17 +382,21 @@
               <h1 id="ser_title"  id="rental">1. 자전거 대여</h1>
               <p>기후시 5개의 현 중 자신이 자전거를 대여할 곳을 선택하면, 모바일 웹으로 손쉽게 자전거 예약이 가능합니다! 자전거 개수, 날짜, 시간을 선택하면 자전거 대여소에 정보가 전송됩니다.</p>
             </div>
+            </div>
+
+            <div id="m">
               <div class="col-sm-6 in-order-3 sm-6-content wow animated fadeInLeft" data-wow-delay="0.22s" id="ser_txt">
-                <h1 id="ser_title">2. QR코드</h1>
+                <a id="ser_title">2. QR코드</a>
                 <p>수기로 번거롭게 대여 일지를 작성하거나, 티켓을 출력할 필요 없이 간단한 QR코드를 이용하여 서비스 이용이 가능합니다! 자전거 대여소에서 QR코드를 인식하면 해당 시간부터 대여가 시작됩니다.</p>
               </div>
               <section class="page-section"  id="qrcode"></section>
               <div class="col-sm-6 in-order-4 wow animated fadeInRight" data-wow-delay="0.22s">
                 <img class="img-float-right" id="ser" src="{% static 'img/qr1.png'%}" alt="smartphone-2">
               </div>
+            </div>
   
 
-        
+          <div id="m">
             <div class="col-sm-6 in-order-5 wow animated fadeInLeft" data-wow-delay="0.22s">
               <div class="col-sm-image-container">
                 <img class="img-float-left" id="ser" src="{% static 'img/timer.png'%}" alt="smartphone-3">
@@ -400,18 +404,21 @@
             </div>
             <section class="page-section"  id="timer"></section>
             <div class="col-sm-6 in-order-6 sm-6-content wow animated fadeInRight" data-wow-delay="0.22s" id="ser_txt">
-              <h1 id="ser_title"  id="timer">3. 타이머</h1>
+              <a id="ser_title"  id="timer">3. 타이머</a>
               <p> QR 코드 인식 시 대여 시작과 동시에 타이머가 작동합니다! 실시간으로 동작하는 타이머를 통해 시간을 초과하여 반납하는 일이 없게끔 노력하였습니다. </p>
             </div>
+          </div>
 
+          <div id="m">
             <div class="col-sm-6 in-order-3 sm-6-content wow animated fadeInLeft" data-wow-delay="0.22s" id="ser_txt">
-              <h1 id="ser_title">4. 업체 측의 간편한 예약 확인 및 반납 확인</h1>
+              <a id="ser_title">4. 업체 측의 간편한 예약 확인 및 반납 확인</a>
               <p>업체 메인 페이지에서 반납 목록 및 예약확인 기능이 있습니다! 따로 가계부를 적지 않아도 한 눈에 보기 쉽게 예약 및 반납 리스트와 고객 정보, 대여 날짜 및 시간을 확인할 수 있습니다. </p>
             </div>
             <section class="page-section"  id="check"></section>
             <div class="col-sm-6 in-order-4 wow animated fadeInRight" data-wow-delay="0.22s">
               <img class="img-float-right" id="ser" src="{% static 'img/com_check.png'%}" alt="smartphone-2">
             </div>
+          </div>
 
 
         </div> <!-- row -->

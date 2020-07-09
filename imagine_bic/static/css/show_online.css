@@ -142,7 +142,7 @@ h3{
 #about_txt{
     color:black;
     font-family:NotoSansCJKKR-Regular;
-    font-size: 1.5Em;
+    font-size: 1.5em;
 }
 
 #center{
@@ -231,10 +231,18 @@ footer{
 }
 
 @media (max-width:767px){
-    
+    #about_txt{
+        font-size: 0.9em;
+    }
+    .section-heading{
+        font-size:2.2em;
+    }
+    .section-subheading{
+        font-size:1.2em;
+    }
     .jumbotron #jtitle{
         font-family: NotoSansCJKKR-Bold;
-        font-size:2.0em;
+        font-size:1.6em;
     }
 
     .jumbotron #jq{
@@ -253,6 +261,7 @@ footer{
     }
 
     #center img{
+        margin-top:7%;
         width:65%;
         height:auto;
         display: flex;
@@ -266,5 +275,35 @@ footer{
         position: relative;
         float: right;
         right:-7%;
+    }
+
+    #use .img-fluid{
+        margin-bottom:5%;
+    }
+
+  .text-muted{
+     position: relative;
+     margin-bottom:30%;
+  }
+
+  #ser_title{
+    font-family:NotoSansCJKKR-Bold;
+    font-size:1.5em;
+    }
+
+    #ser_txt{
+        margin-top:0%;
+        font-family:NotoSansCJKKR-Regular;
+        font-size:1.0em;
+    }
+    #ser{
+        width:55%;
+        margin-top:0%;
+    }
+
+    #m{
+        position: relative;
+        margin-bottom:25%;
+        border-bottom: 1px solid gray;
     }
 }
