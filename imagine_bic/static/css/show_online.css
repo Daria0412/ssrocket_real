@@ -19,6 +19,12 @@ body{
     width:100%;
 }
 
+h3{
+    font-family: NotoSansCJKKR-Bold;
+}
+#use_s{
+    font-family:NotoSansCJKKR-Regular;
+}
 .navbar-brand{
     font-family: NotoSansCJKKR-Bold;
     font-size:1.5em;
