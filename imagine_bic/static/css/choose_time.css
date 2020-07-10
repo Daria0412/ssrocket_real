@@ -97,8 +97,8 @@ body{
     position: relative;
     width:300px;
     height:80px;
-    top:1310px;
-    left:190px;
+    top:1230px;
+    left:370px;
 
 } /*select box css*/
 
@@ -114,7 +114,8 @@ body{
     position: relative;
     width:300px;
     height:80px;
-    top:1230px;
+    top:1310px;
+    left:-200px;
 
 
 } /*select box css*/
