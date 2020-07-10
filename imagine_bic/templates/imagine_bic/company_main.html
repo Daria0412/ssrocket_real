@@ -8,6 +8,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript" src="{% static 'js/main_company_real1.js' %}"></script>
         <title>company_main</title>
+        <style>
+            html{overflow: hidden;}
+        </style>
     </head>
  
     <body>
@@ -27,73 +30,13 @@
        </div>
        {% endfor%}
 
-    <span id="bannap" name="bannap" onclick="h();" style="display:flex;">반납 목록 보기</span>
-    <span id="bannap1" name="bannap" onclick="k();" style="display:none;">전체 목록 보기</span>
-<!-- <form action = "{% url 'company_main' %}" name = "lanForm" method = "POST" accept-charset="UTF-8"> {% csrf_token %}
-    <span id="s">
-        <select id="c_year" name="c_year" data-default-option="년도" data-unit="y" >
-            <option id="y" value="년도">년도</option>
-        </select>
-
-        <select id="c_month" name="c_month" data-default-option="월" data-unit="m">
-            <option id="m" value="월">월</option>
-        </select>
-
-        
-        <select id="c_date" name="c_date"  data-default-option="일" data-unit="d">
-            <option value="일">일</option>
-        </select>
-
-
-        <input type="image" id="sbt" name="sbt" src="{% static 'img/sb.png' %}" alt="Submit" onclick = "sm()">
-    </span>
-</form> -->
-    <div id ='aa'>
-    {% for history in historys %}
-    
-    <form id="abc" method = post name = c> {% csrf_token %}
-    <div id="a">
-        <div class="back">
-        <div class="reservation_list">
-            <span id="user_name">{{history.member_id}}</span>
-            <br>
-            <span id="user_nim" style="margin-left: 50px;" >님이</span>
-            <span id="user_date">{{history.r_btime|date:"Y년 M d일"}}</span>
-            <br>
-            <span id="user_time">{{history.r_btime|date:"A f:i"}} ~ {{history.r_rtime|date:"A f:i"}}</span>
-            <br>
-            <span id="user_num">1대</span>
-            <span id="user_end"> 예약하셨습니다.</span>
-            <br>
-            <input type = hidden name = history_num value = {{history.history_num}}>
-            <input type = hidden name = val id = val>
-        </div>
-        {% if history.btime == None %}
-        <button id="y" onclick="put('b');">대여확인</button>
-        {% else %}
-        <button id="y" onclick="put('r');">반납확인</button>
-        {% endif %}
-      </div>
-     </div>
-    </form>
-    {% endfor%}
-</div>
-
-    {% for history in last_historys %}
-    <div id="ba"> <!--이 부분이 원래는 히든이고, 반납 완료 내역 보기 버튼 만들어서 그거 누르면 얘가 보이고 a가 히든 되도록!!-->
-        <div class="back">
-        <div class="reservation_list">
-            <span id="user_name">{{history.member_id}}</span>
-            <br>
-            <span id="user_nim" style="margin-left: 50px;" >님이</span>
-            <span id="user_date">{{history.r_btime|date:"Y년 M d일"}}</span>
-            <br>
-            <span id="user_time">{{history.r_btime|date:"A f:i"}} ~ {{history.r_rtime|date:"A f:i"}}</span>
-            <br>
-        </div>
-        <button id="y2" disabled="disabled">반납완료</span>
-      </div>
-    </div>
-    {% endfor%}
+    <span id="bannap" name="bannap" onclick="h();" style="display:flex; margin-bottom: -1;">반납 목록 보기</span>
+    <span id="bannap1" name="bannap" onclick="k();" style="display:none; margin-bottom: -1;">전체 목록 보기</span>
+    <center><div id = return_list style="display:none; margin-top:10px;" width=100% >
+        <iframe src="{%url 'history_r'%}" width="100%" style="margin-top: 40px; border: none;" height="400px" scolling=no frameborder=0></iframe>
+    </div></center>
+    <center><div id = all_list style="display:flex;"  width=100%>
+        <iframe src="{%url 'history'%}" width="100%" style="margin-top: 40px; border: none;" height="400px" scolling=no frameborder=0></iframe>
+    </div></center>
     </body>
 </html>

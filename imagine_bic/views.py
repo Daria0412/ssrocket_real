@@ -256,3 +256,50 @@ def introduce(request):
 def logout(request):
     request.session.clear()
     return redirect('choose_use')
+
+def history(request):
+    print("company_main")
+    id = request.session['id']
+    companys = Company.objects.filter(member_id = id)
+    for company in companys:
+        company_num = company.company_num
+    if request.method=="POST":
+        print("post")
+        history_num = int(request.POST['history_num'])
+        print(history_num)
+        rorb = request.POST['val']
+        print(rorb)
+        if rorb == "r":
+            print(Check.bic_return(history_num))
+        elif rorb == "b":
+            print(Check.bic_rent(history_num))
+    historys = History.objects.filter(company_num = company_num, rtime=None).order_by('-reserved_At')
+    last_historys = History.objects.exclude(rtime = None).filter(company_num = company_num).order_by('-r_rtime')
+    print(historys)
+    print("last")
+    print(last_historys)
+    return render(request, 'imagine_bic/history.html',{"companys":companys, "historys":historys, "last_historys":last_historys})
+    
+
+def history_r(request):
+    print("company_main")
+    id = request.session['id']
+    companys = Company.objects.filter(member_id = id)
+    for company in companys:
+        company_num = company.company_num
+    if request.method=="POST":
+        print("post")
+        history_num = int(request.POST['history_num'])
+        print(history_num)
+        rorb = request.POST['val']
+        print(rorb)
+        if rorb == "r":
+            print(Check.bic_return(history_num))
+        elif rorb == "b":
+            print(Check.bic_rent(history_num))
+    historys = History.objects.filter(company_num = company_num, rtime=None).order_by('-reserved_At')
+    last_historys = History.objects.exclude(rtime = None).filter(company_num = company_num).order_by('-r_rtime')
+    print(historys)
+    print("last")
+    print(last_historys)
+    return render(request, 'imagine_bic/history_r.html',{"companys":companys, "historys":historys, "last_historys":last_historys})

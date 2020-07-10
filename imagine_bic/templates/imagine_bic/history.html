@@ -1,0 +1,81 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/company_main_21.css' %}" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/main_company_real1.js' %}"></script>
+    <title>company_main</title>
+    <style>
+        body {
+            background:none transparent;
+            padding:0px;
+        }
+    </style>
+</head>
+<body>
+    <div class='blankdiv' id='blankdiv'>
+    {% load i18n %}
+    {% load static %}
+    {% for history in historys %}
+    
+    <form id="abc" method = post name = c> {% csrf_token %}
+    <div id="a">
+        <div class="back">
+        <div class="reservation_list">
+            <span id="user_name">{{history.member_id}}</span>
+            <br>
+            <span id="user_nim" style="margin-left: 50px;" >님이</span>
+            <span id="user_date">{{history.r_btime|date:"Y년 M d일"}}</span>
+            <br>
+            <span id="user_time">{{history.r_btime|date:"A f:i"}} ~ {{history.r_rtime|date:"A f:i"}}</span>
+            <br>
+            <span id="user_num">1대</span>
+            <span id="user_end"> 예약하셨습니다.</span>
+            <br>
+            <input type = hidden name = history_num value = {{history.history_num}}>
+            <input type = hidden name = val id = val>
+        </div>
+        {% if history.btime == None %}
+        <button id="y" onclick="put('b');">대여확인</button>
+        {% else %}
+        <button id="y" onclick="put('r');">반납확인</button>
+        {% endif %}
+      </div>
+     </div>
+    </form>
+    {% endfor%}
+</div>
+
+    {% for history in last_historys %}
+    <div id="ba"> <!--이 부분이 원래는 히든이고, 반납 완료 내역 보기 버튼 만들어서 그거 누르면 얘가 보이고 a가 히든 되도록!!-->
+        <div class="back">
+        <div class="reservation_list">
+            <span id="user_name">{{history.member_id}}</span>
+            <br>
+            <span id="user_nim" style="margin-left: 50px;" >님이</span>
+            <span id="user_date">{{history.r_btime|date:"Y년 M d일"}}</span>
+            <br>
+            <span id="user_time">{{history.r_btime|date:"A f:i"}} ~ {{history.r_rtime|date:"A f:i"}}</span>
+            <br>
+        </div>
+        <button id="y2" disabled="disabled">반납완료</span>
+      </div>
+    </div>
+    {% endfor%}
+    </div>
+</body>
+<script>
+    $.ajax({
+        type : "GET",
+        url : "",
+        error : function() {
+            alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error)
+        },
+        success : function(data) {
+            $('#blankdiv').html(data);
+        }
+    });
+</script>

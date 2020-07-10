@@ -30,4 +30,6 @@ urlpatterns = [
     path('nearshop/',views.nearshop, name = "nearshop"),
     path('',views.introduce, name = "introduce"),
     path('logout/', views.logout, name='logout'),
+    path('history/',views.history, name='history'),
+    path('history_r/',views.history_r, name='history_r'),
 ]

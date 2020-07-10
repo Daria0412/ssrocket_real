@@ -4,13 +4,13 @@ window.onload = function(){
     adddate();
 }
 function h(){
-    var a=document.getElementById("aa");
+    var return_list=document.getElementById("return_list");
+    var all_list =document.getElementById('all_list');
     var ba=document.getElementById("ba");
     var c=document.getElementById("bannap");
     var d=document.getElementById("bannap1");
-    a.style.display='none';
-    ba.style.display='flex';
-
+    return_list.style.display='flex';
+    all_list.style.display='none';
 
     c.style.display='none';
     d.style.display='flex';
@@ -18,13 +18,12 @@ function h(){
 }
 
 function k(){
-    var a=document.getElementById("aa");
-    var ba=document.getElementById("ba");
+    var return_list=document.getElementById("return_list");
+    var all_list =document.getElementById('all_list');
     var c=document.getElementById("bannap");
     var d=document.getElementById("bannap1");
-    a.style.display='inline';
-    ba.style.display='flex';
-
+    return_list.style.display='none';
+    all_list.style.display='flex';
 
     c.style.display='flex';
     d.style.display='none';
