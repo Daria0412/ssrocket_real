@@ -9,14 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="{% static 'js/main_company_real1.js' %}"></script>
     <title>company_main</title>
-    <style>
-        body {
-            background:none transparent;
-            padding:0px;
-        }
-    </style>
 </head>
-<body style="background-color: transparent;">
+<body>
     <div class='blankdiv' id='blankdiv'>
     {% for history in last_historys %}
     <div id="ba"> <!--이 부분이 원래는 히든이고, 반납 완료 내역 보기 버튼 만들어서 그거 누르면 얘가 보이고 a가 히든 되도록!!-->
