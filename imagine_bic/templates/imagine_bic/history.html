@@ -46,6 +46,8 @@
       </div>
      </div>
     </form>
+    {%empty%}
+    대여 중인 자전거가 없습니다.<br>
     {% endfor%}
 </div>
 
@@ -64,6 +66,8 @@
         <button id="y2" disabled="disabled">반납완료</span>
       </div>
     </div>
+    {%empty%}
+    대여 중인 자전거가 없습니다.<br>
     {% endfor%}
     </div>
 </body>
